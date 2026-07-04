@@ -1,0 +1,19 @@
+# Secrets - never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Chroma vector DB storage
+chroma_db/
+backend/chroma_db/
+
+# Cache folder for dev API response caching
+cache/
+backend/cache/
+
+# OS junk
+.DS_Store

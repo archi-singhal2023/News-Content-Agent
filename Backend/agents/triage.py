@@ -1,5 +1,7 @@
 import os
 import sys
+import json
+import re
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.llm_client import call_llm
 
@@ -28,17 +30,28 @@ def triage_topic(topic: str) -> dict:
     raw_response = call_llm(
         prompt=f"News topic: {topic}",
         system=TRIAGE_SYSTEM_PROMPT,
-        fast=True,          # small model is enough for classification
-        temperature=0.1,    # low temperature = consistent, predictable output
+        fast=True,
+        temperature=0.1,
+        json_mode=True,
     )
 
-    import json
     try:
         result = json.loads(raw_response)
         return result
     except json.JSONDecodeError:
-        # Fallback if the model adds extra text despite instructions
-        return {"category": "quick_read", "reason": "Failed to parse, defaulting safe"}
+        # Model may have added extra text around the JSON — try to extract just the {...} part
+        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group(0))
+            except json.JSONDecodeError:
+                pass
+        # Still failed — return the raw response so we can see what actually came back
+        return {
+            "category": "quick_read",
+            "reason": "Failed to parse, defaulting safe",
+            "raw_response": raw_response,
+        }
 
 
 if __name__ == "__main__":

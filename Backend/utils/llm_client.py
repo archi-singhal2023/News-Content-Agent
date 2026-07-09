@@ -32,20 +32,24 @@ def _write_cache(key, response):
 
 
 @retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=2, max=20))
-def _call_groq(model, system, prompt, temperature):
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
+def _call_groq(model, system, prompt, temperature, json_mode=False):
+    kwargs = {
+        "model": model,
+        "messages": [
             {"role": "system", "content": system},
             {"role": "user", "content": prompt},
         ],
-        temperature=temperature,
-    )
+        "temperature": temperature,
+    }
+    if json_mode:
+        kwargs["response_format"] = {"type": "json_object"}
+
+    response = client.chat.completions.create(**kwargs)
     return response.choices[0].message.content
 
 
 def call_llm(prompt, system="You are a helpful, precise research assistant.",
-             fast=False, temperature=0.3, use_cache=True):
+             fast=False, temperature=0.3, use_cache=True, json_mode=False):
     model = MODEL_FAST if fast else MODEL_SMART
     key = _cache_key(model, prompt, system)
 
@@ -54,7 +58,7 @@ def call_llm(prompt, system="You are a helpful, precise research assistant.",
         if cached is not None:
             return cached
 
-    result = _call_groq(model, system, prompt, temperature)
+    result = _call_groq(model, system, prompt, temperature, json_mode=json_mode)
 
     if use_cache:
         _write_cache(key, result)

@@ -20,12 +20,10 @@ TAGS_TO_STRIP = [
 ]
 
 
-def fetch_article_text(url: str, timeout: int = 10, min_length: int = 200) -> dict:
+def fetch_article_text(url: str, topic_keywords: list = None, timeout: int = 10, min_length: int = 300) -> dict:
     """
     Fetches and cleans article text from a URL.
-
-    Returns:
-        {"url": url, "success": bool, "text": str, "error": str or None}
+    Optionally checks the text actually relates to the topic via keyword presence.
     """
     try:
         response = requests.get(url, headers=HEADERS, timeout=timeout)
@@ -34,31 +32,27 @@ def fetch_article_text(url: str, timeout: int = 10, min_length: int = 200) -> di
         return {"url": url, "success": False, "text": "", "error": str(e)}
 
     soup = BeautifulSoup(response.content, "html.parser")
-
-    # Strip non-content tags before extracting text
     for tag in soup(TAGS_TO_STRIP):
         tag.decompose()
 
-    # Prefer <article> tag if present — most news sites use semantic HTML for the story body
     article_tag = soup.find("article")
-    if article_tag:
-        paragraphs = article_tag.find_all("p")
-    else:
-        # Fallback: grab all <p> tags on the page
-        paragraphs = soup.find_all("p")
+    paragraphs = article_tag.find_all("p") if article_tag else soup.find_all("p")
 
     text = "\n".join(
         p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 40
     )
-    # ^ filter out tiny <p> tags — usually captions, nav labels, or junk, not real sentences
 
     if len(text) < min_length:
-        return {
-            "url": url,
-            "success": False,
-            "text": text,
-            "error": f"Extracted text too short ({len(text)} chars), likely not a real article page",
-        }
+        return {"url": url, "success": False, "text": text,
+                "error": f"Extracted text too short ({len(text)} chars)"}
+
+    # Relevance check: does the article actually mention the topic?
+    if topic_keywords:
+        text_lower = text.lower()
+        matches = sum(1 for kw in topic_keywords if kw.lower() in text_lower)
+        if matches == 0:
+            return {"url": url, "success": False, "text": text,
+                    "error": "Article text doesn't mention any topic keywords — likely irrelevant page"}
 
     return {"url": url, "success": True, "text": text, "error": None}
 

@@ -15,15 +15,15 @@ MODEL_SMART = "llama-3.3-70b-versatile"
 
 # --- Trusted source domains ---
 TRUSTED_DOMAINS = [
-    "reuters.com",
-    "apnews.com",
     "bbc.com",
     "aljazeera.com",
-    "livemint.com",
+    "ndtv.com",
     "thehindu.com",
     "indianexpress.com",
+    "livemint.com",
     "economictimes.indiatimes.com",
-    "ndtv.com",
+    "theguardian.com",
+    "apnews.com",
 ]
 
 # --- RAG settings ---

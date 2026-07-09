@@ -5,6 +5,7 @@ import re
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.llm_client import call_llm
+from utils.fetch_article import fetch_article_text
 from config import TAVILY_API_KEY, TRUSTED_DOMAINS
 from tavily import TavilyClient
 
@@ -55,69 +56,66 @@ def generate_subqueries(topic: str) -> list:
 
 
 
-def search_angle(angle_query: dict, max_results: int = 4) -> dict:
+def search_angle(angle_query: dict, topic: str, max_results: int = 4) -> dict:
     """
-    Runs a Tavily search for one angle/sub-query, filtered to trusted domains.
-    Falls back to an unrestricted search if the whitelist returns nothing,
-    so a narrow whitelist never silently kills an entire angle.
+    Runs a Tavily search, fetches full clean article text, and verifies relevance.
+    Drops sources that fail quality checks instead of forcing them in.
     """
     sources = []
-    used_fallback = False
+    topic_keywords = [w for w in topic.split() if len(w) > 3]  # rough keyword set
 
     try:
         response = tavily_client.search(
-            query=angle_query["query"],
-            search_depth="basic",
-            max_results=max_results,
-            include_domains=TRUSTED_DOMAINS,
+            query=angle_query["query"], search_depth="basic",
+            max_results=max_results, include_domains=TRUSTED_DOMAINS,
         )
-        sources = [s for s in sources if is_likely_article(s["url"])]
-        
+        raw_results = response.get("results", [])
     except Exception as e:
-        print(f"Whitelisted search failed for angle '{angle_query['angle']}': {e}")
+        print(f"Whitelisted search failed for '{angle_query['angle']}': {e}")
+        raw_results = []
 
-    # Fallback: no whitelist, if nothing came back
-    if not sources:
-        used_fallback = True
+    if not raw_results:
         try:
             response = tavily_client.search(
-                query=angle_query["query"],
-                search_depth="basic",
-                max_results=max_results,
+                query=angle_query["query"], search_depth="basic", max_results=max_results,
+                exclude_domains=["facebook.com", "twitter.com", "x.com", "reddit.com",
+                                  "instagram.com", "quora.com", "pinterest.com"],
             )
-            sources = [
-                {"title": r["title"], "url": r["url"], "content": r["content"]}
-                for r in response.get("results", [])
-            ]
+            raw_results = response.get("results", [])
         except Exception as e:
-            print(f"Fallback search also failed for angle '{angle_query['angle']}': {e}")
+            print(f"Fallback search failed for '{angle_query['angle']}': {e}")
 
-    return {
-        "angle": angle_query["angle"],
-        "query": angle_query["query"],
-        "sources": sources,
-        "used_fallback": used_fallback,
-    }
+    for r in raw_results:
+        if not is_likely_article(r["url"]):
+            continue
+
+        fetch_result = fetch_article_text(r["url"], topic_keywords=topic_keywords)
+
+        if fetch_result["success"]:
+            sources.append({
+                "title": r["title"],
+                "url": r["url"],
+                "content": fetch_result["text"],
+                "source_type": "full_fetch",
+            })
+        else:
+            print(f"    Dropped source (failed quality check): {r['url']} — {fetch_result['error']}")
+            # dropped entirely — no weak fallback content forced in
+
+    return {"angle": angle_query["angle"], "query": angle_query["query"], "sources": sources}
 
 
 def research_topic(topic: str) -> dict:
-    """
-    Full research step: generates sub-queries, then searches each one.
-    Returns a dict with the topic and a list of angle-tagged source results.
-    """
     subqueries = generate_subqueries(topic)
     print(f"Generated {len(subqueries)} angles: {[q['angle'] for q in subqueries]}")
 
     results = []
     for sq in subqueries:
-        angle_result = search_angle(sq)
+        angle_result = search_angle(sq, topic=topic)
         results.append(angle_result)
         print(f"  -> '{angle_result['angle']}': {len(angle_result['sources'])} sources found")
 
-    return {
-        "topic": topic,
-        "angles": results,
-    }
+    return {"topic": topic, "angles": results}
 
 
 if __name__ == "__main__":

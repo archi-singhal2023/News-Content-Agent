@@ -1,0 +1,158 @@
+"""
+Analyst agent — takes retrieved chunks for one angle and synthesizes them
+into a clear, accurate paragraph, with source attribution.
+Does NOT invent facts not present in the retrieved text.
+"""
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from utils.llm_client import call_llm
+from rag.embed_store import retrieve_for_angle
+
+ANALYST_SYSTEM_PROMPT = """You are a careful news analyst. You will be given several
+source excerpts about ONE specific angle of a news topic (e.g. History, Economics,
+Geopolitics, or Business Impact).
+
+Your job: write a clear, factual paragraph (4-6 sentences) synthesizing what these
+sources say about this angle. Rules:
+- Only use information present in the given excerpts. Do NOT add outside knowledge
+  or invent facts, dates, or figures not stated in the sources.
+- If sources disagree or present different emphases, note that briefly rather than
+  picking one side silently.
+- Write in a neutral, explanatory tone — like a knowledgeable journalist, not an
+  opinion columnist.
+- Do not repeat "according to the sources" or similar meta-phrases repeatedly —
+  write naturally, as an explainer.
+
+Respond with ONLY a JSON object in this format:
+{"paragraph": "your synthesized paragraph here"}
+"""
+
+
+def analyze_angle(collection_name: str, angle: str, query: str) -> dict:
+    """
+    Retrieves relevant chunks for an angle and synthesizes them into one paragraph.
+    Returns the paragraph plus the source URLs actually used, for attribution.
+    """
+    chunks = retrieve_for_angle(collection_name, angle, query, n_results=4)
+
+    if not chunks:
+        return {
+            "angle": angle,
+            "paragraph": None,
+            "sources": [],
+            "note": "No verified sources found for this angle — section omitted.",
+        }
+
+    excerpts_text = "\n\n---\n\n".join(
+        f"Source: {c['title']}\n{c['text'][:800]}" for c in chunks
+    )
+
+    raw_response = call_llm(
+        prompt=f"Angle: {angle}\n\nSource excerpts:\n\n{excerpts_text}",
+        system=ANALYST_SYSTEM_PROMPT,
+        fast=False,  # synthesis needs the smarter model
+        temperature=0.2,
+        json_mode=True,
+    )
+
+    import json
+    import re
+    try:
+        result = json.loads(raw_response)
+        paragraph = result.get("paragraph", "")
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
+        paragraph = json.loads(match.group(0)).get("paragraph", "") if match else ""
+
+    # Deduplicate source URLs used for this angle
+    unique_sources = list({c["url"]: c["title"] for c in chunks}.items())
+
+    return {
+        "angle": angle,
+        "paragraph": paragraph,
+        "sources": [{"url": url, "title": title} for url, title in unique_sources],
+        "note": None,
+    }
+
+SUMMARY_SYSTEM_PROMPT = """You are a news editor writing a short, neutral summary of
+CURRENT events for a news app. You will be given source excerpts.
+
+Write a 3-4 line summary of what is currently happening — just the facts of the
+present situation, no history, no analysis of causes, no economic impact. Purely
+"what is happening right now."
+
+Respond with ONLY a JSON object in this format:
+{"summary": "your 3-4 line summary here"}
+"""
+
+
+def generate_current_summary(collection_name: str, topic: str) -> dict:
+    """
+    Generates the short 'what's happening right now' summary, pulling from
+    whichever angle has the most current/recent source material
+    (typically Business Impact or Geopolitics, since those track live events).
+    """
+    # Pull chunks broadly, not angle-restricted, to get the most current facts
+    from rag.embed_store import chroma_client, embedding_fn
+    collection = chroma_client.get_collection(collection_name, embedding_function=embedding_fn)
+
+    results = collection.query(query_texts=[f"latest news {topic}"], n_results=5)
+    chunks = [
+        {"text": doc, "url": meta["url"], "title": meta["title"]}
+        for doc, meta in zip(results["documents"][0], results["metadatas"][0])
+    ]
+
+    excerpts_text = "\n\n---\n\n".join(f"Source: {c['title']}\n{c['text'][:600]}" for c in chunks)
+
+    raw_response = call_llm(
+        prompt=f"Topic: {topic}\n\nSource excerpts:\n\n{excerpts_text}",
+        system=SUMMARY_SYSTEM_PROMPT,
+        fast=False,
+        temperature=0.2,
+        json_mode=True,
+    )
+
+    import json
+    import re
+    try:
+        result = json.loads(raw_response)
+        summary = result.get("summary", "")
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
+        summary = json.loads(match.group(0)).get("summary", "") if match else ""
+
+    unique_sources = list({c["url"]: c["title"] for c in chunks}.items())
+    return {
+        "summary": summary,
+        "sources": [{"url": url, "title": title} for url, title in unique_sources],
+    }
+
+if __name__ == "__main__":
+    import json as json_lib
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from agents.researcher import research_topic
+    from rag.embed_store import store_research
+
+    topic = "US-Iran tensions over oil and dollar dominance"
+    research_result = research_topic(topic)
+    collection_name = store_research(topic, research_result)
+
+    print("\n--- Current Situation Summary ---\n")
+    summary_result = generate_current_summary(collection_name, topic)
+    print(summary_result["summary"])
+    print(f"\nSources: {[s['url'] for s in summary_result['sources']]}\n")
+
+    print("\n--- Analyzing each angle ---\n")
+    for angle_data in research_result["angles"]:
+        angle = angle_data["angle"]
+        query = angle_data["query"]
+        analysis = analyze_angle(collection_name, angle, query)
+        print(f"### {angle} ###")
+        if analysis["paragraph"]:
+            print(analysis["paragraph"])
+            print(f"\nSources: {[s['url'] for s in analysis['sources']]}")
+        else:
+            print(analysis["note"])
+        print("\n")

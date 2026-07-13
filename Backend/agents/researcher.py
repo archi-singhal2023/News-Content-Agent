@@ -64,10 +64,19 @@ def search_angle(angle_query: dict, topic: str, max_results: int = 4) -> dict:
     sources = []
     topic_keywords = [w for w in topic.split() if len(w) > 3]  # rough keyword set
 
+    # Allow Wikipedia only for History/background angles — reliable for timelines,
+    # but not appropriate for current events, economics, or geopolitics analysis
+    angle_lower = angle_query["angle"].lower()
+    domains_for_this_angle = TRUSTED_DOMAINS.copy()
+    if "history" in angle_lower or "background" in angle_lower:
+        domains_for_this_angle += ["en.wikipedia.org", "britannica.com"]
+
     try:
         response = tavily_client.search(
-            query=angle_query["query"], search_depth="basic",
-            max_results=max_results, include_domains=TRUSTED_DOMAINS,
+            query=angle_query["query"],
+            search_depth="basic",
+            max_results=max_results,
+            include_domains=domains_for_this_angle,
         )
         raw_results = response.get("results", [])
     except Exception as e:

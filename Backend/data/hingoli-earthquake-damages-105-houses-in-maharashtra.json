@@ -1,0 +1,34 @@
+{
+  "topic": "Hingoli earthquake damages 105 houses in Maharashtra",
+  "type": "quick_read",
+  "summary": "A 4.7 magnitude earthquake struck Hingoli district in Maharashtra, causing minor structural damage and affecting 105 houses, but no casualties have been reported. The earthquake occurred in a region that has experienced significant seismic activity in the past, including the 1993 Latur earthquake that resulted in significant loss of life and damage. The recent earthquake has not caused any loss of life, but has resulted in damage to homes in the area.",
+  "sources": [
+    {
+      "url": "https://indianexpress.com/article/explained/explained-sci-tech/earthquake-taiwan-ring-of-fire-9249383",
+      "title": "Massive earthquake hits Taiwan: What is the Ring of Fire?"
+    },
+    {
+      "url": "https://www.thehindu.com/news/international/venezuela-appreciates-indian-teams-efforts-to-help-earthquake-victims/article71164908.ece",
+      "title": "Venezuela appreciates Indian team\u2019s efforts to help earthquake victims - The Hindu"
+    },
+    {
+      "url": "https://www.thehindu.com/news/international/venezuela-fm-visits-indian-field-hospital-expresses-gratitude-for-earthquake-relief-work/article71182611.ece",
+      "title": "Venezuela FM visits Indian field hospital"
+    },
+    {
+      "url": "https://www.thehindu.com/news/national/maharashtra/47-magnitude-earthquake-jolts-maharashtras-hingoli-district-no-casualties/article70850199.ece",
+      "title": "4.7 magnitude earthquake jolts Maharashtra's Hingoli ..."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/1993_Latur_earthquake",
+      "title": "1993 Latur earthquake - Wikipedia"
+    }
+  ],
+  "note": null,
+  "triage_reason": "The story is a factual report of a specific event with no underlying causes to explain.",
+  "category": "india",
+  "tags": [
+    "india"
+  ],
+  "id": "hingoli-earthquake-damages-105-houses-in-maharashtra"
+}

@@ -1,0 +1,126 @@
+{
+  "topic": "Meta unveils Muse Image and Muse Video AI models",
+  "summary": "Meta has launched two new AI models, Muse Image and Muse Video. Muse Image is currently available to users, while Muse Video is in preview and will be available to creators in the coming months. Muse Image can generate images based on user instructions and edit them with precision. The model is integrated into Meta's AI chatbot.",
+  "summary_sources": [
+    {
+      "url": "https://www.livemint.com/ai/artificial-intelligence/metas-latest-ai-model-can-generate-images-websites-and-even-qr-codes-11783489540341.html",
+      "title": "Meta's latest AI model can generate images, websites and even QR codes | Mint"
+    },
+    {
+      "url": "https://www.thehindu.com/sci-tech/technology/meta-expands-generative-ai-tools-with-muse-image-rollout/article71196482.ece",
+      "title": "Meta expands generative AI tools with Muse Image rollout"
+    },
+    {
+      "url": "https://indianexpress.com/article/technology/tech-news-technology/meta-unveils-new-ai-model-as-it-tries-to-catch-up-with-google-and-openai-after-spending-billions-10627005",
+      "title": "Meta unveils new AI model as it tries to catch up with ..."
+    },
+    {
+      "url": "https://www.thehindu.com/sci-tech/technology/why-is-metas-muse-image-ai-feature-facing-a-backlash/article71205487.ece",
+      "title": "Why is Meta\u2019s Muse Image AI feature facing a backlash? - The Hindu"
+    }
+  ],
+  "sections": [
+    {
+      "angle": "AI Technology",
+      "paragraph": "Meta has launched two new AI models, Muse Image and Muse Video, with Muse Image being made available to users immediately. Muse Image is described as Meta's most advanced image generation model, capable of following user instructions, making edits with precision, and composing images from multiple reference shots. The model can also search the web for real-time information, write and execute code, and refine its own outputs. Additionally, Muse Image can interpret complex prompts, use photos as inputs, and allow users to edit generated images directly through sketches or annotations. However, the feature has faced backlash, with some criticizing its ability to turn publicly available photos and other people's media into AI content without their consent. Muse Image is available through the Meta AI app, the meta.ai website, and is rolling out to Instagram Stories in the US and WhatsApp in select countries.",
+      "sources": [
+        {
+          "url": "https://www.livemint.com/ai/artificial-intelligence/metas-latest-ai-model-can-generate-images-websites-and-even-qr-codes-11783489540341.html",
+          "title": "Meta's latest AI model can generate images, websites and even QR codes | Mint"
+        },
+        {
+          "url": "https://www.thehindu.com/sci-tech/technology/meta-expands-generative-ai-tools-with-muse-image-rollout/article71196482.ece",
+          "title": "Meta expands generative AI tools with Muse Image rollout - The Hindu"
+        },
+        {
+          "url": "https://www.thehindu.com/sci-tech/technology/why-is-metas-muse-image-ai-feature-facing-a-backlash/article71205487.ece",
+          "title": "Why is Meta\u2019s Muse Image AI feature facing a backlash? - The Hindu"
+        }
+      ]
+    },
+    {
+      "angle": "Business Impact",
+      "paragraph": "Meta has unveiled a new artificial intelligence model called Muse Spark, marking the first launch under its new AI division. The company, led by Mark Zuckerberg, has invested billions in this division, aiming to become more competitive in the AI space. The development of Muse Spark was completed in just nine months, with Meta rebuilding its AI stack from the ground up. This initial model is designed to be small and fast, yet capable of reasoning through complex questions in various fields. The launch of Muse Spark is seen as a significant step for Meta, as it tries to catch up with dominant players in the AI space, such as Google, OpenAI, and Anthropic. The company is already working on the next generation of the model.",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/technology/tech-news-technology/meta-unveils-new-ai-model-as-it-tries-to-catch-up-with-google-and-openai-after-spending-billions-10627005",
+          "title": "Meta unveils new AI model as it tries to catch up with ..."
+        }
+      ]
+    },
+    {
+      "angle": "Social Impact",
+      "paragraph": "The emergence of AI image generators has sparked concerns about their social impact, particularly regarding the potential spread of misinformation and creation of disturbing content. For instance, images of beloved cartoon characters engaging in inappropriate behavior have been generated, raising questions about the ability of tech companies to control the output of these tools. The National Crime Agency has warned parents not to publicly share images of their children online due to the growing threat of AI-generated child sexual abuse material, with over 8,000 such images and videos identified in 2025. Meanwhile, YouTube has introduced new rules requiring creators to disclose the use of generative AI in their videos, with penalties for non-compliance. The issue has also raised ethical and legal questions, with companies facing potential liabilities and lawsuits over the use of AI-generated content.",
+      "sources": [
+        {
+          "url": "https://www.livemint.com/ai/artificial-intelligence/mickey-mouse-smoking-how-ai-image-tools-are-generating-new-content-moderation-problems-11725270751993.html",
+          "title": "Mickey Mouse Smoking: How AI Image Tools Are ..."
+        },
+        {
+          "url": "https://www.bbc.com/news/articles/cd7wj7d0jzzo",
+          "title": "Parents warned not to publicly share children\u2019s images amid AI abuse risks"
+        },
+        {
+          "url": "https://apnews.com/article/youtube-artitifical-intelligence-deep-fake-ai-creaters-0513fd9fddbd93af327f0411dd29ff3d",
+          "title": "YouTube creators will soon have to disclose use of generative AI in videos or risk suspension | AP News"
+        }
+      ]
+    },
+    {
+      "angle": "Geopolitics",
+      "paragraph": "The rollout of Meta's Muse Image, a generative AI tool, has sparked a geopolitical backlash, with Hollywood talent union SAG-AFTRA condemning the feature for allowing users to turn publicly available photos and other people's media into AI content without their consent. Muse Image, launched by Meta Superintelligence Labs, is integrated into Meta's AI chatbot and can interpret complex prompts, use photos as inputs, and enable users to edit generated images. The feature is set to power over 30 new AI effects for Instagram Stories. However, its launch on July 7 has been met with widespread criticism, particularly regarding the issue of consent and the potential for misuse of users' media. The controversy surrounding Muse Image highlights the geopolitical implications of emerging technologies and the need for companies to consider the potential consequences of their innovations. The backlash against Meta's feature has sparked a debate about the responsible development and deployment of AI technologies.",
+      "sources": [
+        {
+          "url": "https://www.thehindu.com/sci-tech/technology/meta-expands-generative-ai-tools-with-muse-image-rollout/article71196482.ece",
+          "title": "Meta expands generative AI tools with Muse Image rollout"
+        },
+        {
+          "url": "https://www.thehindu.com/sci-tech/technology/why-is-metas-muse-image-ai-feature-facing-a-backlash/article71205487.ece",
+          "title": "Why is Meta's Muse Image AI feature facing a backlash?"
+        }
+      ]
+    }
+  ],
+  "dropped_angles": [],
+  "consistency_check": {
+    "has_contradictions": true,
+    "notes": "The Business Impact angle mentions 'Muse Spark', while the Summary and other angles mention 'Muse Image' and 'Muse Video', indicating a direct factual contradiction in the naming of the AI models."
+  },
+  "all_sources": [
+    {
+      "url": "https://www.livemint.com/ai/artificial-intelligence/metas-latest-ai-model-can-generate-images-websites-and-even-qr-codes-11783489540341.html",
+      "title": "Meta's latest AI model can generate images, websites and even QR codes | Mint"
+    },
+    {
+      "url": "https://www.thehindu.com/sci-tech/technology/meta-expands-generative-ai-tools-with-muse-image-rollout/article71196482.ece",
+      "title": "Meta expands generative AI tools with Muse Image rollout"
+    },
+    {
+      "url": "https://indianexpress.com/article/technology/tech-news-technology/meta-unveils-new-ai-model-as-it-tries-to-catch-up-with-google-and-openai-after-spending-billions-10627005",
+      "title": "Meta unveils new AI model as it tries to catch up with ..."
+    },
+    {
+      "url": "https://www.thehindu.com/sci-tech/technology/why-is-metas-muse-image-ai-feature-facing-a-backlash/article71205487.ece",
+      "title": "Why is Meta's Muse Image AI feature facing a backlash?"
+    },
+    {
+      "url": "https://www.livemint.com/ai/artificial-intelligence/mickey-mouse-smoking-how-ai-image-tools-are-generating-new-content-moderation-problems-11725270751993.html",
+      "title": "Mickey Mouse Smoking: How AI Image Tools Are ..."
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/cd7wj7d0jzzo",
+      "title": "Parents warned not to publicly share children\u2019s images amid AI abuse risks"
+    },
+    {
+      "url": "https://apnews.com/article/youtube-artitifical-intelligence-deep-fake-ai-creaters-0513fd9fddbd93af327f0411dd29ff3d",
+      "title": "YouTube creators will soon have to disclose use of generative AI in videos or risk suspension | AP News"
+    }
+  ],
+  "type": "deep_dive",
+  "triage_reason": "Meta's AI models have significant implications for the tech industry and future of content creation.",
+  "category": "tech",
+  "tags": [
+    "tech"
+  ],
+  "id": "meta-unveils-muse-image-and-muse-video-ai-models"
+}

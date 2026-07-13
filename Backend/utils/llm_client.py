@@ -65,7 +65,37 @@ def call_llm(prompt, system="You are a helpful, precise research assistant.",
 
     return result
 
+def call_llm_json(prompt: str, system: str, fast: bool = False, temperature: float = 0.2) -> dict:
+    """
+    Calls the LLM with json_mode enabled and returns an already-parsed dict.
+    Handles the "model added extra text around the JSON" edge case automatically,
+    so callers don't need to repeat this parsing logic themselves.
 
+    Returns an empty dict {} if parsing fails completely, with the raw text
+    included under "_raw_response" for debugging.
+    """
+    import json
+    import re
+
+    raw_response = call_llm(
+        prompt=prompt,
+        system=system,
+        fast=fast,
+        temperature=temperature,
+        json_mode=True,
+    )
+
+    try:
+        return json.loads(raw_response)
+    except json.JSONDecodeError:
+        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group(0))
+            except json.JSONDecodeError:
+                pass
+        return {"_raw_response": raw_response}
+    
 if __name__ == "__main__":
     test_response = call_llm(
         prompt="Say 'API connection successful' and nothing else.",

@@ -5,6 +5,10 @@ Does NOT invent facts not present in the retrieved text.
 """
 import os
 import sys
+import json, re
+import json as json_lib
+from utils.llm_client import call_llm_json
+
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.llm_client import call_llm
@@ -49,22 +53,13 @@ def analyze_angle(collection_name: str, angle: str, query: str) -> dict:
         f"Source: {c['title']}\n{c['text'][:800]}" for c in chunks
     )
 
-    raw_response = call_llm(
+    result = call_llm_json(
         prompt=f"Angle: {angle}\n\nSource excerpts:\n\n{excerpts_text}",
         system=ANALYST_SYSTEM_PROMPT,
-        fast=False,  # synthesis needs the smarter model
+        fast=False,
         temperature=0.2,
-        json_mode=True,
     )
-
-    import json
-    import re
-    try:
-        result = json.loads(raw_response)
-        paragraph = result.get("paragraph", "")
-    except json.JSONDecodeError:
-        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
-        paragraph = json.loads(match.group(0)).get("paragraph", "") if match else ""
+    paragraph = result.get("paragraph", "")
 
     # Deduplicate source URLs used for this angle
     unique_sources = list({c["url"]: c["title"] for c in chunks}.items())
@@ -106,22 +101,14 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
 
     excerpts_text = "\n\n---\n\n".join(f"Source: {c['title']}\n{c['text'][:600]}" for c in chunks)
 
-    raw_response = call_llm(
+    from utils.llm_client import call_llm_json
+    result = call_llm_json(
         prompt=f"Topic: {topic}\n\nSource excerpts:\n\n{excerpts_text}",
         system=SUMMARY_SYSTEM_PROMPT,
         fast=False,
         temperature=0.2,
-        json_mode=True,
     )
-
-    import json
-    import re
-    try:
-        result = json.loads(raw_response)
-        summary = result.get("summary", "")
-    except json.JSONDecodeError:
-        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
-        summary = json.loads(match.group(0)).get("summary", "") if match else ""
+    summary = result.get("summary", "")
 
     unique_sources = list({c["url"]: c["title"] for c in chunks}.items())
     return {
@@ -130,7 +117,6 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
     }
 
 if __name__ == "__main__":
-    import json as json_lib
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     from agents.researcher import research_topic
     from rag.embed_store import store_research

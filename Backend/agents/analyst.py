@@ -7,11 +7,13 @@ import os
 import sys
 import json, re
 import json as json_lib
-from utils.llm_client import call_llm_json
-
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.llm_client import call_llm
+
+from utils.llm_client import call_llm_json
+from rag.embed_store import chroma_client, embedding_fn
+from agents.researcher import research_topic
+from rag.embed_store import store_research
 from rag.embed_store import retrieve_for_angle
 
 ANALYST_SYSTEM_PROMPT = """You are a careful news analyst. You will be given several
@@ -90,7 +92,6 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
     (typically Business Impact or Geopolitics, since those track live events).
     """
     # Pull chunks broadly, not angle-restricted, to get the most current facts
-    from rag.embed_store import chroma_client, embedding_fn
     collection = chroma_client.get_collection(collection_name, embedding_function=embedding_fn)
 
     results = collection.query(query_texts=[f"latest news {topic}"], n_results=5)
@@ -101,7 +102,6 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
 
     excerpts_text = "\n\n---\n\n".join(f"Source: {c['title']}\n{c['text'][:600]}" for c in chunks)
 
-    from utils.llm_client import call_llm_json
     result = call_llm_json(
         prompt=f"Topic: {topic}\n\nSource excerpts:\n\n{excerpts_text}",
         system=SUMMARY_SYSTEM_PROMPT,
@@ -118,8 +118,6 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
 
 if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from agents.researcher import research_topic
-    from rag.embed_store import store_research
 
     topic = "US-Iran tensions over oil and dollar dominance"
     research_result = research_topic(topic)

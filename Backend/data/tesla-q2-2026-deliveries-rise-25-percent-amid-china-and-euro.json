@@ -1,86 +1,83 @@
 {
   "topic": "Tesla Q2 2026 deliveries rise 25 percent amid China and Europe competition",
-  "summary": "Tesla has reported a 25% rise in Q2 2026 deliveries, with around 358,000 vehicles delivered globally in the first quarter. The company's core auto business has seen mixed results. Tesla has also discontinued its Model X and S vehicles as Elon Musk shifts focus to robotics. Deliveries have increased despite declining demand in the US.",
+  "headline": "TESLA DELIVERS RECORD QUARTER, 25% RISE IN Q2 2026 SALES DESPITE MODEL X, S DISCONTINUATION",
+  "summary": "Tesla has reported a 25% rise in Q2 2026 deliveries, with record figures for the period. The company delivered vehicles globally, with recovering demand in Europe outweighing weakness in North America. Tesla's auto business is regaining momentum, despite discontinuing Model X and S vehicles. The company is shifting focus to autonomous driving and artificial intelligence.",
   "summary_sources": [
+    {
+      "url": "https://www.theguardian.com/technology/2026/jul/02/tesla-sales-second-quarter",
+      "title": "Tesla sales surpass expectations for second quarter as Musk backlash seems to cool | Tesla | The Guardian"
+    },
     {
       "url": "https://www.theguardian.com/technology/2026/jan/28/tesla-q4-earnings-estimates-elon-musk",
       "title": "Tesla discontinues Model X and S vehicles as Elon Musk pivots to robotics | Tesla | The Guardian"
     },
     {
       "url": "https://www.theguardian.com/technology/2026/apr/22/tesla-first-quarter-report-earnings",
-      "title": "Tesla reports mixed financial results as Musk pivots ..."
+      "title": "Tesla reports mixed financial results as Musk pivots automaker to AI and robots | Tesla | The Guardian"
     },
     {
       "url": "https://www.bbc.com/news/articles/cz61vwjel2zo",
-      "title": "Tesla's challenges run deeper than controversy around ..."
-    },
-    {
-      "url": "https://apnews.com/article/tesla-earnings-profit-results-musk-robotaxi-1da9f3a184dfd11b3f4c43b84ad67de4",
-      "title": "Tesla profits rose in the first quarter as Musk teases debut of new Roadster | AP News"
+      "title": "Tesla's challenges run deeper than controversy around Elon Musk"
     }
   ],
   "sections": [
     {
       "angle": "Market Competition",
-      "paragraph": "China's electric vehicle exports have surged, with a 40 percent increase in April, bolstering its position in the global market. Chinese EVs are being imported by various regions, with Asia being the largest market, followed by Europe and Latin America. The UK has emerged as a key target for Chinese sellers, with companies like Xpeng and Leapmotor selling over 1,000 cars in the country this year. Chinese manufacturers are using the electric transition to seize market share in Europe, with the UK being a gateway, and have even outsold Korean rivals in western Europe for the first time. The influx of Chinese EVs into Europe has contributed to a record trade surplus for China with the EU, with China selling goods worth about $148bn to the EU in the first quarter of the year, while importing just $65bn. This has led to a 'China shock' in the EU, with Chinese cars, including those from BYD, being in high demand.",
+      "paragraph": "The market for electric vehicles is experiencing significant growth and increased competition, with Chinese-made EVs playing a major role in accelerating the shift away from petrol cars. Countries such as Norway, Denmark, and California are leading the way in EV adoption, with notable shares of new car sales being electric. However, it's not just rich nations that are driving this trend, as countries like Thailand, Vietnam, India, Mexico, and Brazil are also seeing significant growth in EV uptake, largely due to the availability of cheaper Chinese models. China's EV exports have surged, with a 40% increase in April, and the country is now a major player in the global market, with Asia, Europe, and Latin America being key importers. The rise of Chinese EVs is also being felt in countries like Germany, where the car industry is experiencing an influx of Chinese EVs, but is also seeing a resurgence in its own EV sales, with every second electric car sold in Europe now made in Germany.",
       "sources": [
+        {
+          "url": "https://www.theguardian.com/environment/2026/jan/29/electric-cars-go-mainstream-as-adoption-surges-across-rich-and-developing-nations",
+          "title": "Electric \u200bcars \u200bgo \u200bmainstream as \u200badoption \u200bsurges \u200bacross \u200brich and \u200bdeveloping \u200bnations | Environment | The Guardian"
+        },
         {
           "url": "https://www.aljazeera.com/economy/2026/5/27/chinas-ev-exports-surge-40-percent-in-april",
           "title": "China\u2019s EV exports surge 40 percent in April | Automotive Industry | Al Jazeera"
         },
         {
-          "url": "https://www.theguardian.com/business/2025/nov/07/china-in-push-to-dominate-europe-electric-vehicle-market-with-uk-as-gateway",
-          "title": "Driving competition: China\u2019s carmakers in race to dominate Europe\u2019s roads | Automotive industry | The Guardian"
-        },
-        {
-          "url": "https://www.theguardian.com/world/2026/apr/27/eu-faces-china-shock-as-ev-imports-drive-beijings-record-surplus-with-bloc",
-          "title": "EU faces \u2018China shock\u2019 as EV imports drive Beijing\u2019s record surplus with bloc | European Union | The Guardian"
+          "url": "https://www.theguardian.com/environment/2026/apr/20/electric-car-ev-sales-mainland-europe-petrol-prices-iran-war",
+          "title": "Electric car sales soar 51% in mainland Europe as Iran war drives up fuel prices | Electric, hybrid and low-emission cars | The Guardian"
         }
       ]
     },
     {
       "angle": "Economic Impact",
-      "paragraph": "Tesla's economic impact has been a mixed bag, with the company experiencing both gains and losses. In the first quarter, Tesla's profit rose by 17% to $477 million, with revenue increasing to $22.39 billion, led by a 16% increase in automotive revenues. However, this is still below the company's peak, and profits and revenue have been declining in recent quarters, with a 12% drop in revenue and a 42% decrease in operating income in the second quarter. The company has faced increasing competition from European and Chinese rivals, including BYD, which overtook Tesla last year. Additionally, Tesla has struggled with declining demand in the US following the end of a key tax credit for electric vehicles in 2025. Despite this, the company's stock price has rebounded after a significant decline in 2025, and Tesla has announced plans to pivot to new areas, including robotics.",
+      "paragraph": "Tesla's economic impact has been affected by declining sales and increased competition, particularly from Chinese electric vehicle companies such as BYD, which overtook Tesla last year. The company's second-quarter net income fell 45% compared to the previous year, with global electric vehicle sales tumbling despite price cuts and low-interest financing. However, revenue rose 2% to $25.5 billion, beating Wall Street estimates. Tesla's core auto business has struggled, with the company delivering about 358,000 vehicles globally in the first quarter, falling short of analyst projections. The company's stock price has rebounded after initially tanking in 2025, but its mixed financial results have raised investor questions about when Tesla can deliver on its goals. Despite this, Elon Musk has been awarded a pay package of up to $1 trillion if the company meets certain financial milestones.",
       "sources": [
-        {
-          "url": "https://apnews.com/article/tesla-earnings-profit-results-musk-robotaxi-1da9f3a184dfd11b3f4c43b84ad67de4",
-          "title": "Tesla profits rose in the first quarter as Musk teases debut of new Roadster | AP News"
-        },
-        {
-          "url": "https://www.theguardian.com/us-news/2025/jul/23/tesla-second-quarter-earnings-elon-musk",
-          "title": "Tesla reports declines in revenue and profit amid shaky financial year | US news | The Guardian"
-        },
         {
           "url": "https://www.theguardian.com/technology/2026/jan/28/tesla-q4-earnings-estimates-elon-musk",
           "title": "Tesla discontinues Model X and S vehicles as Elon Musk pivots to robotics | Tesla | The Guardian"
         },
         {
+          "url": "https://apnews.com/article/tesla-earnings-second-quarter-sales-decline-8bdd0d655cddde90f534b41fd87edc4a",
+          "title": "Tesla profit falls 45% to $1.48 billion on weak EV sales in Q2 | AP News"
+        },
+        {
           "url": "https://www.theguardian.com/technology/2026/apr/22/tesla-first-quarter-report-earnings",
-          "title": "Tesla reports mixed financial results as Musk pivots ..."
+          "title": "Tesla reports mixed financial results as Musk pivots automaker to AI and robots | Tesla | The Guardian"
         }
       ]
     },
     {
       "angle": "Technology and Innovation",
-      "paragraph": "The electric vehicle (EV) market is rapidly evolving, with Chinese firms such as BYD, Xpeng, and Nio posing a significant threat to Tesla. BYD has developed an ultra-fast charging system that can provide a car with 250 miles of range in just five minutes, outpacing Tesla's supercharger network. Tesla, however, has been a pioneer in the EV industry, credited with making electric vehicles mainstream and proving they can be fast, powerful, and practical. Despite its success, Tesla faces challenges, including a potential decline in sales, with some analysts predicting a 5% drop in worldwide sales this year. The company's valuation remains high, with shareholders pinning their hopes on future growth, but its share price has been volatile, influenced by various factors, including Musk's activities and market expectations.",
+      "paragraph": "The electric vehicle (EV) market is rapidly evolving, with Chinese firms such as BYD, Xpeng, and Nio posing a significant threat to Tesla. BYD has developed an ultra-fast charging system that can provide a car with 250 miles of range in just five minutes, outpacing Tesla's supercharger network. Tesla, however, has been a pioneer in the EV industry, credited with making EVs mainstream and proving they can be fast, powerful, and practical. Despite its successes, Tesla faces challenges, including a potential decline in worldwide sales, with some analysts predicting a 5% drop this year. The company's valuation remains high, with shareholders pinning their hopes on future growth, but its share price has been volatile, influenced by factors such as Elon Musk's activities and the launch of new models like the Model Y.",
       "sources": [
         {
           "url": "https://www.bbc.com/news/articles/cz61vwjel2zo",
-          "title": "Tesla's challenges run deeper than controversy around ..."
+          "title": "Tesla's challenges run deeper than controversy around Elon Musk"
         }
       ]
     },
     {
       "angle": "Business Strategy",
-      "paragraph": "Tesla has unveiled plans to reduce production costs, with the goal of making electric vehicles more affordable. The company aims to cut assembly costs by half in future generations of cars, according to engineers. While a highly anticipated announcement of a smaller, more affordable electric vehicle did not materialize, Tesla did share plans to start production of battery materials factories this year, including a lithium refinery and a cathode facility in Texas. Additionally, the company is expanding its manufacturing capabilities, including a new factory in Mexico, which will be its first outside of the US, Germany, and China. Tesla's efforts to increase efficiency and reduce costs may be driven by its struggles to scale up production of its 4680 batteries, which are key to making self-driving electric cars priced at $25,000 feasible. The company's plans and announcements have been closely watched by investors, with shares falling over 5% in after-hours trade following the presentations.",
+      "paragraph": "Tesla's business strategy appears to be gaining momentum, with the company surpassing Wall Street estimates for second-quarter deliveries and posting a record for the period. This growth is largely driven by recovering demand in Europe, which is offsetting weakness in North America. The strong sales figures are expected to provide a spending cushion for Tesla's ambitions in autonomous driving and artificial intelligence, which are key drivers of the company's valuation. To support these ambitions, Tesla plans to spend over $25 billion on capital expenditure in 2026, a significant increase from the $8.5 billion spent last year. Additionally, the company is looking to expand its car parts production capacity in Shanghai, although some buyers have raised concerns about the chips used in their cars. Tesla's investments in AI infrastructure, battery production, and manufacturing capacity are expected to drive its future growth.",
       "sources": [
         {
-          "url": "https://www.theguardian.com/technology/2023/mar/01/elon-musk-tesla-fossil-fuels-economy",
-          "title": "Musk unveils plans for low production cost while skirting ..."
+          "url": "https://www.theguardian.com/technology/2026/jul/02/tesla-sales-second-quarter",
+          "title": "Tesla sales surpass expectations for second quarter as Musk backlash seems to cool | Tesla | The Guardian"
         },
         {
           "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tesla-plans-to-expand-car-parts-production-capacity-in-shanghai-govt-document/74562891",
-          "title": "Tesla plans to expand car parts production capacity in ..."
+          "title": "Tesla plans to expand car parts production capacity in Shanghai: Govt document, ETAuto"
         }
       ]
     }
@@ -88,48 +85,44 @@
   "dropped_angles": [],
   "consistency_check": {
     "has_contradictions": true,
-    "notes": "The summary states that Tesla delivered around 358,000 vehicles globally in the first quarter, but it mentions this is for Q2 2026, which is a contradiction."
+    "notes": "The summary states that Tesla delivered vehicles globally with record figures for Q2 2026, while the Economic Impact section mentions that global electric vehicle sales tumbled in the second quarter."
   },
   "all_sources": [
+    {
+      "url": "https://www.theguardian.com/technology/2026/jul/02/tesla-sales-second-quarter",
+      "title": "Tesla sales surpass expectations for second quarter as Musk backlash seems to cool | Tesla | The Guardian"
+    },
     {
       "url": "https://www.theguardian.com/technology/2026/jan/28/tesla-q4-earnings-estimates-elon-musk",
       "title": "Tesla discontinues Model X and S vehicles as Elon Musk pivots to robotics | Tesla | The Guardian"
     },
     {
       "url": "https://www.theguardian.com/technology/2026/apr/22/tesla-first-quarter-report-earnings",
-      "title": "Tesla reports mixed financial results as Musk pivots ..."
+      "title": "Tesla reports mixed financial results as Musk pivots automaker to AI and robots | Tesla | The Guardian"
     },
     {
       "url": "https://www.bbc.com/news/articles/cz61vwjel2zo",
-      "title": "Tesla's challenges run deeper than controversy around ..."
+      "title": "Tesla's challenges run deeper than controversy around Elon Musk"
     },
     {
-      "url": "https://apnews.com/article/tesla-earnings-profit-results-musk-robotaxi-1da9f3a184dfd11b3f4c43b84ad67de4",
-      "title": "Tesla profits rose in the first quarter as Musk teases debut of new Roadster | AP News"
+      "url": "https://www.theguardian.com/environment/2026/jan/29/electric-cars-go-mainstream-as-adoption-surges-across-rich-and-developing-nations",
+      "title": "Electric \u200bcars \u200bgo \u200bmainstream as \u200badoption \u200bsurges \u200bacross \u200brich and \u200bdeveloping \u200bnations | Environment | The Guardian"
     },
     {
       "url": "https://www.aljazeera.com/economy/2026/5/27/chinas-ev-exports-surge-40-percent-in-april",
       "title": "China\u2019s EV exports surge 40 percent in April | Automotive Industry | Al Jazeera"
     },
     {
-      "url": "https://www.theguardian.com/business/2025/nov/07/china-in-push-to-dominate-europe-electric-vehicle-market-with-uk-as-gateway",
-      "title": "Driving competition: China\u2019s carmakers in race to dominate Europe\u2019s roads | Automotive industry | The Guardian"
+      "url": "https://www.theguardian.com/environment/2026/apr/20/electric-car-ev-sales-mainland-europe-petrol-prices-iran-war",
+      "title": "Electric car sales soar 51% in mainland Europe as Iran war drives up fuel prices | Electric, hybrid and low-emission cars | The Guardian"
     },
     {
-      "url": "https://www.theguardian.com/world/2026/apr/27/eu-faces-china-shock-as-ev-imports-drive-beijings-record-surplus-with-bloc",
-      "title": "EU faces \u2018China shock\u2019 as EV imports drive Beijing\u2019s record surplus with bloc | European Union | The Guardian"
-    },
-    {
-      "url": "https://www.theguardian.com/us-news/2025/jul/23/tesla-second-quarter-earnings-elon-musk",
-      "title": "Tesla reports declines in revenue and profit amid shaky financial year | US news | The Guardian"
-    },
-    {
-      "url": "https://www.theguardian.com/technology/2023/mar/01/elon-musk-tesla-fossil-fuels-economy",
-      "title": "Musk unveils plans for low production cost while skirting ..."
+      "url": "https://apnews.com/article/tesla-earnings-second-quarter-sales-decline-8bdd0d655cddde90f534b41fd87edc4a",
+      "title": "Tesla profit falls 45% to $1.48 billion on weak EV sales in Q2 | AP News"
     },
     {
       "url": "https://auto.economictimes.indiatimes.com/news/auto-components/tesla-plans-to-expand-car-parts-production-capacity-in-shanghai-govt-document/74562891",
-      "title": "Tesla plans to expand car parts production capacity in ..."
+      "title": "Tesla plans to expand car parts production capacity in Shanghai: Govt document, ETAuto"
     }
   ],
   "type": "deep_dive",

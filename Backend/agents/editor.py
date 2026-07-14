@@ -32,6 +32,35 @@ Respond with ONLY a JSON object in this format:
 {"has_contradictions": true or false, "notes": "brief explanation if true, empty string if false"}
 """
 
+HEADLINE_SYSTEM_PROMPT = """You are a headline writer for a news app, in the style
+of Inshorts — punchy, attention-grabbing, ALL CAPS, single sentence that tells the
+core of the story at a glance. Think tabloid-style impact but factually accurate,
+no clickbait exaggeration.
+
+Examples of the style:
+"NEERU DHANDA CREATES HISTORY, WINS INDIA'S FIRST-EVER INTERNATIONAL GOLD MEDAL IN WOMEN'S TRAP SHOOTING AT THE ISSF WORLD CUP IN ITALY"
+"'INDIA WILL SOON HAVE FLYING BUSES FOR TRANSPORT,' SAYS NITIN GADKARI; FIR FILED ON INFLUENCERS OVER E20"
+
+Given a news summary, write ONE punchy headline in this exact style, 15-25 words.
+
+Respond with ONLY a JSON object in this format:
+{"headline": "YOUR HEADLINE IN CAPS HERE"}
+"""
+
+
+def generate_headline(topic: str, summary: str) -> str:
+    """
+    Generates a punchy, Inshorts-style headline from the summary,
+    for use on homepage/category cards.
+    """
+    result = call_llm_json(
+        prompt=f"Topic: {topic}\n\nSummary: {summary}",
+        system=HEADLINE_SYSTEM_PROMPT,
+        fast=True,  # simple rephrasing task, small model is enough
+        temperature=0.4,  # a bit more creative than factual synthesis tasks
+    )
+    return result.get("headline", topic.upper())  # fallback to topic itself if parsing fails
+
 
 def check_consistency(summary: str, angle_analyses: list) -> dict:
     """
@@ -72,6 +101,7 @@ def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list) -
     dropped_angles = [a["angle"] for a in angle_analyses if not a["paragraph"]]
 
     consistency = check_consistency(summary_result["summary"], valid_angles)
+    headline = generate_headline(topic, summary_result["summary"])
 
     # Collect every unique source used across the whole explainer, for a top-level "all sources" list
     all_sources = {}
@@ -83,6 +113,7 @@ def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list) -
 
     final_explainer = {
         "topic": topic,
+        "headline": headline,
         "summary": summary_result["summary"],
         "summary_sources": summary_result["sources"],
         "sections": [

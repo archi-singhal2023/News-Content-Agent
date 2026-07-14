@@ -1,22 +1,23 @@
 {
   "topic": "US-Iran tensions over oil and dollar dominance",
-  "summary": "The US and Iran are currently trading attacks over the Strait of Hormuz, with oil prices rising as a result. The US has carried out strikes on Iran to degrade its ability to attack vessels in the strait. Iran and China are also working together to counter the US dollar's dominance in international trade, particularly in the oil market.",
+  "headline": "US-IRAN TENSIONS ESCALATE OVER STRAIT OF HORMUZ AS OIL PRICES SOAR AND CHINA JOINS FORCES WITH TEHRAN TO CHALLENGE US DOLLAR DOMINANCE",
+  "summary": "The US and Iran are currently trading attacks over the Strait of Hormuz, with oil prices rising over 2% as a result. Iran is also working with China to reduce US dollar dominance in international trade, particularly in the oil market. China buys a significant portion of Iran's oil exports, often using yuan for transactions. The situation remains tense, with both sides engaging in negotiations to prevent further escalation.",
   "summary_sources": [
     {
       "url": "https://www.aljazeera.com/economy/2026/4/8/in-strait-of-hormuz-iran-and-china-take-aim-at-us-dollar-hegemony",
       "title": "In Strait of Hormuz, Iran and China take aim at US dollar hegemony | Business and Economy News | Al Jazeera"
     },
     {
+      "url": "https://www.theguardian.com/business/live/2026/jul/14/oil-prices-rise-2-middle-east-strikes-chinas-exports-surge-ai-boom-live-updates",
+      "title": "Oil prices rise over 2% after Middle East strikes"
+    },
+    {
       "url": "https://www.bbc.com/news/world-middle-east-24316661",
       "title": "US-Iran relations: A brief history - BBC News"
     },
     {
-      "url": "https://www.aljazeera.com/economy/2026/7/1/how-war-on-iran-changed-the-global-energy-sector-forever",
-      "title": "'Never the same': How war on Iran changed the global ..."
-    },
-    {
       "url": "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
-      "title": "Oil prices jump as US and Iran trade attacks over Strait of Hormuz"
+      "title": "Oil prices jump as US and Iran trade attacks over Strait of ..."
     }
   ],
   "sections": [
@@ -58,49 +59,41 @@
     },
     {
       "angle": "Economics",
-      "paragraph": "Iran and China are taking steps to reduce their dependence on the US dollar, with China purchasing nearly all of Iran's oil and their trade being in balance as Iran can get the machinery and industrial goods it needs from China. This partnership could potentially challenge the dollar's hegemony, as China is a significant manufacturing power that can supply oil-producing countries with their import needs, unlike Europe and Japan in the past. China's aim is to create a multipolar financial world where the US dollar's central role is counterbalanced by emerging powers, and its large-scale purchases of Iranian oil, often facilitated in yuan, are a key part of this strategy. While some analysts believe that the dollar will remain dominant for the foreseeable future, others note that the frequency of efforts to move away from sole dependence on the USD is increasing, driven by the growing influence of emerging powers like China. The use of local currencies in bilateral trade, such as the yuan, and the development of alternative payment systems, like the Pan-African payment and settlement system, could also erode the dollar's dominance over time. However, experts caution that any challenge to the dollar's dominance will be an uphill climb, and the dollar is likely to remain the most powerful currency on earth for decades to come.",
+      "paragraph": "Some major emerging economies, including Russia and Iran, are reducing their reliance on the US dollar by trading commodities in alternative currencies, with buyers in countries like China and India willing to purchase these exports at lower prices. China, in particular, is a significant player in this shift, purchasing nearly all of Iran's oil and providing the country with machinery and industrial goods it cannot obtain elsewhere. This move aligns with Beijing's goal of creating a multipolar financial world where the US dollar's influence is counterbalanced by emerging powers. However, the dominant role of the dollar in oil markets may still be difficult to shake, as currencies like the dirham and Saudi riyal are pegged to the dollar, and liquidity issues have arisen with alternative currencies like the rupee and yuan. Despite these challenges, the trend towards de-dollarization is expected to continue, albeit slowly, with some countries laying the groundwork for trade that sidesteps the dollar. Experts note that it will take time to see significant de-dollarization, given the current system has been in place for decades.",
       "sources": [
+        {
+          "url": "https://www.livemint.com/market/the-dominant-dollar-faces-a-backlash-in-the-oil-market-11703749186612.html",
+          "title": "The dominant dollar faces a backlash in the oil market | Stock Market News"
+        },
         {
           "url": "https://www.aljazeera.com/economy/2026/4/8/in-strait-of-hormuz-iran-and-china-take-aim-at-us-dollar-hegemony",
           "title": "In Strait of Hormuz, Iran and China take aim at US dollar hegemony | Business and Economy News | Al Jazeera"
-        },
-        {
-          "url": "https://www.aljazeera.com/news/2026/1/27/us-dollar-wounded-hegemon-or-secure-as-most-powerful-currency-on-earth",
-          "title": "US dollar: \u2018Wounded hegemon\u2019 or secure as most powerful currency on earth? | International Trade News | Al Jazeera"
-        },
-        {
-          "url": "https://www.aljazeera.com/features/2023/8/24/can-brics-dethrone-the-us-dollar-itll-be-an-uphill-climb-experts-say",
-          "title": "Can BRICS dethrone the US dollar? It\u2019ll be an uphill climb, experts say | Business and Economy | Al Jazeera"
         }
       ]
     },
     {
       "angle": "Business Impact",
-      "paragraph": "The war between the US and Iran has significantly impacted the global energy sector, with oil prices fluctuating wildly due to the conflict's effect on the Strait of Hormuz, a critical waterway through which about one-fifth of global oil and liquefied natural gas supplies pass. Oil prices initially surged, peaking at around $120 a barrel, but have since fallen following the announcement of a framework deal between the US and Iran, with Brent crude dropping to around $82-83 a barrel. The deal is expected to lead to the reopening of the Strait of Hormuz, which would help stabilize oil prices and reduce the cost of fuel. However, analysts note that the lack of detail on the agreement and the potential for ongoing volatility in the region could continue to impact oil prices. The conflict has also had a knock-on effect on the cost of petrol, diesel, and jet fuel, with governments implementing emergency measures to mitigate the impact on citizens. The signing of the deal is expected to bring some stability to the energy market, but the situation remains uncertain.",
+      "paragraph": "The conflict between the US and Iran has significantly impacted oil prices, with Brent crude rising over 4% to its highest level in four weeks. The price increase is attributed to the US reimposing a naval blockade of Iran and the trading of attacks between the two countries. As a result, Brent crude has jumped to $87.08 a barrel, while US West Texas Intermediate crude has risen to $80.92 a barrel. The conflict has effectively closed one of the world's key water transport routes for oil, limiting global supplies and increasing oil prices. However, with a framework deal agreed upon, experts warn that a return to normal shipping through the Strait of Hormuz will take time, and the impact of the war will continue to affect the global economy for potentially months to come. The volatility in oil prices is expected to continue, with some analysts predicting a strong possibility of further fluctuations.",
       "sources": [
         {
-          "url": "https://www.aljazeera.com/economy/2026/7/1/how-war-on-iran-changed-the-global-energy-sector-forever",
-          "title": "'Never the same': How war on Iran changed the global ..."
-        },
-        {
-          "url": "https://www.bbc.com/news/articles/c6217106px6o",
-          "title": "Oil prices fall and shares jump after US-Iran deal announced"
+          "url": "https://www.theguardian.com/business/live/2026/jul/14/oil-prices-rise-2-middle-east-strikes-chinas-exports-surge-ai-boom-live-updates",
+          "title": "Oil prices rise over 2% after Middle East strikes"
         },
         {
           "url": "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
-          "title": "Oil prices jump as US and Iran trade attacks over Strait of Hormuz"
+          "title": "Oil prices jump as US and Iran trade attacks over Strait of ..."
         },
         {
           "url": "https://www.bbc.com/news/articles/cd0p8me2m5do",
-          "title": "How could the US-Iran deal affect oil prices and the cost of food?"
+          "title": "How could the US-Iran deal affect oil prices and the cost of ..."
         }
       ]
     }
   ],
   "dropped_angles": [],
   "consistency_check": {
-    "has_contradictions": false,
-    "notes": ""
+    "has_contradictions": true,
+    "notes": "The summary states oil prices rose over 2%, while the Business Impact section states Brent crude rose over 4%."
   },
   "all_sources": [
     {
@@ -108,16 +101,16 @@
       "title": "In Strait of Hormuz, Iran and China take aim at US dollar hegemony | Business and Economy News | Al Jazeera"
     },
     {
+      "url": "https://www.theguardian.com/business/live/2026/jul/14/oil-prices-rise-2-middle-east-strikes-chinas-exports-surge-ai-boom-live-updates",
+      "title": "Oil prices rise over 2% after Middle East strikes"
+    },
+    {
       "url": "https://www.bbc.com/news/world-middle-east-24316661",
       "title": "US-Iran relations: A brief history - BBC News"
     },
     {
-      "url": "https://www.aljazeera.com/economy/2026/7/1/how-war-on-iran-changed-the-global-energy-sector-forever",
-      "title": "'Never the same': How war on Iran changed the global ..."
-    },
-    {
       "url": "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
-      "title": "Oil prices jump as US and Iran trade attacks over Strait of Hormuz"
+      "title": "Oil prices jump as US and Iran trade attacks over Strait of ..."
     },
     {
       "url": "https://www.britannica.com/topic/US-Iran-Relations-A-Timeline",
@@ -140,20 +133,12 @@
       "title": "Iran sanctions: US can't stop our oil exports, says minister"
     },
     {
-      "url": "https://www.aljazeera.com/news/2026/1/27/us-dollar-wounded-hegemon-or-secure-as-most-powerful-currency-on-earth",
-      "title": "US dollar: \u2018Wounded hegemon\u2019 or secure as most powerful currency on earth? | International Trade News | Al Jazeera"
-    },
-    {
-      "url": "https://www.aljazeera.com/features/2023/8/24/can-brics-dethrone-the-us-dollar-itll-be-an-uphill-climb-experts-say",
-      "title": "Can BRICS dethrone the US dollar? It\u2019ll be an uphill climb, experts say | Business and Economy | Al Jazeera"
-    },
-    {
-      "url": "https://www.bbc.com/news/articles/c6217106px6o",
-      "title": "Oil prices fall and shares jump after US-Iran deal announced"
+      "url": "https://www.livemint.com/market/the-dominant-dollar-faces-a-backlash-in-the-oil-market-11703749186612.html",
+      "title": "The dominant dollar faces a backlash in the oil market | Stock Market News"
     },
     {
       "url": "https://www.bbc.com/news/articles/cd0p8me2m5do",
-      "title": "How could the US-Iran deal affect oil prices and the cost of food?"
+      "title": "How could the US-Iran deal affect oil prices and the cost of ..."
     }
   ],
   "type": "deep_dive",

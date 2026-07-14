@@ -1,27 +1,28 @@
 {
   "topic": "Hingoli earthquake damages 105 houses in Maharashtra",
   "type": "quick_read",
-  "summary": "A 4.7 magnitude earthquake struck Hingoli district in Maharashtra, causing minor structural damage and affecting 105 houses, but no casualties have been reported. The earthquake occurred in a region that has experienced significant seismic activity in the past, including the 1993 Latur earthquake that resulted in significant loss of life and damage. The recent earthquake has not caused any loss of life, but has resulted in damage to homes in the area.",
+  "headline": "4.7 MAGNITUDE EARTHQUAKE IN MAHARASHTRA DAMAGES 105 HOUSES, LEAVES LOCAL POPULATION IN NEED",
+  "summary": "A 4.7 magnitude earthquake struck Hingoli district in Maharashtra, resulting in minor structural damage but no reported casualties. The earthquake damaged 105 houses in the area. The region has been experiencing seismic activity, with a series of micro earthquakes recorded in nearby areas. The earthquake has affected the local population, with some villages relying on water tankers for their daily needs.",
   "sources": [
     {
-      "url": "https://indianexpress.com/article/explained/explained-sci-tech/earthquake-taiwan-ring-of-fire-9249383",
-      "title": "Massive earthquake hits Taiwan: What is the Ring of Fire?"
+      "url": "https://indianexpress.com/article/india/40-micro-quakes-shook-dahanu-in-24-hours-tectonic-not-artificial-experts-5569320",
+      "title": "40 micro quakes shook Dahanu in 24 hours; tectonic, not ..."
     },
     {
       "url": "https://www.thehindu.com/news/international/venezuela-appreciates-indian-teams-efforts-to-help-earthquake-victims/article71164908.ece",
       "title": "Venezuela appreciates Indian team\u2019s efforts to help earthquake victims - The Hindu"
     },
     {
-      "url": "https://www.thehindu.com/news/international/venezuela-fm-visits-indian-field-hospital-expresses-gratitude-for-earthquake-relief-work/article71182611.ece",
-      "title": "Venezuela FM visits Indian field hospital"
+      "url": "https://www.thehindu.com/news/national/india-launches-operation-amistad-for-earthquake-hit-venezuela-june-26-2026/article71152657.ece",
+      "title": "India launches \u2018Op Amistad\u2019 to aid quake-hit Venezuela; sends relief material, medical assistance - The Hindu"
     },
     {
       "url": "https://www.thehindu.com/news/national/maharashtra/47-magnitude-earthquake-jolts-maharashtras-hingoli-district-no-casualties/article70850199.ece",
       "title": "4.7 magnitude earthquake jolts Maharashtra's Hingoli ..."
     },
     {
-      "url": "https://en.wikipedia.org/wiki/1993_Latur_earthquake",
-      "title": "1993 Latur earthquake - Wikipedia"
+      "url": "https://economictimes.indiatimes.com/topic/Hingoli-district/ampnews",
+      "title": "Hingoli district News and Updates from ..."
     }
   ],
   "note": null,

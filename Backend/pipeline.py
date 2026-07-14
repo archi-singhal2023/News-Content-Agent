@@ -16,6 +16,7 @@ from agents.researcher import research_topic
 from rag.embed_store import store_research
 from agents.analyst import generate_current_summary, analyze_angle
 from agents.editor import assemble_explainer
+from agents.editor import generate_headline
 from utils.llm_client import call_llm_json
 
 
@@ -76,10 +77,12 @@ def generate_quick_read(topic: str) -> dict:
         }
 
     unique_sources = list({s["url"]: s["title"] for s in all_sources}.items())
-
+    headline = generate_headline(topic, result.get("summary", "")) if result.get("summary") else topic.upper()
+    
     return {
         "topic": topic,
         "type": "quick_read",
+        "headline": headline,
         "summary": summary,
         "sources": [{"url": url, "title": title} for url, title in unique_sources[:5]],
         "note": None,

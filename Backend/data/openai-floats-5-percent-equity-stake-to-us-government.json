@@ -1,32 +1,41 @@
 {
   "topic": "OpenAI floats 5 percent equity stake to US government",
-  "summary": "OpenAI is in talks with the US government to give it a 5% ownership stake. The proposed arrangement would involve other leading US AI companies handing over a similar stake. OpenAI has been discussing this possibility with the White House for about a year. A special investment vehicle would be used to hold the equity.",
+  "headline": "OPENAI OFFERS 5% EQUITY STAKE TO US GOVERNMENT, GRANTS EARLY ACCESS TO GPT-5.5 AI MODEL FOR NATIONAL SECURITY TESTING",
+  "summary": "OpenAI is in talks to give the US government a 5% stake in the company, with CEO Sam Altman suggesting other leading AI companies do the same. The proposed arrangement would involve a special investment vehicle. OpenAI has also provided the US government with early access to its GPT-5.5 AI model for national security testing.",
   "summary_sources": [
     {
       "url": "https://www.thehindu.com/sci-tech/technology/openai-discusses-giving-us-government-5-stake-report/article71177217.ece",
       "title": "OpenAI discusses giving U.S. government 5% stake: Report - The Hindu"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/OpenAI",
-      "title": "OpenAI"
+      "url": "https://www.theguardian.com/technology/2026/mar/31/openai-raises-122-billion-ai-boom",
+      "title": "OpenAI, parent firm of ChatGPT, closes $122bn funding ..."
     },
     {
-      "url": "https://openai.com/about",
-      "title": "About - OpenAI"
+      "url": "https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman",
+      "title": "OpenAI \u2018in early talks to give 5% stake to US government\u2019 | OpenAI | The Guardian"
+    },
+    {
+      "url": "https://www.livemint.com/companies/news/openai-secures-40-billion-funding-softbank-investment-300-billion-valuation-doubling-chatgpt-business-ai-tech-us-news-11743470238453.html",
+      "title": "Amid Ghibli image hype, OpenAI secures $40bn funding led ..."
+    },
+    {
+      "url": "https://www.livemint.com/technology/tech-news/openai-quietly-gave-us-government-early-access-to-its-powerful-gpt-5-5-model-for-national-security-testing-11778044250327.html",
+      "title": "OpenAI quietly gave US government early access to its powerful GPT-5.5 model for \u2018national security testing\u2019 | Mint"
     }
   ],
   "sections": [
     {
       "angle": "Geopolitics",
-      "paragraph": "The US government is taking a keen interest in artificial intelligence, with President Donald Trump planning to meet AI company leaders to discuss potential government investment. This move comes as big tech companies have already spent $155bn on AI this year, outpacing the US government's spending on education, jobs, and social services. Amazon has announced a $50bn investment to expand AI and supercomputing capacity for US government customers, while other tech giants like Microsoft, Google, and Meta are also increasing their AI spending. The investments are expected to accelerate, with hundreds of billions more to be spent in the coming years. The scale of these investments is significant, with some exceeding the European Union's quarterly defense spending. The tech companies' increased spending on AI is driven in part by investor demand, with shares in companies like Microsoft and Google soaring after they announced plans to boost their AI investments.",
+      "paragraph": "The US government is exploring ways to invest in and partner with artificial intelligence companies, with President Donald Trump planning to meet with leaders of major AI companies to discuss potential government investment. OpenAI is reportedly in early talks to give a 5% stake to the US government, with CEO Sam Altman arguing that this move would help share the benefits of AI and could involve other firms doing similar. The proposal would aim to create a partnership between the government and AI companies, with the goal of smoothing relations between the industry and the Trump administration. Meanwhile, Amazon has announced plans to invest up to $50 billion in AI and supercomputing capacity for US government customers, aiming to expand its cloud infrastructure and remove technology barriers for the government. The involvement of other major AI companies, such as Google and Anthropic, in potential government investment or partnerships remains unclear. These developments reflect the growing importance of AI in the US and the government's interest in shaping the industry's future.",
       "sources": [
         {
           "url": "https://www.bbc.com/news/articles/c98r8r7dz5no",
-          "title": "Trump to meet AI leaders over US investment in their companies"
+          "title": "Trump to meet AI leaders over US investment in their ..."
         },
         {
-          "url": "https://www.theguardian.com/technology/2025/aug/02/big-tech-ai-spending",
-          "title": "Big tech has spent $155bn on AI this year. It\u2019s about to spend hundreds of billions more | AI (artificial intelligence) | The Guardian"
+          "url": "https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman",
+          "title": "OpenAI \u2018in early talks to give 5% stake to US government\u2019 | OpenAI | The Guardian"
         },
         {
           "url": "https://www.aljazeera.com/economy/2025/11/24/amazon-to-invest-50bn-in-ai-for-us-government-customers",
@@ -36,51 +45,47 @@
     },
     {
       "angle": "Business Impact",
-      "paragraph": "OpenAI, an artificial intelligence research organization, has experienced significant business growth and investment. In 2026, the company raised $110 billion at a $730 billion valuation, with investors including Amazon, SoftBank, and Nvidia, and later extended this to $120 billion. By April 2026, OpenAI had secured $122 billion in committed capital at a post-money valuation of $852 billion. The company's for-profit structure, established in 2025, allows it to raise investor funds and potentially pursue an initial public offering (IPO), which it filed for in June 2026. OpenAI's ability to attract top AI researchers, despite not initially offering comparable salaries or stock options to tech giants like Google or Facebook, has been driven by its mission and potential. The company's valuation and funding reflect its position as a leader in the development of generative AI models, including the GPT series and ChatGPT.",
+      "paragraph": "OpenAI, the parent company of ChatGPT, has secured significant funding, with reports varying from $40 billion to $122 billion, valuing the company at $300 billion to $852 billion. The funding rounds have been led by prominent investors such as SoftBank, Amazon, and Nvidia, with the latter two also partnering with OpenAI for computing capacity and cloud services. The investments signal a rapid pace of growth in the artificial intelligence sector, with OpenAI's valuation more than doubling in some reports. The company's revenue has also been reported to be around $2 billion per month. OpenAI's CEO, Sam Altman, has expressed excitement about the deals, stating that they will help push the frontier of AI and make it more useful in everyday life. The funding rounds are among the largest in Silicon Valley's history, with some reports indicating that they are the largest ever.",
       "sources": [
         {
-          "url": "https://en.wikipedia.org/wiki/OpenAI",
-          "title": "OpenAI"
+          "url": "https://www.theguardian.com/technology/2026/mar/31/openai-raises-122-billion-ai-boom",
+          "title": "OpenAI, parent firm of ChatGPT, closes $122bn funding ..."
         },
         {
-          "url": "https://openai.com/about",
-          "title": "About - OpenAI"
+          "url": "https://www.livemint.com/companies/news/openai-secures-40-billion-funding-softbank-investment-300-billion-valuation-doubling-chatgpt-business-ai-tech-us-news-11743470238453.html",
+          "title": "Amid Ghibli image hype, OpenAI secures $40bn funding led ..."
+        },
+        {
+          "url": "https://www.theguardian.com/technology/2026/feb/27/openai-110-billion-funding-round",
+          "title": "OpenAI announces $110bn funding round that would value firm at $840bn | OpenAI | The Guardian"
         }
       ]
     },
     {
       "angle": "Technology",
-      "paragraph": "OpenAI has agreed to changes in its deal with the US military to address concerns over the use of its technology in classified military operations. The company's CEO, Sam Altman, stated that the agreement would explicitly prohibit the use of its systems for spying on Americans. This development comes after a fallout between Anthropic, a rival AI company, and the Department of Defense over concerns about the use of its AI model for mass surveillance and autonomous weapons. OpenAI's initial deal with the Pentagon had raised questions about the use of AI in war and the balance of power between government and private companies. The company has emphasized that its agreement includes assurances against the use of its technology for autonomous killing systems or mass surveillance, although some observers have expressed skepticism about the terms of the deal.",
+      "paragraph": "OpenAI has been working closely with the US government, providing early access to its GPT-5.5 model for national security testing and evaluations. The company is also collaborating with the US government's Center for AI Standards and Innovation (CAISI) to test its upcoming models, including GPT-5.5 Cyber, designed for cyber defenders. Additionally, OpenAI has won a $200m contract with the US Department of Defense to develop prototype AI capabilities for warfighting and enterprise domains. The US government's increasing focus on controlling advanced AI technology for national security reasons is also evident in its decision to block foreign access to certain AI models, citing security concerns. Meanwhile, other companies, such as Meta, are working on designing custom-built silicon to improve AI capabilities, highlighting the growing importance of AI technology in various sectors.",
       "sources": [
         {
-          "url": "https://www.bbc.com/news/articles/c3rz1nd0egro",
-          "title": "OpenAI changes deal with US military after backlash"
-        },
-        {
-          "url": "https://www.theguardian.com/technology/2026/mar/03/openai-pentagon-ceo-sam-altman-chatgpt",
-          "title": "OpenAI amends Pentagon deal as Sam Altman admits it looks \u2018sloppy\u2019 | OpenAI | The Guardian"
+          "url": "https://www.livemint.com/technology/tech-news/openai-quietly-gave-us-government-early-access-to-its-powerful-gpt-5-5-model-for-national-security-testing-11778044250327.html",
+          "title": "OpenAI quietly gave US government early access to its powerful GPT-5.5 model for \u2018national security testing\u2019 | Mint"
         },
         {
           "url": "https://www.theguardian.com/technology/2025/jun/17/openai-military-contract-warfighting",
           "title": "OpenAI wins $200m contract with US military for \u2018warfighting\u2019 | OpenAI | The Guardian"
         },
         {
-          "url": "https://www.theguardian.com/technology/2026/feb/28/openai-us-military-anthropic",
-          "title": "OpenAI to work with Pentagon after Anthropic dropped by Trump over company\u2019s ethics concerns | OpenAI | The Guardian"
+          "url": "https://economictimes.indiatimes.com/topic/openai-security-issue",
+          "title": "openai security issue: Latest News & Videos, Photos about openai security issue | The Economic Times - Page 1"
         }
       ]
     },
     {
       "angle": "Economics",
-      "paragraph": "The US government's potential stake in AI companies has sparked discussion about the economic implications. OpenAI has reportedly discussed giving the US government a 5% ownership stake, with CEO Sam Altman suggesting this could be a way to share the benefits of AI. However, Intel has warned that a similar 10% stake in the company could harm international sales, which accounted for 76% of its revenue in the last fiscal year. The White House has hinted at taking equity stakes in other AI and chip companies, which could include Advanced Micro Devices or Taiwan Semiconductor Manufacturing. Meanwhile, Anthropic has filed to go public on the US stock market and advocated for a \"pause\" on AI development, despite the Trump administration's push for AI growth. The administration's plans to take financial stakes in leading AI companies have raised questions about the potential impact on the industry.",
+      "paragraph": "OpenAI has proposed giving the U.S. government a 5% ownership stake, with CEO Sam Altman suggesting this would allow the public to share in the benefits of AI. This move is seen as an attempt to smooth relations with the Trump administration, which has shown interest in taking financial stakes in leading AI companies. The idea of a government stake in AI companies has been discussed alongside other developments in the sector, including Anthropic's filing for an initial public offering and its advocacy for a \"pause\" on AI development. Meanwhile, the Trump administration has issued executive orders related to AI, including one demanding the US military accelerate AI adoption, indicating a focus on promoting AI growth rather than restraining it. The economic implications of these developments are still being considered, with some companies facing expenses that raise doubts about the sector's path to profitability. Overall, the intersection of government involvement and AI company growth is a key aspect of the current economic landscape for the AI sector.",
       "sources": [
         {
           "url": "https://www.thehindu.com/sci-tech/technology/openai-discusses-giving-us-government-5-stake-report/article71177217.ece",
           "title": "OpenAI discusses giving U.S. government 5% stake: Report - The Hindu"
-        },
-        {
-          "url": "https://www.aljazeera.com/economy/2025/8/25/intel-says-us-govt-stake-could-hurt-sales-white-house-hints-at-more-deals",
-          "title": "Intel says US govt stake could hurt sales, White House hints at more deals | Technology News | Al Jazeera"
         },
         {
           "url": "https://www.theguardian.com/technology/2026/jun/08/trump-ai-growth-anthropic",
@@ -100,44 +105,40 @@
       "title": "OpenAI discusses giving U.S. government 5% stake: Report - The Hindu"
     },
     {
-      "url": "https://en.wikipedia.org/wiki/OpenAI",
-      "title": "OpenAI"
+      "url": "https://www.theguardian.com/technology/2026/mar/31/openai-raises-122-billion-ai-boom",
+      "title": "OpenAI, parent firm of ChatGPT, closes $122bn funding ..."
     },
     {
-      "url": "https://openai.com/about",
-      "title": "About - OpenAI"
+      "url": "https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman",
+      "title": "OpenAI \u2018in early talks to give 5% stake to US government\u2019 | OpenAI | The Guardian"
+    },
+    {
+      "url": "https://www.livemint.com/companies/news/openai-secures-40-billion-funding-softbank-investment-300-billion-valuation-doubling-chatgpt-business-ai-tech-us-news-11743470238453.html",
+      "title": "Amid Ghibli image hype, OpenAI secures $40bn funding led ..."
+    },
+    {
+      "url": "https://www.livemint.com/technology/tech-news/openai-quietly-gave-us-government-early-access-to-its-powerful-gpt-5-5-model-for-national-security-testing-11778044250327.html",
+      "title": "OpenAI quietly gave US government early access to its powerful GPT-5.5 model for \u2018national security testing\u2019 | Mint"
     },
     {
       "url": "https://www.bbc.com/news/articles/c98r8r7dz5no",
-      "title": "Trump to meet AI leaders over US investment in their companies"
-    },
-    {
-      "url": "https://www.theguardian.com/technology/2025/aug/02/big-tech-ai-spending",
-      "title": "Big tech has spent $155bn on AI this year. It\u2019s about to spend hundreds of billions more | AI (artificial intelligence) | The Guardian"
+      "title": "Trump to meet AI leaders over US investment in their ..."
     },
     {
       "url": "https://www.aljazeera.com/economy/2025/11/24/amazon-to-invest-50bn-in-ai-for-us-government-customers",
       "title": "Amazon to invest $50bn in AI for US government customers | Business and Economy News | Al Jazeera"
     },
     {
-      "url": "https://www.bbc.com/news/articles/c3rz1nd0egro",
-      "title": "OpenAI changes deal with US military after backlash"
-    },
-    {
-      "url": "https://www.theguardian.com/technology/2026/mar/03/openai-pentagon-ceo-sam-altman-chatgpt",
-      "title": "OpenAI amends Pentagon deal as Sam Altman admits it looks \u2018sloppy\u2019 | OpenAI | The Guardian"
+      "url": "https://www.theguardian.com/technology/2026/feb/27/openai-110-billion-funding-round",
+      "title": "OpenAI announces $110bn funding round that would value firm at $840bn | OpenAI | The Guardian"
     },
     {
       "url": "https://www.theguardian.com/technology/2025/jun/17/openai-military-contract-warfighting",
       "title": "OpenAI wins $200m contract with US military for \u2018warfighting\u2019 | OpenAI | The Guardian"
     },
     {
-      "url": "https://www.theguardian.com/technology/2026/feb/28/openai-us-military-anthropic",
-      "title": "OpenAI to work with Pentagon after Anthropic dropped by Trump over company\u2019s ethics concerns | OpenAI | The Guardian"
-    },
-    {
-      "url": "https://www.aljazeera.com/economy/2025/8/25/intel-says-us-govt-stake-could-hurt-sales-white-house-hints-at-more-deals",
-      "title": "Intel says US govt stake could hurt sales, White House hints at more deals | Technology News | Al Jazeera"
+      "url": "https://economictimes.indiatimes.com/topic/openai-security-issue",
+      "title": "openai security issue: Latest News & Videos, Photos about openai security issue | The Economic Times - Page 1"
     },
     {
       "url": "https://www.theguardian.com/technology/2026/jun/08/trump-ai-growth-anthropic",

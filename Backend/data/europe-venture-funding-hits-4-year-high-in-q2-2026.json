@@ -1,64 +1,69 @@
 {
   "topic": "Europe venture funding hits 4 year high in Q2 2026",
-  "summary": "Europe has seen a surge in venture funding, reaching a 4-year high in Q2 2026. The region is also spawning a high number of $1 billion tech startups, overtaking China. Meanwhile, European governments are implementing measures to reduce the price impact of the Iran war. Growth forecasts for 2026 and 2027 have been cut in Germany.",
+  "headline": "EUROPE VENTURE FUNDING REACHES 4-YEAR HIGH IN Q2 2026, DESPITE HIGH INFLATION AND RISING INTEREST RATES",
+  "summary": "Europe's venture funding has reached a 4-year high in Q2 2026, with the region seeing increased investment in startups. Meanwhile, the European economy is expected to grow faster than forecast, with an average growth of 1% in 2023 and 1.7% in 2024. The growth is happening despite high inflation and rising interest rates.",
   "summary_sources": [
     {
-      "url": "https://www.theguardian.com/business/2014/dec/29/europe-shadow-budget-debt-fund-investment",
-      "title": "Europe's shadow budget venture could lead to spiralling debt"
+      "url": "https://www.livemint.com/news/world/for-chinese-tech-startups-beijing-fills-a-funding-void-left-by-vcs-11728015547578.html",
+      "title": "For Chinese Tech Startups, Beijing Fills a Funding Void ..."
+    },
+    {
+      "url": "https://www.livemint.com/market/stock-market-news/americas-stock-market-dominance-is-an-emergency-for-europe-11755333287778.html",
+      "title": "America's Stock-Market Dominance Is an Emergency for ..."
+    },
+    {
+      "url": "https://www.theguardian.com/business/2023/may/15/european-economy-expected-to-grow-faster-than-forecast-says-eu",
+      "title": "European economy expected to grow faster than forecast, says EU | Global economy | The Guardian"
     },
     {
       "url": "https://www.theguardian.com/business/2025/dec/30/five-charts-that-explain-the-global-economic-outlook-for-2026",
-      "title": "Five charts that explain the global economic outlook for 2026 | Global economy | The Guardian"
-    },
-    {
-      "url": "https://www.livemint.com/companies/start-ups/europe-tops-china-in-spawning-1-billion-tech-startups-11638885947803.html",
-      "title": "Europe tops China in spawning $1 billion tech startups - Mint"
-    },
-    {
-      "url": "https://apnews.com/article/europe-germany-economy-growth-iran-war-inflation-6dd8a19413de5ba1f788b0f5b447d6b7",
-      "title": "Europe scrambles to contain price shock from Iran war as growth suffers | AP News"
+      "title": "Five charts that explain the global economic outlook for 2026"
     }
   ],
   "sections": [
     {
       "angle": "Economic Context",
-      "paragraph": "The economic context in 2026 is marked by growth forecasts being cut due to the price shock from the Iran war, with German growth predicted to expand by 0.6% this year, less than half of the previously forecast 1.3%. The global economy, although more resilient in 2025 than expected, is slowing down with fragile conditions. Inflation is predicted to cool, but uncertainty over AI-driven growth and trade policy poses risks. Unemployment rates in countries like the US and the UK have risen sharply, with economists warning of a further rise in joblessness in 2026. Meanwhile, central banks are expected to keep interest rates low, with the European Central Bank unlikely to take action as inflation is already near its 2% target.",
+      "paragraph": "The European economy is expected to experience growth, albeit at varying rates. The European Commission forecasts an average growth of 1% for the 27-member bloc in 2023 and 1.7% in 2024, with the eurozone's 20 members expected to grow by 1.1% and 1.6% in the respective years. However, the UK economy is anticipated to be weaker, with growth of 0.25% expected in 2023 and 0.75% in 2024, according to the Bank of England. More recent forecasts have been impacted by the Iran war, with German growth forecasts for 2026 and 2027 being cut to 0.6% and 0.9%, respectively. The International Monetary Fund has also cut its forecast for UK growth, expecting a 0.8% rise in 2026, down from a previous forecast of 1.3%. Overall, the economic outlook for Europe is mixed, with some countries experiencing slower growth due to various factors, including the Iran war.",
       "sources": [
         {
-          "url": "https://apnews.com/article/europe-germany-economy-growth-iran-war-inflation-6dd8a19413de5ba1f788b0f5b447d6b7",
-          "title": "Europe scrambles to contain price shock from Iran war as growth suffers | AP News"
+          "url": "https://www.theguardian.com/business/2023/may/15/european-economy-expected-to-grow-faster-than-forecast-says-eu",
+          "title": "European economy expected to grow faster than forecast, says EU | Global economy | The Guardian"
         },
         {
-          "url": "https://www.theguardian.com/business/2025/dec/30/five-charts-that-explain-the-global-economic-outlook-for-2026",
-          "title": "Five charts that explain the global economic outlook for 2026 | Global economy | The Guardian"
+          "url": "https://apnews.com/article/europe-germany-economy-growth-iran-war-inflation-6dd8a19413de5ba1f788b0f5b447d6b7",
+          "title": "Europe scrambles to contain price shock from Iran war as ..."
+        },
+        {
+          "url": "https://www.theguardian.com/business/live/2026/apr/14/iran-war-hurting-global-economic-growth-imf-meeting-rachel-reeves-oil-price-stock-markets-latest-updates",
+          "title": "UK growth forecasts slashed by IMF as Iran war hurts global economy \u2013 as it happened | Business | The Guardian"
         }
       ]
     },
     {
       "angle": "Geopolitical Impact",
-      "paragraph": "The geopolitical impact of economic trends is multifaceted, with factors such as capital structure, human resources, natural resources, and revenue generation influencing a country's economic growth. A decline in economic development can affect these factors and have broader implications for government systems. Meanwhile, global markets are being shaped by various forces, including the increasing prioritization of national strategic goals by sovereign wealth funds, which are making larger investments in areas like artificial intelligence and semiconductors to strengthen technological leadership and long-term economic resilience. The European Central Bank's brief technical disruption to its payment system and the upcoming NATO summit are also being closely watched for their potential impact on global markets. Additionally, the concept of Brexit, or Britain's potential withdrawal from the European Union, is a significant geopolitical consideration. These developments reflect the complex interplay between economic and geopolitical factors in today's global landscape.",
+      "paragraph": "India has been actively engaging in trade deals with other nations, signing or advancing several major agreements in a short span. This development may be a reflection of the growing size of the Indian economy. The country's increasing involvement in global trade could have significant geopolitical implications, although the specifics of these impacts are not detailed. Meanwhile, emerging markets, including potentially India, are relying on global funds, but are also facing rising risks. The interplay between India's trade deals and its position within the global economy, particularly in relation to emerging markets, suggests a complex geopolitical landscape. However, the exact nature and extent of these geopolitical impacts are not explicitly stated in the available information.",
       "sources": [
         {
-          "url": "https://economictimes.indiatimes.com/definition/recession",
-          "title": "What is Recession? Definition of Recession, Recession Meaning - The Economic Times"
+          "url": "https://www.bbc.com/audio/play/w3ct6s3h",
+          "title": "Business Daily | Why is India striking so many trade deals?"
         },
         {
-          "url": "https://economictimes.indiatimes.com/markets/global-markets",
-          "title": "Global Markets - Global Markets news, Global stock market updates, detailed analysis | ETMarkets"
+          "url": "https://m.economictimes.indiatimes.com/markets/us-stocks/news/global-market-emerging-markets-lean-on-global-funds-but-face-rising-risk-of-sudden-capital-flight/articleshow/130101990.cms",
+          "title": "Emerging markets lean on global funds, but face rising risk ..."
         }
       ]
     },
     {
       "angle": "Industry Comparison",
-      "paragraph": "In the tech industry, Europe has been gaining ground, particularly in comparison to China, with the continent overtaking China in creating billion-dollar tech startups. The US still leads in this area, but Europe has been attracting investment, especially from US funds, and has accounted for 33% of early-stage investments of less than $5 million. European startups tend to have lower valuations than their US counterparts, making them more attractive to investors. In contrast, China's crackdown on its tech giants has led to a loss of market value and a chill across the sector. The European Commission's investment plan, including the European Fund for Strategic Investment, has also been established to finance public investment projects, although this has raised concerns about debt and the distortion of market processes.",
+      "paragraph": "The tech industry is experiencing a shift in funding and growth, with Europe surpassing China in creating billion-dollar startups. China's tech industry is facing a sharp drop in venture-capital funding, with private investment, including US money, drying up due to lost faith in China's economy and geopolitical tensions. In contrast, Europe has attracted further investment in its tech industry, particularly from US funds, and has accounted for 33% of early-stage investments of less than $5 million. The US remains the leader in creating so-called unicorns, with both Europe and China still lagging behind. Beijing is attempting to fill the funding void by increasing its involvement in China's tech industry, with a focus on nurturing companies in capital-intensive sectors such as semiconductors and AI. However, this strategy may threaten to handicap China's efforts to catch up with Western technologies in the long run.",
       "sources": [
         {
-          "url": "https://www.livemint.com/companies/start-ups/europe-tops-china-in-spawning-1-billion-tech-startups-11638885947803.html",
-          "title": "Europe tops China in spawning $1 billion tech startups - Mint"
+          "url": "https://www.livemint.com/news/world/for-chinese-tech-startups-beijing-fills-a-funding-void-left-by-vcs-11728015547578.html",
+          "title": "For Chinese Tech Startups, Beijing Fills a Funding Void ..."
         },
         {
-          "url": "https://www.theguardian.com/business/2014/dec/29/europe-shadow-budget-debt-fund-investment",
-          "title": "Europe's shadow budget venture could lead to spiralling debt"
+          "url": "https://www.livemint.com/companies/start-ups/europe-tops-china-in-spawning-1-billion-tech-startups-11638885947803.html",
+          "title": "Europe tops China in spawning $1 billion tech startups | Company Business News"
         }
       ]
     }
@@ -72,28 +77,40 @@
   },
   "all_sources": [
     {
-      "url": "https://www.theguardian.com/business/2014/dec/29/europe-shadow-budget-debt-fund-investment",
-      "title": "Europe's shadow budget venture could lead to spiralling debt"
+      "url": "https://www.livemint.com/news/world/for-chinese-tech-startups-beijing-fills-a-funding-void-left-by-vcs-11728015547578.html",
+      "title": "For Chinese Tech Startups, Beijing Fills a Funding Void ..."
+    },
+    {
+      "url": "https://www.livemint.com/market/stock-market-news/americas-stock-market-dominance-is-an-emergency-for-europe-11755333287778.html",
+      "title": "America's Stock-Market Dominance Is an Emergency for ..."
+    },
+    {
+      "url": "https://www.theguardian.com/business/2023/may/15/european-economy-expected-to-grow-faster-than-forecast-says-eu",
+      "title": "European economy expected to grow faster than forecast, says EU | Global economy | The Guardian"
     },
     {
       "url": "https://www.theguardian.com/business/2025/dec/30/five-charts-that-explain-the-global-economic-outlook-for-2026",
-      "title": "Five charts that explain the global economic outlook for 2026 | Global economy | The Guardian"
-    },
-    {
-      "url": "https://www.livemint.com/companies/start-ups/europe-tops-china-in-spawning-1-billion-tech-startups-11638885947803.html",
-      "title": "Europe tops China in spawning $1 billion tech startups - Mint"
+      "title": "Five charts that explain the global economic outlook for 2026"
     },
     {
       "url": "https://apnews.com/article/europe-germany-economy-growth-iran-war-inflation-6dd8a19413de5ba1f788b0f5b447d6b7",
-      "title": "Europe scrambles to contain price shock from Iran war as growth suffers | AP News"
+      "title": "Europe scrambles to contain price shock from Iran war as ..."
     },
     {
-      "url": "https://economictimes.indiatimes.com/definition/recession",
-      "title": "What is Recession? Definition of Recession, Recession Meaning - The Economic Times"
+      "url": "https://www.theguardian.com/business/live/2026/apr/14/iran-war-hurting-global-economic-growth-imf-meeting-rachel-reeves-oil-price-stock-markets-latest-updates",
+      "title": "UK growth forecasts slashed by IMF as Iran war hurts global economy \u2013 as it happened | Business | The Guardian"
     },
     {
-      "url": "https://economictimes.indiatimes.com/markets/global-markets",
-      "title": "Global Markets - Global Markets news, Global stock market updates, detailed analysis | ETMarkets"
+      "url": "https://www.bbc.com/audio/play/w3ct6s3h",
+      "title": "Business Daily | Why is India striking so many trade deals?"
+    },
+    {
+      "url": "https://m.economictimes.indiatimes.com/markets/us-stocks/news/global-market-emerging-markets-lean-on-global-funds-but-face-rising-risk-of-sudden-capital-flight/articleshow/130101990.cms",
+      "title": "Emerging markets lean on global funds, but face rising risk ..."
+    },
+    {
+      "url": "https://www.livemint.com/companies/start-ups/europe-tops-china-in-spawning-1-billion-tech-startups-11638885947803.html",
+      "title": "Europe tops China in spawning $1 billion tech startups | Company Business News"
     }
   ],
   "type": "deep_dive",

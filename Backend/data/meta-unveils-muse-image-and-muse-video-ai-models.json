@@ -1,6 +1,7 @@
 {
   "topic": "Meta unveils Muse Image and Muse Video AI models",
-  "summary": "Meta has launched two new AI models, Muse Image and Muse Video. Muse Image is currently available to users, while Muse Video is in preview and will be available to creators in the coming months. Muse Image can generate images based on user instructions and edit them with precision. The model is integrated into Meta's AI chatbot.",
+  "headline": "META UNVEILS MUSE IMAGE AND MUSE VIDEO AI MODELS, REVOLUTIONIZING VISUAL CONTENT CREATION",
+  "summary": "Meta has launched Muse Image, an AI model that can generate images, and announced an early preview of Muse Video, a video generation model. Muse Image is available to users, while Muse Video will be available to creators in the coming months. The models are part of Meta's expanded generative AI tools across its apps.",
   "summary_sources": [
     {
       "url": "https://www.livemint.com/ai/artificial-intelligence/metas-latest-ai-model-can-generate-images-websites-and-even-qr-codes-11783489540341.html",
@@ -12,7 +13,7 @@
     },
     {
       "url": "https://indianexpress.com/article/technology/tech-news-technology/meta-unveils-new-ai-model-as-it-tries-to-catch-up-with-google-and-openai-after-spending-billions-10627005",
-      "title": "Meta unveils new AI model as it tries to catch up with ..."
+      "title": "Meta unveils new AI model as it tries to catch up with Google and OpenAI after spending billions | Technology News - The Indian Express"
     },
     {
       "url": "https://www.thehindu.com/sci-tech/technology/why-is-metas-muse-image-ai-feature-facing-a-backlash/article71205487.ece",
@@ -40,29 +41,29 @@
     },
     {
       "angle": "Business Impact",
-      "paragraph": "Meta has unveiled a new artificial intelligence model called Muse Spark, marking the first launch under its new AI division. The company, led by Mark Zuckerberg, has invested billions in this division, aiming to become more competitive in the AI space. The development of Muse Spark was completed in just nine months, with Meta rebuilding its AI stack from the ground up. This initial model is designed to be small and fast, yet capable of reasoning through complex questions in various fields. The launch of Muse Spark is seen as a significant step for Meta, as it tries to catch up with dominant players in the AI space, such as Google, OpenAI, and Anthropic. The company is already working on the next generation of the model.",
+      "paragraph": "Meta has unveiled a new artificial intelligence model called Muse Spark, marking the first launch under its new AI division. The company has spent billions building this division, aiming to become more competitive in the AI space, which is currently dominated by Google, OpenAI, and Anthropic. The development of Muse Spark was completed in just nine months, with Meta's Superintelligence Labs rebuilding its AI stack from the ground up. This initial model is designed to be small and fast, yet capable of reasoning through complex questions in science, math, and health. The launch of Muse Spark is seen as a significant step for Meta, with the next generation of the model already in development. The move is part of Meta's efforts to catch up with its competitors in the AI sector.",
       "sources": [
         {
           "url": "https://indianexpress.com/article/technology/tech-news-technology/meta-unveils-new-ai-model-as-it-tries-to-catch-up-with-google-and-openai-after-spending-billions-10627005",
-          "title": "Meta unveils new AI model as it tries to catch up with ..."
+          "title": "Meta unveils new AI model as it tries to catch up with Google and OpenAI after spending billions | Technology News - The Indian Express"
         }
       ]
     },
     {
       "angle": "Social Impact",
-      "paragraph": "The emergence of AI image generators has sparked concerns about their social impact, particularly regarding the potential spread of misinformation and creation of disturbing content. For instance, images of beloved cartoon characters engaging in inappropriate behavior have been generated, raising questions about the ability of tech companies to control the output of these tools. The National Crime Agency has warned parents not to publicly share images of their children online due to the growing threat of AI-generated child sexual abuse material, with over 8,000 such images and videos identified in 2025. Meanwhile, YouTube has introduced new rules requiring creators to disclose the use of generative AI in their videos, with penalties for non-compliance. The issue has also raised ethical and legal questions, with companies facing potential liabilities and lawsuits over the use of AI-generated content.",
+      "paragraph": "The growing use of AI-generated imagery has significant social implications, particularly when it comes to the safety and privacy of children. Parents are being warned not to publicly share images of their children online due to the risk of these images being used to create child sexual abuse material, with over 8,000 AI-generated images and videos identified in 2025, a 14% increase from the previous year. Schools are also being cautioned against posting pupils' images on their websites and social media pages, as this can expose them to potential identity fraud, harassment, and AI exploitation. Experts emphasize that these are not hypothetical threats, but real concerns that require informed decision-making. The issue is not limited to child safety, as AI-generated content is also being used to manipulate and deceive in other contexts, further eroding public trust. As the use of AI-generated imagery becomes more widespread, it is essential to be aware of the potential risks and take steps to mitigate them.",
       "sources": [
-        {
-          "url": "https://www.livemint.com/ai/artificial-intelligence/mickey-mouse-smoking-how-ai-image-tools-are-generating-new-content-moderation-problems-11725270751993.html",
-          "title": "Mickey Mouse Smoking: How AI Image Tools Are ..."
-        },
         {
           "url": "https://www.bbc.com/news/articles/cd7wj7d0jzzo",
           "title": "Parents warned not to publicly share children\u2019s images amid AI abuse risks"
         },
         {
-          "url": "https://apnews.com/article/youtube-artitifical-intelligence-deep-fake-ai-creaters-0513fd9fddbd93af327f0411dd29ff3d",
-          "title": "YouTube creators will soon have to disclose use of generative AI in videos or risk suspension | AP News"
+          "url": "https://apnews.com/article/ai-videos-trump-ice-artificial-intelligence-08d91fa44f3146ec1f8ee4d213cdad31",
+          "title": "Trump's use of AI images pushes new boundaries, further eroding public trust | AP News"
+        },
+        {
+          "url": "https://www.theguardian.com/technology/2026/may/19/dangers-of-putting-pupils-images-on-school-websites",
+          "title": "Dangers of putting pupils\u2019 images on school websites | Internet safety | The Guardian"
         }
       ]
     },
@@ -84,7 +85,7 @@
   "dropped_angles": [],
   "consistency_check": {
     "has_contradictions": true,
-    "notes": "The Business Impact angle mentions 'Muse Spark', while the Summary and other angles mention 'Muse Image' and 'Muse Video', indicating a direct factual contradiction in the naming of the AI models."
+    "notes": "The Business Impact angle mentions 'Muse Spark', while the Summary and other angles mention 'Muse Image' and 'Muse Video', indicating a direct contradiction in the naming of the AI models."
   },
   "all_sources": [
     {
@@ -97,23 +98,23 @@
     },
     {
       "url": "https://indianexpress.com/article/technology/tech-news-technology/meta-unveils-new-ai-model-as-it-tries-to-catch-up-with-google-and-openai-after-spending-billions-10627005",
-      "title": "Meta unveils new AI model as it tries to catch up with ..."
+      "title": "Meta unveils new AI model as it tries to catch up with Google and OpenAI after spending billions | Technology News - The Indian Express"
     },
     {
       "url": "https://www.thehindu.com/sci-tech/technology/why-is-metas-muse-image-ai-feature-facing-a-backlash/article71205487.ece",
       "title": "Why is Meta's Muse Image AI feature facing a backlash?"
     },
     {
-      "url": "https://www.livemint.com/ai/artificial-intelligence/mickey-mouse-smoking-how-ai-image-tools-are-generating-new-content-moderation-problems-11725270751993.html",
-      "title": "Mickey Mouse Smoking: How AI Image Tools Are ..."
-    },
-    {
       "url": "https://www.bbc.com/news/articles/cd7wj7d0jzzo",
       "title": "Parents warned not to publicly share children\u2019s images amid AI abuse risks"
     },
     {
-      "url": "https://apnews.com/article/youtube-artitifical-intelligence-deep-fake-ai-creaters-0513fd9fddbd93af327f0411dd29ff3d",
-      "title": "YouTube creators will soon have to disclose use of generative AI in videos or risk suspension | AP News"
+      "url": "https://apnews.com/article/ai-videos-trump-ice-artificial-intelligence-08d91fa44f3146ec1f8ee4d213cdad31",
+      "title": "Trump's use of AI images pushes new boundaries, further eroding public trust | AP News"
+    },
+    {
+      "url": "https://www.theguardian.com/technology/2026/may/19/dangers-of-putting-pupils-images-on-school-websites",
+      "title": "Dangers of putting pupils\u2019 images on school websites | Internet safety | The Guardian"
     }
   ],
   "type": "deep_dive",

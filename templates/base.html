@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Context — News, explained{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <a class="wordmark" href="{{ url_for('home') }}">
+        <span class="wordmark-badge">C</span>
+        <span class="wordmark-text">Context</span>
+      </a>
+      <div class="nav-links">
+        <a
+          class="nav-link"
+          href="{{ url_for('category_page', name='Politics') }}"
+          >Politics</a
+        >
+        <a class="nav-link" href="{{ url_for('category_page', name='Tech') }}"
+          >Tech</a
+        >
+        <a
+          class="nav-link"
+          href="{{ url_for('category_page', name='Finance') }}"
+          >Finance</a
+        >
+      </div>
+    </nav>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>

@@ -21,21 +21,54 @@
         <span class="wordmark-text">Context</span>
       </a>
       <div class="nav-links">
-        <a
-          class="nav-link"
-          href="{{ url_for('category_page', name='Politics') }}"
-          >Politics</a
-        >
-        <a class="nav-link" href="{{ url_for('category_page', name='Tech') }}"
-          >Tech</a
-        >
-        <a
-          class="nav-link"
-          href="{{ url_for('category_page', name='Finance') }}"
-          >Finance</a
-        >
+        <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+        <a class="nav-link" href="{{ url_for('about') }}">About us</a>
+        <div class="menu-dropdown" id="menu-dropdown">
+          <button
+            class="hamburger-btn"
+            id="hamburger-btn"
+            aria-label="Browse categories"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <div class="dropdown-panel" id="dropdown-panel">
+            <a
+              class="dropdown-item"
+              href="{{ url_for('category_page', name='tech') }}"
+              >Tech</a
+            >
+            <a
+              class="dropdown-item"
+              href="{{ url_for('category_page', name='finance') }}"
+              >Finance</a
+            >
+            <a
+              class="dropdown-item"
+              href="{{ url_for('category_page', name='sports') }}"
+              >Sports</a
+            >
+            <a
+              class="dropdown-item"
+              href="{{ url_for('category_page', name='politics') }}"
+              >Politics</a
+            >
+            <a
+              class="dropdown-item"
+              href="{{ url_for('category_page', name='science') }}"
+              >Science</a
+            >
+            <a
+              class="dropdown-item"
+              href="{{ url_for('category_page', name='daily-rituals') }}"
+              >Daily Rituals</a
+            >
+          </div>
+        </div>
       </div>
     </nav>
+
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
 
     <main>{% block content %}{% endblock %}</main>
 

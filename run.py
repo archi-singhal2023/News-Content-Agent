@@ -200,6 +200,75 @@ TOPICS = {
         ],
         "dropped_angles": ["Geopolitics"],
     },
+    "issf-trap-gold": {
+        "id": "issf-trap-gold",
+        "topic": "Neeru Dhanda wins India's first trap shooting gold",
+        "category": "Sports",
+        "tags": ["trending", "india", "sports"],
+        "type": "deep_dive",
+        "headline": "NEERU DHANDA CREATES HISTORY, WINS INDIA'S FIRST-EVER INTERNATIONAL GOLD IN WOMEN'S TRAP SHOOTING AT THE ISSF WORLD CUP",
+        "summary": "Neeru Dhanda became the first Indian woman to win an international trap shooting gold medal, topping the podium at the ISSF World Cup in Italy. The win is being seen as a breakthrough for a discipline India has historically struggled in compared to rifle and pistol events.",
+        "summary_sources": [{"title": "ISSF Results", "url": "https://issf-sports.org"}],
+        "sections": [
+            {"angle": "History", "paragraph": "India has won Olympic and World Cup medals in rifle and pistol shooting for decades, but trap and skeet events lagged behind due to costlier equipment and fewer dedicated ranges.", "sources": [{"title": "Sportstar", "url": "https://sportstar.thehindu.com"}]},
+            {"angle": "Economics", "paragraph": "Trap shooting requires expensive imported cartridges and clay targets, which has historically limited grassroots participation compared to more accessible shooting disciplines.", "sources": [{"title": "Olympic Khel", "url": "https://olympics.com"}]},
+            {"angle": "India Impact", "paragraph": "The win is expected to boost funding and visibility for shotgun shooting events ahead of the next Olympic cycle, and may inspire more young women to take up the sport.", "sources": [{"title": "Times of India", "url": "https://timesofindia.com"}]},
+        ],
+        "dropped_angles": ["Geopolitics"],
+    },
+    "cricket-wtc-final": {
+        "id": "cricket-wtc-final",
+        "topic": "India reaches World Test Championship final",
+        "category": "Sports",
+        "tags": ["india", "sports"],
+        "type": "quick_read",
+        "headline": "INDIA SEALS WORLD TEST CHAMPIONSHIP FINAL BERTH AFTER DECISIVE SERIES WIN",
+        "summary": "India secured a spot in the World Test Championship final after a decisive series win, finishing on top of the points table. It will be India's third WTC final appearance, having fallen short in the previous two.",
+        "summary_sources": [{"title": "ICC Standings", "url": "https://icc-cricket.com"}],
+        "sections": [],
+        "dropped_angles": [],
+    },
+    "gaganyaan-test": {
+        "id": "gaganyaan-test",
+        "topic": "ISRO completes Gaganyaan uncrewed test flight",
+        "category": "Science",
+        "tags": ["trending", "india", "science"],
+        "type": "deep_dive",
+        "headline": "ISRO PULLS OFF KEY UNCREWED TEST FLIGHT, MOVING INDIA A STEP CLOSER TO ITS FIRST HUMAN SPACEFLIGHT",
+        "summary": "ISRO successfully completed an uncrewed test flight of the Gaganyaan crew module, testing the crew escape system and parachute-based splashdown recovery. Officials say a crewed mission remains on track for the next couple of years, pending further test flights.",
+        "summary_sources": [{"title": "ISRO Press Release", "url": "https://isro.gov.in"}],
+        "sections": [
+            {"angle": "History", "paragraph": "India has developed human spaceflight capability gradually since the Gaganyaan programme was approved in 2018, with this uncrewed test following two earlier abort-system tests.", "sources": [{"title": "ISRO archive", "url": "https://isro.gov.in"}]},
+            {"angle": "Economics", "paragraph": "The programme has cost several billion rupees so far, with officials arguing the spin-off technologies in materials science and life support systems justify the investment beyond prestige alone.", "sources": [{"title": "Economic Times", "url": "https://economictimes.com"}]},
+            {"angle": "Geopolitics", "paragraph": "A successful crewed mission would make India only the fourth country to independently send humans to space, joining the US, Russia, and China.", "sources": [{"title": "Reuters", "url": "https://reuters.com"}]},
+            {"angle": "India Impact", "paragraph": "Beyond prestige, the programme is expected to feed into India's planned space station and deepen the domestic aerospace supply chain over the next decade.", "sources": [{"title": "The Hindu", "url": "https://thehindu.com"}]},
+        ],
+        "dropped_angles": [],
+    },
+    "sleep-research": {
+        "id": "sleep-research",
+        "topic": "New research links consistent sleep timing to better health",
+        "category": "Daily Rituals",
+        "tags": ["trending", "daily-rituals"],
+        "type": "quick_read",
+        "headline": "NEW STUDY FINDS WHEN YOU SLEEP MATTERS AS MUCH AS HOW LONG, EVEN IF YOU HIT SEVEN HOURS",
+        "summary": "A large observational study found that irregular sleep timing was linked to worse cardiovascular and metabolic health markers, even among people who got a full seven to eight hours of sleep on average. Researchers say consistency may matter as much as total duration.",
+        "summary_sources": [{"title": "Sleep Health Journal", "url": "https://sleephealthjournal.org"}],
+        "sections": [],
+        "dropped_angles": [],
+    },
+    "morning-routine-trend": {
+        "id": "morning-routine-trend",
+        "topic": "Cold showers and morning walks trend among young professionals",
+        "category": "Daily Rituals",
+        "tags": ["daily-rituals"],
+        "type": "quick_read",
+        "headline": "COLD SHOWERS AND EARLY MORNING WALKS ARE HAVING A MOMENT AMONG YOUNG PROFESSIONALS",
+        "summary": "Surveys and app usage data suggest a rising number of young professionals in Indian metros are adopting structured morning routines, from cold showers to early walks, often influenced by wellness content online. Doctors note the benefits are real but caution against overly rigid routines becoming a source of stress themselves.",
+        "summary_sources": [{"title": "Mint Lifestyle", "url": "https://livemint.com"}],
+        "sections": [],
+        "dropped_angles": [],
+    },
 }
 
 
@@ -215,9 +284,15 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
 @app.route("/category/<name>")
 def category_page(name):
-    return render_template("category.html", category=name.capitalize())
+    category = name.replace("-", " ").title()
+    return render_template("category.html", category=category)
 
 
 @app.route("/topic/<topic_id>")

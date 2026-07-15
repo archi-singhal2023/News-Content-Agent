@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<div class="detail-page" data-topic-id="{{ topic_id }}">
+  <a class="back-btn" href="javascript:history.back()">← Back</a>
+  <div id="detail-content">
+    <div class="detail-loading"><span class="spinner"></span></div>
+  </div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/api.js') }}"></script>
+<script src="{{ url_for('static', filename='js/render.js') }}"></script>
+<script src="{{ url_for('static', filename='js/detail.js') }}"></script>
+{% endblock %}

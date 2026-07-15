@@ -1,0 +1,58 @@
+{% extends "base.html" %} {% block title %}{{ category }} — Context{% endblock
+%} {% block content %}
+<div class="category-page" data-category="{{ category }}">
+  <a class="back-btn" href="{{ url_for('home') }}">← Back</a>
+  <span class="detail-eyebrow">SECTION</span>
+  <h1 class="detail-title">{{ category }}</h1>
+
+  <section class="carousel-section">
+    <h2 class="section-title">Latest</h2>
+    <div class="carousel-wrap">
+      <button
+        class="scroll-arrow left"
+        data-target="row-a"
+        aria-label="Scroll left"
+      >
+        ‹
+      </button>
+      <div class="carousel-track" id="row-a"></div>
+      <button
+        class="scroll-arrow right"
+        data-target="row-a"
+        aria-label="Scroll right"
+      >
+        ›
+      </button>
+    </div>
+  </section>
+
+  <section class="carousel-section">
+    <h2 class="section-title">More</h2>
+    <div class="carousel-wrap">
+      <button
+        class="scroll-arrow left"
+        data-target="row-b"
+        aria-label="Scroll left"
+      >
+        ‹
+      </button>
+      <div class="carousel-track" id="row-b"></div>
+      <button
+        class="scroll-arrow right"
+        data-target="row-b"
+        aria-label="Scroll right"
+      >
+        ›
+      </button>
+    </div>
+  </section>
+
+  <p class="empty-note" id="empty-note" style="display: none">
+    No stories filed under {{ category }} yet.
+  </p>
+</div>
+{% endblock %} {% block scripts %}
+<script src="{{ url_for('static', filename='js/api.js') }}"></script>
+<script src="{{ url_for('static', filename='js/render.js') }}"></script>
+<script src="{{ url_for('static', filename='js/category.js') }}"></script>
+{% endblock %}

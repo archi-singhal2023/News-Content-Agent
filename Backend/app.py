@@ -1,19 +1,20 @@
 """
-Flask backend — serves the pre-generated explainer dataset to the frontend,
-and exposes a live-generation endpoint for user-typed search queries.
+Context — Flask app.
+
+Serves the templates/static frontend (built via Lovable) AND the real API
+endpoints, backed by actual pre-generated data from batch_generate.py and
+the live pipeline for search.
 """
 import os
 import sys
 import json
 
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask import Flask, render_template, jsonify, request
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from pipeline import generate_full_explainer
 
 app = Flask(__name__)
-CORS(app)  # allows the frontend (different origin) to call this API
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
@@ -26,61 +27,93 @@ def load_json(filename):
         return json.load(f)
 
 
-@app.route("/api/topics", methods=["GET"])
-def get_topics():
-    """
-    Returns the index of all pre-generated topics, with optional filtering
-    by category or tag via query params, e.g. /api/topics?tag=india
-    """
+def topic_summary(t):
+    """Shape used for list views (carousels) — smaller than the full explainer."""
+    return {
+        "id": t["id"],
+        "topic": t["topic"],
+        "category": t["category"],
+        "tags": t.get("tags", []),
+        "headline": t.get("headline", t["topic"].upper()),
+    }
+
+
+# ---------------------------------------------------------------------------
+# Page routes (render templates)
+# ---------------------------------------------------------------------------
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+
+@app.route("/category/<name>")
+def category_page(name):
+    category = name.replace("-", " ").title()
+    return render_template("category.html", category=category)
+
+
+@app.route("/topic/<topic_id>")
+def detail_page(topic_id):
+    return render_template("detail.html", topic_id=topic_id)
+
+
+# ---------------------------------------------------------------------------
+# API routes — backed by real pre-generated data + live pipeline
+# ---------------------------------------------------------------------------
+@app.route("/api/topics")
+def api_topics():
+    tag = request.args.get("tag")
+    category = request.args.get("category")
+
     index_data = load_json("index.json")
     if index_data is None:
-        return jsonify({"error": "No data found. Run batch_generate.py first."}), 404
+        return jsonify([])
 
-    tag_filter = request.args.get("tag")
-    category_filter = request.args.get("category")
+    items = index_data
+    if tag:
+        items = [t for t in items if tag in t.get("tags", [])]
+    if category:
+        items = [t for t in items if t.get("category", "").lower() == category.lower()]
 
-    if tag_filter:
-        index_data = [t for t in index_data if tag_filter in t.get("tags", [])]
-    if category_filter:
-        index_data = [t for t in index_data if t.get("category") == category_filter]
+    # index.json already has id/topic/category/tags — just need headline too,
+    # so pull that from each topic's full JSON file
+    results = []
+    for t in items:
+        full = load_json(f"{t['id']}.json")
+        if full:
+            results.append(topic_summary(full))
+    return jsonify(results)
 
-    return jsonify(index_data)
 
-
-@app.route("/api/topics/<topic_id>", methods=["GET"])
-def get_topic_detail(topic_id):
-    """
-    Returns the full explainer for one topic (used by the detail page).
-    """
+@app.route("/api/topics/<topic_id>")
+def api_topic(topic_id):
     explainer = load_json(f"{topic_id}.json")
     if explainer is None:
-        return jsonify({"error": "Topic not found"}), 404
+        return jsonify({"error": "not found"}), 404
     return jsonify(explainer)
 
 
 @app.route("/api/explain", methods=["POST"])
-def explain_live():
-    """
-    Live generation endpoint — for the search bar. Takes a user-typed topic
-    and runs the full pipeline in real time. Slower than pre-generated data,
-    since it hits Groq + Tavily live, but works for anything not in the demo set.
-    """
-    data = request.get_json(silent=True) or {}
-    topic = data.get("topic", "").strip()
-
-    if not topic:
-        return jsonify({"error": "Missing 'topic' in request body"}), 400
+def api_explain():
+    data = request.get_json(force=True, silent=True) or {}
+    query = data.get("topic", "").strip()
+    if not query:
+        return jsonify({"error": "topic is required"}), 400
 
     try:
-        result = generate_full_explainer(topic)
+        result = generate_full_explainer(query)
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": f"Failed to generate explainer: {str(e)}"}), 500
 
 
-@app.route("/api/health", methods=["GET"])
+@app.route("/api/health")
 def health_check():
-    """Simple endpoint to confirm the server is up — useful for Render's health checks."""
     return jsonify({"status": "ok"})
 
 

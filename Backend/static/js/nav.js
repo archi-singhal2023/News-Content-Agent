@@ -13,15 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.setAttribute("aria-expanded", "false");
   };
   const toggle = () => (wrap.classList.contains("open") ? close() : open());
-
+  
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
     toggle();
   });
-
-  // Hover support for pointer devices, in addition to click/tap.
-  wrap.addEventListener("mouseenter", open);
-  wrap.addEventListener("mouseleave", close);
 
   document.addEventListener("click", (e) => {
     if (!wrap.contains(e.target)) close();

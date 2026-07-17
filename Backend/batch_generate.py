@@ -14,56 +14,44 @@ import time
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from pipeline import generate_full_explainer
+from agents.classifier import classify_topic
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 os.makedirs(DATA_DIR, exist_ok=True)
 
-# Each entry: (topic, category, tags)
-# tags let a story appear in more than one row, e.g. India + Politics
+# Just the raw topic strings now — category and tags are decided by the
+# classifier agent at generation time, not hardcoded here.
 DEMO_TOPICS = [
-    ("Gujarat High Court upholds death penalty for 38 in 2008 Ahmedabad serial blasts case",
-     "politics", ["india", "trending"]),
-    ("Centre names 23 Jaish and Lashkar operatives as terrorists citing J-K attack links",
-     "politics", ["india"]),
-    ("VB-G RAM G scheme replaces MGNREGA with wage changes",
-     "politics", ["india"]),
-    ("US-Iran tensions over oil and dollar dominance",
-     "international", ["international", "trending"]),
-    ("China considers restricting foreign access to advanced AI models",
-     "tech", ["international", "tech"]),
-    ("OpenAI floats 5 percent equity stake to US government",
-     "tech", ["international", "tech", "trending"]),
-    ("SK Hynix lists on Nasdaq in major foreign listing",
-     "finance", ["international", "finance"]),
-    ("Tesla Q2 2026 deliveries rise 25 percent amid China and Europe competition",
-     "finance", ["international", "finance"]),
-    ("Europe venture funding hits 4 year high in Q2 2026",
-     "finance", ["international", "finance"]),
-    ("Anthropic in talks with Samsung to manufacture custom AI chip",
-     "tech", ["tech", "trending"]),
-    ("Meta unveils Muse Image and Muse Video AI models",
-     "tech", ["tech"]),
-    ("JadePuffer first known agentic ransomware system discovered",
-     "tech", ["tech", "trending"]),
-    ("Hingoli earthquake damages 105 houses in Maharashtra",
-     "india", ["india"]),
-    ("Air Marshal Ashutosh Dixit assumes charge as Vice Chief of Air Staff",
-     "india", ["india"]),
-    ("Telstra suffers nationwide outage from software fault",
-     "international", ["international"]),
+    "Gujarat High Court upholds death penalty for 38 in 2008 Ahmedabad serial blasts case",
+    "Centre names 23 Jaish and Lashkar operatives as terrorists citing J-K attack links",
+    "VB-G RAM G scheme replaces MGNREGA with wage changes",
+    "US-Iran tensions over oil and dollar dominance",
+    "China considers restricting foreign access to advanced AI models",
+    "OpenAI floats 5 percent equity stake to US government",
+    "SK Hynix lists on Nasdaq in major foreign listing",
+    "Tesla Q2 2026 deliveries rise 25 percent amid China and Europe competition",
+    "Europe venture funding hits 4 year high in Q2 2026",
+    "Anthropic in talks with Samsung to manufacture custom AI chip",
+    "Meta unveils Muse Image and Muse Video AI models",
+    "JadePuffer first known agentic ransomware system discovered",
+    "Hingoli earthquake damages 105 houses in Maharashtra",
+    "Air Marshal Ashutosh Dixit assumes charge as Vice Chief of Air Staff",
+    "Telstra suffers nationwide outage from software fault",
 ]
-
 
 def slugify(topic: str) -> str:
     """Convert a topic string into a safe filename."""
     slug = re.sub(r"[^a-z0-9]+", "-", topic.lower()).strip("-")
     return slug[:60]  # keep filenames reasonable length
 
+def load_saved_explainer(filepath):
+    with open(filepath, "r") as f:
+        return json.load(f)
 
 def run_batch():
     results_summary = []
 
-    for i, (topic, category, tags) in enumerate(DEMO_TOPICS, start=1):
+    for i, topic in enumerate(DEMO_TOPICS, start=1):
         print(f"\n{'='*70}")
         print(f"[{i}/{len(DEMO_TOPICS)}] {topic}")
         print(f"{'='*70}")
@@ -75,9 +63,13 @@ def run_batch():
             results_summary.append({"topic": topic, "status": "failed", "error": str(e)})
             continue
 
-        # Attach category/tags metadata for the frontend to filter by
-        explainer["category"] = category
-        explainer["tags"] = tags
+        # Classifier agent decides category + tags based on the actual content
+        classification = classify_topic(topic, explainer.get("summary", ""))
+        print(f"[Classifier] -> {classification['category']} | tags: {classification['tags']} "
+              f"({classification.get('reason', '')})")
+
+        explainer["category"] = classification["category"]
+        explainer["tags"] = classification["tags"]
         explainer["id"] = slugify(topic)
 
         filename = os.path.join(DATA_DIR, f"{explainer['id']}.json")
@@ -95,16 +87,21 @@ def run_batch():
         time.sleep(1)  # small pause between topics, easy on rate limits
 
     # Save an index file listing all generated explainers, for the frontend to fetch
+    # Save an index file listing all generated explainers, for the frontend to fetch.
+    # Built from the actual saved results (which include classifier-assigned
+    # category/tags), not from DEMO_TOPICS, since categories are now dynamic.
     index_path = os.path.join(DATA_DIR, "index.json")
-    index_data = [
-        {
-            "id": slugify(t),
-            "topic": t,
-            "category": c,
-            "tags": tags,
-        }
-        for t, c, tags in DEMO_TOPICS
-    ]
+    index_data = []
+    for r in results_summary:
+        if r["status"] == "success":
+            saved = load_saved_explainer(r["file"])
+            if saved:
+                index_data.append({
+                    "id": saved["id"],
+                    "topic": saved["topic"],
+                    "category": saved["category"],
+                    "tags": saved["tags"],
+                })
     with open(index_path, "w") as f:
         json.dump(index_data, f, indent=2)
 

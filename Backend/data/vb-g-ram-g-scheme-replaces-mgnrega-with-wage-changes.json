@@ -1,19 +1,19 @@
 {
   "topic": "VB-G RAM G scheme replaces MGNREGA with wage changes",
-  "headline": "CENTRE NOTIFIES NEW WAGE RATES UNDER VB-G RAM G SCHEME, REPLACING MGNREGA WITH KEY CHANGES",
-  "summary": "The Viksit Bharat-Guarantee for Rozgar and Ajeevika Mission (Gramin) scheme has come into effect, replacing the Mahatma Gandhi National Rural Employment Guarantee Act. The Centre has notified new wage rates for unskilled manual workers under the scheme. The new scheme brings changes to the entitlements and cost-sharing ratio between the Centre and states.",
+  "headline": "VB-G RAM G SCHEME REPLACES MGNREGA, RAISES DAILY WAGE FOR WORKERS TO \u20b9370",
+  "summary": "The VB-G RAM G scheme has replaced MGNREGA, introducing changes to wage structures and employment security. The daily wage for workers under the previous MGNREGA scheme was revised to \u20b9370 from \u20b9349. The new VB-G RAM G scheme aims to combine employment security with long-term rural development.",
   "summary_sources": [
     {
-      "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-essentials/knowledge-nugget-vb-g-ram-g-what-changes-rural-employment-mgnrega-10766098",
-      "title": "Knowledge Nugget | VB-G RAM G comes into effect"
+      "url": "https://vbgramgyojana.com/post/vb-g-ram-g-vs-mgnrega",
+      "title": "VB-G RAM G vs MGNREGA - Full Comparison, Differences ..."
+    },
+    {
+      "url": "https://www.thehindu.com/news/national/karnataka/mgnrega-wage-revised-to-370-a-day-from-april-1/article69395963.ece",
+      "title": "MGNREGA wage revised from \u20b9349 to \u20b9370 a day from April 1 - The Hindu"
     },
     {
       "url": "https://indianexpress.com/article/explained/explained-economics/how-new-vb-g-ram-g-act-affects-states-finances-10437630",
       "title": "How VB \u2013 G RAM G Act, which replaces MGNREGA, affects states\u2019 finances"
-    },
-    {
-      "url": "https://indianexpress.com/article/opinion/columns/vb-g-ram-g-bill-annihilates-mgnrega-right-to-work-10421788",
-      "title": "VB-G RAM G Bill annihilates MGNREGA and undermines rural India\u2019s right to work"
     },
     {
       "url": "https://frontline.thehindu.com/the-nation/spotlight-mgnrega-under-attack-from-the-narendra-modi-government/article66684747.ece",
@@ -23,15 +23,11 @@
   "sections": [
     {
       "angle": "Economics",
-      "paragraph": "The Viksit Bharat \u2013 Guarantee for Rozgar and Ajeevika Mission (Gramin) Act, which replaces the Mahatma Gandhi National Rural Employment Guarantee Act, introduces significant changes to the fiscal responsibility of states. Under the new Act, states will bear a larger burden, with general category states financing 40% of all components and hilly and north-eastern states financing 10%, compared to the previous arrangement where the Centre covered the full cost of wages, 75% of material costs, and up to 6% of administrative costs. This shift is expected to result in substantially higher spending by states, with estimates suggesting a potential 600% rise in rural employment costs. The change arrives amid concerns over shrinking fiscal space for states, with many having urged an increase in tax devolution from 41% to at least 50%. The new Act's cost-sharing ratio rule may require states to spend more to deliver the guaranteed 125 days of wage employment, or necessitate an increase in the Centre's allocated amount. The impact of this shift on states' finances is a key concern, with some arguing that it pre-commits a larger slice of states' future fiscal space to a centrally designed programme without clarity on the details.",
+      "paragraph": "The Viksit Bharat \u2013 Guarantee for Rozgar and Ajeevika Mission (Gramin) Act, which replaces the Mahatma Gandhi National Rural Employment Guarantee Act, is expected to significantly impact states' finances. Under the new Act, states will bear a larger burden of the costs, with general category states financing 40% of all components and hilly and north-eastern states financing 10%. This is a shift from the previous arrangement, where the Centre covered the full cost of wages, 75% of material costs, and up to 6% of administrative costs. As a result, states may face a substantial increase in rural employment costs, with some estimates suggesting a 600% to 800% rise in expenditure for certain states, such as Uttar Pradesh, Tamil Nadu, and Bihar. The increased financial burden on states may require them to spend more or rely on increased allocations from the Centre, which could further strain their fiscal space. The shift in financial responsibility comes amid concerns from states about shrinking fiscal space due to various factors, including cesses, surcharges, and tighter grant conditionalities.",
       "sources": [
         {
           "url": "https://indianexpress.com/article/explained/explained-economics/how-new-vb-g-ram-g-act-affects-states-finances-10437630",
           "title": "How VB \u2013 G RAM G Act, which replaces MGNREGA, affects states\u2019 finances"
-        },
-        {
-          "url": "https://indianexpress.com/article/opinion/columns/vb-g-ram-g-bill-annihilates-mgnrega-right-to-work-10421788",
-          "title": "VB-G RAM G Bill annihilates MGNREGA and undermines rural India\u2019s right to work"
         },
         {
           "url": "https://www.thehindu.com/data/vb-g-ram-g-vs-mgnrega-states-expenditure-could-go-up-six-fold-from-7600-cr-to-51000-cr/article71171719.ece",
@@ -41,47 +37,51 @@
     },
     {
       "angle": "Government Policy",
-      "paragraph": "The Indian government's policy on the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGA) has been a subject of debate, with some demanding an increase in wages to \u20b9400 per day. The Congress party has reiterated its demand for a wage hike, citing a report that only 7% of households receive the promised 100 days of work under the scheme. The MGNREGA, which was passed in 2005, legally binds the government to provide employment to one person from every rural family for at least 100 days a year. However, experts and activists have pointed out that the scheme faces administrative apathy, stagnation in real expenditure, and issues with wage payments, which have led to rural distress. Some have even suggested extending the scheme to provide employment for 365 days and expanding it to urban areas. The scheme has been successful in providing jobs during times of crisis, such as the COVID-19 pandemic, but its effectiveness is hindered by administrative issues and stagnant rural wages.",
+      "paragraph": "The Indian government has revised the daily wage for workers under the Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA) from \u20b9349 to \u20b9370, effective from April 1, 2025. This revision applies to the 2025-26 financial year and aims to provide 100 days of wage employment to every eligible rural family. The MGNREGA was initially launched in 2005 as the National Rural Employment Guarantee Act, with the goal of providing employment to one person from every rural family for at least 100 days a year. However, the scheme has faced challenges, including delays in wage payments and pending liabilities. Some experts and activists are advocating for an extension of the scheme to provide employment for 365 days and to cover urban areas as well. The program has generated significant employment, with over 200 crore person-days of employment per year for 50 million rural households reported in 2011-12.",
       "sources": [
         {
-          "url": "https://www.thehindu.com/news/national/mgnrega-wages-must-rise-to-400-per-day-jairam-ramesh/article69602517.ece",
-          "title": "MGNREGA wages must rise to \u20b9400 per day"
+          "url": "https://www.thehindu.com/news/national/karnataka/mgnrega-wage-revised-to-370-a-day-from-april-1/article69395963.ece",
+          "title": "MGNREGA wage revised from \u20b9349 to \u20b9370 a day from April 1 - The Hindu"
+        },
+        {
+          "url": "https://indianexpress.com/article/opinion/columns/mgnrega-vb-g-ram-g-rural-employment-viksit-bharat-10424877",
+          "title": "Jean Dr\u00e8ze writes: With MGNREGA, India set an example ..."
         },
         {
           "url": "https://frontline.thehindu.com/the-nation/spotlight-mgnrega-under-attack-from-the-narendra-modi-government/article66684747.ece",
           "title": "SPOTLIGHT | MGNREGA under attack from the Narendra Modi government - Frontline"
-        },
-        {
-          "url": "https://www.livemint.com/opinion/columns/himanshu-india-rural-jobs-mgnrega-rural-economy-social-safety-net-demand-consumption-economy-global-uncertainty-growth-11754410806608.html",
-          "title": "Himanshu: India\u2019s rural jobs scheme is especially relevant today | Mint"
         }
       ]
     },
     {
       "angle": "Social Impact",
-      "paragraph": "The social impact of poverty in India is a complex issue, with some arguing that neoliberal policies have exacerbated economic disparity, while others claim that the poor have not seen significant benefits from liberalization. The poverty line in India is influenced by the national average income, which has risen due to increased income among the rich, making the poor appear even poorer despite potential rises in their own incomes. Efforts to eliminate poverty have been a longstanding goal in India, with all major political parties pledging to address the issue since the country's independence in 1947. However, the problem persists, with the latest estimates suggesting that anyone with a daily consumption expenditure of \u00a30.31 in urban areas and \u00a30.25 in rural areas is considered above the poverty line. Meanwhile, India is also facing an employment crisis, with rising youth unemployment rates and a significant gender gap in labor force participation. Globally, rural areas continue to struggle with extreme poverty, with over a billion people still living on less than $1.25 a day, despite progress in lifting 350 million people out of poverty in the past decade.",
+      "paragraph": "The social impact of economic policies in India has been a subject of discussion, with some arguing that neoliberal policies have benefited the better-off sections of society while leaving the poor behind. The urban and rural poor have not seen significant benefits from liberalization, and the poverty line has been rising due to an increase in the national average income, making the poor appear even poorer. In rural areas, the stagnation of real wages for agricultural workers and the lack of alternative employment opportunities have contributed to distress, with many households relying on non-agricultural work to make ends meet. The situation is particularly challenging in states like Maharashtra, where rural poverty is deeper than the national average, and agricultural wages are below the national average. However, urban areas in Maharashtra have fared better, with lower poverty rates and greater economic opportunities, although challenges remain in providing decent housing, healthcare, and other basic services. Overall, the social impact of economic policies in India has been marked by increasing income disparity and uneven growth between urban and rural areas.",
       "sources": [
         {
           "url": "https://www.theguardian.com/global-development-professionals-network/2013/aug/23/india-poverty-figures-debate",
           "title": "Redefining poverty: what does it mean to be poor in India? | Impact and effectiveness | The Guardian"
         },
         {
-          "url": "https://frontline.thehindu.com/the-nation/india-reverse-the-trend-of-low-unemployment-lok-sabha-2024-bjp-congress-manifestos-narendra-modi/article68105198.ece",
-          "title": "India\u2019s employment crisis: Jobless growth, threat of automation, and impact of climate change on productivity - Frontline"
+          "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-essentials/what-is-driving-rural-distress-in-india-10157600",
+          "title": "UPSC Current Affairs: What is driving rural distress in India?"
         },
         {
-          "url": "https://www.bbc.com/news/business-11909255",
-          "title": "Rural areas face challenges to eradicate extreme poverty - BBC News"
+          "url": "https://frontline.thehindu.com/politics/maharashtra-economy-urban-poverty-rural-poverty-unemployment-per-capita-income-agricultural-income/article68476493.ece",
+          "title": "Maharashtra's Prosperity Paradox - Frontline - The Hindu"
         }
       ]
     },
     {
       "angle": "Labor Rights",
-      "paragraph": "Labor rights and employment trends in recent times have shown notable shifts. Between 2009-10 and 2011-12, non-agricultural employment experienced rapid growth, with significant increases in construction employment, which rose from 25.6 million to 50 million by 2011-12. This growth was largely driven by infrastructure investments, including roads, bridges, and energy projects, as well as government initiatives like rural housing and road development. The rise in real wages and consumption expenditure also led to increased demand for simple manufactured consumer goods, resulting in a dramatic increase in employment in sectors such as textiles, garments, and food processing between 2009-10 and 2011-12. However, the sources do not explicitly address labor rights issues, instead focusing on employment growth and sectoral shifts. The growth in employment has been largely in the unorganized sector, which uses labor-intensive methods to produce low-end products.",
+      "paragraph": "The Viksit Bharat Guarantee for Rozgar and Ajeevika Mission (Gramin) Bill, 2025, also known as the VB-G RAM G Bill, has introduced significant reforms to India's rural employment system, replacing the Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA) which was in place since 2005. The new framework aims to combine employment security with long-term rural development, aligning with the national vision of Viksit Bharat 2047. However, the shift in financial burden from the Centre to the States has raised concerns, with estimates suggesting that some states, such as Uttar Pradesh, Tamil Nadu, and Bihar, may face a 600% to 800% increase in expenditure for the scheme. This has sparked criticism, particularly as MGNREGA has been criticized for failing to ensure even 100 days of work for registered households. The new law's implementation has been met with concerns from states, despite the government's commitment to spend more on the scheme. The changes aim to transform rural India, which has undergone significant changes since MGNREGA was introduced in 2005.",
       "sources": [
         {
-          "url": "https://www.thehindu.com/opinion/op-ed/jobless-growth-no-more/article5919426.ece",
-          "title": "'Jobless growth' no more"
+          "url": "https://vbgramgyojana.com/post/vb-g-ram-g-vs-mgnrega",
+          "title": "VB-G RAM G vs MGNREGA - Full Comparison, Differences ..."
+        },
+        {
+          "url": "https://www.thehindu.com/data/vb-g-ram-g-vs-mgnrega-states-expenditure-could-go-up-six-fold-from-7600-cr-to-51000-cr/article71171719.ece",
+          "title": "VB-G RAM G vs MGNREGA: States May Face 600% Rise ..."
         }
       ]
     }
@@ -93,16 +93,16 @@
   },
   "all_sources": [
     {
-      "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-essentials/knowledge-nugget-vb-g-ram-g-what-changes-rural-employment-mgnrega-10766098",
-      "title": "Knowledge Nugget | VB-G RAM G comes into effect"
+      "url": "https://vbgramgyojana.com/post/vb-g-ram-g-vs-mgnrega",
+      "title": "VB-G RAM G vs MGNREGA - Full Comparison, Differences ..."
+    },
+    {
+      "url": "https://www.thehindu.com/news/national/karnataka/mgnrega-wage-revised-to-370-a-day-from-april-1/article69395963.ece",
+      "title": "MGNREGA wage revised from \u20b9349 to \u20b9370 a day from April 1 - The Hindu"
     },
     {
       "url": "https://indianexpress.com/article/explained/explained-economics/how-new-vb-g-ram-g-act-affects-states-finances-10437630",
       "title": "How VB \u2013 G RAM G Act, which replaces MGNREGA, affects states\u2019 finances"
-    },
-    {
-      "url": "https://indianexpress.com/article/opinion/columns/vb-g-ram-g-bill-annihilates-mgnrega-right-to-work-10421788",
-      "title": "VB-G RAM G Bill annihilates MGNREGA and undermines rural India\u2019s right to work"
     },
     {
       "url": "https://frontline.thehindu.com/the-nation/spotlight-mgnrega-under-attack-from-the-narendra-modi-government/article66684747.ece",
@@ -110,36 +110,28 @@
     },
     {
       "url": "https://www.thehindu.com/data/vb-g-ram-g-vs-mgnrega-states-expenditure-could-go-up-six-fold-from-7600-cr-to-51000-cr/article71171719.ece",
-      "title": "VB-G RAM G vs MGNREGA: States May Face 600% Rise in Rural Employment Costs - The Hindu"
+      "title": "VB-G RAM G vs MGNREGA: States May Face 600% Rise ..."
     },
     {
-      "url": "https://www.thehindu.com/news/national/mgnrega-wages-must-rise-to-400-per-day-jairam-ramesh/article69602517.ece",
-      "title": "MGNREGA wages must rise to \u20b9400 per day"
-    },
-    {
-      "url": "https://www.livemint.com/opinion/columns/himanshu-india-rural-jobs-mgnrega-rural-economy-social-safety-net-demand-consumption-economy-global-uncertainty-growth-11754410806608.html",
-      "title": "Himanshu: India\u2019s rural jobs scheme is especially relevant today | Mint"
+      "url": "https://indianexpress.com/article/opinion/columns/mgnrega-vb-g-ram-g-rural-employment-viksit-bharat-10424877",
+      "title": "Jean Dr\u00e8ze writes: With MGNREGA, India set an example ..."
     },
     {
       "url": "https://www.theguardian.com/global-development-professionals-network/2013/aug/23/india-poverty-figures-debate",
       "title": "Redefining poverty: what does it mean to be poor in India? | Impact and effectiveness | The Guardian"
     },
     {
-      "url": "https://frontline.thehindu.com/the-nation/india-reverse-the-trend-of-low-unemployment-lok-sabha-2024-bjp-congress-manifestos-narendra-modi/article68105198.ece",
-      "title": "India\u2019s employment crisis: Jobless growth, threat of automation, and impact of climate change on productivity - Frontline"
+      "url": "https://indianexpress.com/article/upsc-current-affairs/upsc-essentials/what-is-driving-rural-distress-in-india-10157600",
+      "title": "UPSC Current Affairs: What is driving rural distress in India?"
     },
     {
-      "url": "https://www.bbc.com/news/business-11909255",
-      "title": "Rural areas face challenges to eradicate extreme poverty - BBC News"
-    },
-    {
-      "url": "https://www.thehindu.com/opinion/op-ed/jobless-growth-no-more/article5919426.ece",
-      "title": "'Jobless growth' no more"
+      "url": "https://frontline.thehindu.com/politics/maharashtra-economy-urban-poverty-rural-poverty-unemployment-per-capita-income-agricultural-income/article68476493.ece",
+      "title": "Maharashtra's Prosperity Paradox - Frontline - The Hindu"
     }
   ],
   "type": "deep_dive",
   "triage_reason": "The story involves a policy change with potential economic and social implications.",
-  "category": "politics",
+  "category": "Politics",
   "tags": [
     "india"
   ],

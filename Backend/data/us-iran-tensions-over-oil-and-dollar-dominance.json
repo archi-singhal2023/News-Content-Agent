@@ -1,48 +1,52 @@
 {
   "topic": "US-Iran tensions over oil and dollar dominance",
-  "headline": "US-IRAN TENSIONS ESCALATE OVER STRAIT OF HORMUZ AS OIL PRICES SOAR AND CHINA JOINS FORCES WITH TEHRAN TO CHALLENGE US DOLLAR DOMINANCE",
-  "summary": "The US and Iran are currently trading attacks over the Strait of Hormuz, with oil prices rising over 2% as a result. Iran is also working with China to reduce US dollar dominance in international trade, particularly in the oil market. China buys a significant portion of Iran's oil exports, often using yuan for transactions. The situation remains tense, with both sides engaging in negotiations to prevent further escalation.",
+  "headline": "US-IRAN TENSIONS ESCALATE AS TEHRAN DITCHES DOLLAR, CHINA STEPS IN TO BUY OIL EXPORTS IN YUAN",
+  "summary": "The US and Iran are currently experiencing heightened tensions, with the US having withdrawn from the Iran nuclear deal and reinstating sanctions. Iran and China are working together to reduce their dependence on the US dollar, with China buying a significant portion of Iran's oil exports in yuan. The global energy sector is undergoing significant changes due to the conflict, with oil prices fluctuating and energy suppliers seeking alternative trade routes.",
   "summary_sources": [
+    {
+      "url": "https://www.bbc.com/news/world-middle-east-44052734",
+      "title": "The impact of Iran sanctions - in charts"
+    },
     {
       "url": "https://www.aljazeera.com/economy/2026/4/8/in-strait-of-hormuz-iran-and-china-take-aim-at-us-dollar-hegemony",
       "title": "In Strait of Hormuz, Iran and China take aim at US dollar hegemony | Business and Economy News | Al Jazeera"
-    },
-    {
-      "url": "https://www.theguardian.com/business/live/2026/jul/14/oil-prices-rise-2-middle-east-strikes-chinas-exports-surge-ai-boom-live-updates",
-      "title": "Oil prices rise over 2% after Middle East strikes"
     },
     {
       "url": "https://www.bbc.com/news/world-middle-east-24316661",
       "title": "US-Iran relations: A brief history - BBC News"
     },
     {
-      "url": "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
-      "title": "Oil prices jump as US and Iran trade attacks over Strait of ..."
+      "url": "https://www.aljazeera.com/economy/2026/7/1/how-war-on-iran-changed-the-global-energy-sector-forever",
+      "title": "\u2018Never the same\u2019: How war on Iran changed the global energy sector | US-Israel war on Iran | Al Jazeera"
     }
   ],
   "sections": [
     {
       "angle": "History",
-      "paragraph": "The relationship between the United States and Iran has been volatile over the last 80 years, marked by significant events such as the 1953 CIA-orchestrated overthrow of Iran's prime minister, Mohammad Mossadeq, and the subsequent installation of the US-backed Shah of Iran. The US-Iran relationship further deteriorated with the 1979 Islamic Revolution, which led to the ousting of the Shah and the rise of Ayatollah Khomeini. In the following years, tensions escalated with the imposition of oil and trade sanctions by the US in 1995, and the branding of Iran as part of an \"axis of evil\" by the US. Despite occasional attempts at dialogue, such as President Clinton's extension of sanctions in 2000 and President Obama's offer of talks without preconditions in 2008, the relationship has remained strained. The timeline of US-Iran relations also includes notable events such as the Iran-Contra Affair and the 2026 attacks on Iran that killed its supreme leader, Ali Khamenei. Sources vary in their emphasis on specific events, but all agree that the history of US-Iran relations has been complex and tumultuous.",
+      "paragraph": "The relationship between the United States and Iran has been volatile for over 65 years, marked by significant events that have shaped their interactions. The CIA-orchestrated overthrow of Iran's democratically elected Prime Minister, Mohammad Mossadeq, in 1953, is often cited as a starting point for the tensions. The US-backed Shah of Iran, Mohammed Reza Pahlevi, was later forced to leave the country in 1979, paving the way for the Islamic Republic of Iran to be established under Ayatollah Khomeini. Since then, the two nations have sparred over issues such as Iran's nuclear ambitions and US political interference. The US and Iran have had periods of heightened tension, including in 2018 when the US abandoned the nuclear deal and reinstated economic sanctions, and in 2019 when the US tightened sanctions on Iran's oil exports, leading to a counter-pressure campaign by Iran. The situation escalated further in 2026 when President Donald Trump ordered attacks on Iran that killed its supreme leader, Ali Khamenei.",
       "sources": [
         {
           "url": "https://www.britannica.com/topic/US-Iran-Relations-A-Timeline",
-          "title": "U.S.-Iran Relations: A Timeline | 1953 Coup, Hostage Crisis, Iran-Contra Affair, JCPOA, & 2025 and 2026 attacks | Britannica"
+          "title": "U.S.-Iran Relations: A Timeline | 1953 Coup, Hostage ..."
         },
         {
           "url": "https://www.bbc.com/news/world-middle-east-24316661",
           "title": "US-Iran relations: A brief history - BBC News"
         },
         {
-          "url": "https://www.aljazeera.com/news/2009/6/25/timeline-iran-us-relations",
-          "title": "Timeline: Iran-US relations | News | Al Jazeera"
+          "url": "https://www.aljazeera.com/news/2025/6/23/history-of-us-iran-relations-from-the-1953-regime-change-to-trump-strikes",
+          "title": "History of US-Iran relations: From the 1953 regime change to Trump strikes | Donald Trump News | Al Jazeera"
         }
       ]
     },
     {
       "angle": "Geopolitics",
-      "paragraph": "The US has imposed significant sanctions on Iran, particularly targeting its energy sector, with the goal of applying 'maximum pressure' on the government to renegotiate a landmark nuclear deal abandoned by President Donald Trump in 2018. The sanctions have had a substantial impact on Iran's economy, with oil exports falling to 1 million bpd on average by April 2019 and crude oil production declining to 2.1 million bpd by October 2019. However, Iran's leaders have remained defiant, with a minister stating that the US cannot stop their oil exports. The US has temporarily lifted some sanctions, allowing Iran to sell crude oil and petrochemical products, in response to 'encouraging progress' in talks. Other countries, including those in the European Union, have also taken steps to mitigate the impact of US sanctions on their firms doing business with Iran. The situation remains complex, with the US seeking to isolate Iran while other nations explore ways to maintain economic ties.",
+      "paragraph": "The US withdrawal from the 2015 Iran nuclear deal has led to the reinstatement of economic sanctions on Iran, with the aim of applying 'maximum pressure' on the government to renegotiate the accord. The sanctions have had a significant impact on Iran's economy, particularly its energy sector, with oil exports falling to 1 million barrels per day by April 2019. However, the US has temporarily lifted some sanctions, allowing Iran to sell crude oil and petrochemical products until August 21, in exchange for commitments on nuclear inspections and free transit through the Strait of Hormuz. The sanctions have also led to widespread protests in Iran, which were brutally quashed by the authorities. The economic hardship faced by Iranians has been exacerbated by the sanctions, which have been in place for several years due to the country's nuclear program. The US has set wind-down periods of 90 and 180 days before sanctions are fully implemented, with the first deadline affecting the purchase of US dollars, trade in gold, and certain other metals, as well as aviation and the car industry.",
       "sources": [
+        {
+          "url": "https://www.bbc.com/news/world-middle-east-44052734",
+          "title": "The impact of Iran sanctions - in charts"
+        },
         {
           "url": "https://www.bbc.com/news/world-middle-east-48119109",
           "title": "Six charts that show how hard US sanctions have hit Iran"
@@ -50,42 +54,38 @@
         {
           "url": "https://indianexpress.com/article/world/us-lifts-iran-oil-sanctions-temporary-waiver-india-impact-10752474",
           "title": "US temporarily lifts Iran oil sanctions: What does it mean for India | World News - The Indian Express"
-        },
-        {
-          "url": "https://www.bbc.com/news/world-middle-east-45115743",
-          "title": "Iran sanctions: US can't stop our oil exports, says minister"
         }
       ]
     },
     {
       "angle": "Economics",
-      "paragraph": "Some major emerging economies, including Russia and Iran, are reducing their reliance on the US dollar by trading commodities in alternative currencies, with buyers in countries like China and India willing to purchase these exports at lower prices. China, in particular, is a significant player in this shift, purchasing nearly all of Iran's oil and providing the country with machinery and industrial goods it cannot obtain elsewhere. This move aligns with Beijing's goal of creating a multipolar financial world where the US dollar's influence is counterbalanced by emerging powers. However, the dominant role of the dollar in oil markets may still be difficult to shake, as currencies like the dirham and Saudi riyal are pegged to the dollar, and liquidity issues have arisen with alternative currencies like the rupee and yuan. Despite these challenges, the trend towards de-dollarization is expected to continue, albeit slowly, with some countries laying the groundwork for trade that sidesteps the dollar. Experts note that it will take time to see significant de-dollarization, given the current system has been in place for decades.",
+      "paragraph": "Iran and China are attempting to reduce the US dollar's dominance in international trade, particularly in the oil market, where about 80 percent of transactions are settled in the currency. China's large-scale purchases of Iranian oil, often at discounted rates and facilitated in yuan, have helped to balance trade between the two countries, with Iran also importing significant quantities of Chinese machinery and industrial goods. This partnership may enable China to challenge the dollar's hegemony, as it is \"perhaps the closest the world has seen to a manufacturing powerhouse\" that can supply oil-producing countries with all of their import needs. However, analysts note that the dollar will likely remain dominant for the foreseeable future, with some estimating that it will take decades for any alternative currency or system to seriously challenge its dominance. The BRICS nations' potential creation of a common currency may also not necessarily threaten the dollar's position, as even the Euro has not significantly challenged its dominance. Iran and China's efforts are part of a broader push for a \"multipolar financial world\" where the US dollar's central role is counterbalanced by emerging powers.",
       "sources": [
-        {
-          "url": "https://www.livemint.com/market/the-dominant-dollar-faces-a-backlash-in-the-oil-market-11703749186612.html",
-          "title": "The dominant dollar faces a backlash in the oil market | Stock Market News"
-        },
         {
           "url": "https://www.aljazeera.com/economy/2026/4/8/in-strait-of-hormuz-iran-and-china-take-aim-at-us-dollar-hegemony",
           "title": "In Strait of Hormuz, Iran and China take aim at US dollar hegemony | Business and Economy News | Al Jazeera"
+        },
+        {
+          "url": "https://www.aljazeera.com/features/2023/8/24/can-brics-dethrone-the-us-dollar-itll-be-an-uphill-climb-experts-say",
+          "title": "Can BRICS dethrone the US dollar? It\u2019ll be an uphill climb, experts say | Business and Economy | Al Jazeera"
         }
       ]
     },
     {
       "angle": "Business Impact",
-      "paragraph": "The conflict between the US and Iran has significantly impacted oil prices, with Brent crude rising over 4% to its highest level in four weeks. The price increase is attributed to the US reimposing a naval blockade of Iran and the trading of attacks between the two countries. As a result, Brent crude has jumped to $87.08 a barrel, while US West Texas Intermediate crude has risen to $80.92 a barrel. The conflict has effectively closed one of the world's key water transport routes for oil, limiting global supplies and increasing oil prices. However, with a framework deal agreed upon, experts warn that a return to normal shipping through the Strait of Hormuz will take time, and the impact of the war will continue to affect the global economy for potentially months to come. The volatility in oil prices is expected to continue, with some analysts predicting a strong possibility of further fluctuations.",
+      "paragraph": "The ongoing conflict between the US and Iran has significantly impacted the global energy sector, with oil prices experiencing major fluctuations. Since the start of the war, oil prices have swung from levels not seen since 2022 to near pre-conflict levels, and have jumped over 4 percent amid recent hostilities over the Strait of Hormuz. The closure of the Strait of Hormuz has forced energy suppliers to find alternative trade routes, and governments worldwide have implemented emergency measures to mitigate the effects of surging fuel costs on their citizens. As a result, global oil markets are approaching a tipping point that could trigger inflation, shortages, and potentially even recession. A US-Iran deal is seen as crucial to restoring stability to the energy markets, with some warning that prolonging negotiations could have catastrophic consequences. The impact of the conflict is being felt globally, from Tokyo to New Delhi to London, with the finances of ordinary citizens hanging in the balance.",
       "sources": [
         {
-          "url": "https://www.theguardian.com/business/live/2026/jul/14/oil-prices-rise-2-middle-east-strikes-chinas-exports-surge-ai-boom-live-updates",
-          "title": "Oil prices rise over 2% after Middle East strikes"
+          "url": "https://www.aljazeera.com/economy/2026/7/1/how-war-on-iran-changed-the-global-energy-sector-forever",
+          "title": "\u2018Never the same\u2019: How war on Iran changed the global energy sector | US-Israel war on Iran | Al Jazeera"
         },
         {
           "url": "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
-          "title": "Oil prices jump as US and Iran trade attacks over Strait of ..."
+          "title": "Oil prices jump as US and Iran trade attacks over Strait of Hormuz - Al Jazeera"
         },
         {
-          "url": "https://www.bbc.com/news/articles/cd0p8me2m5do",
-          "title": "How could the US-Iran deal affect oil prices and the cost of ..."
+          "url": "https://www.theguardian.com/business/2026/may/24/oil-markets-danger-zone-us-iran-deal",
+          "title": "With oil markets nearing the danger zone, a US-Iran deal can\u2019t come soon enough | Heather Stewart | The Guardian"
         }
       ]
     }
@@ -93,32 +93,32 @@
   "dropped_angles": [],
   "consistency_check": {
     "has_contradictions": true,
-    "notes": "The summary states oil prices rose over 2%, while the Business Impact section states Brent crude rose over 4%."
+    "notes": "The History section mentions that President Donald Trump ordered attacks on Iran that killed its supreme leader, Ali Khamenei, in 2026, but this event is not mentioned in the Summary or other sections, and it contradicts the fact that the current situation is described without mentioning such a significant event. Additionally, the History section mentions the US abandoned the nuclear deal and reinstated economic sanctions in 2018, which is consistent with other sections, but the specific event of the attack in 2026 is not supported by other sections."
   },
   "all_sources": [
     {
-      "url": "https://www.aljazeera.com/economy/2026/4/8/in-strait-of-hormuz-iran-and-china-take-aim-at-us-dollar-hegemony",
-      "title": "In Strait of Hormuz, Iran and China take aim at US dollar hegemony | Business and Economy News | Al Jazeera"
+      "url": "https://www.bbc.com/news/world-middle-east-44052734",
+      "title": "The impact of Iran sanctions - in charts"
     },
     {
-      "url": "https://www.theguardian.com/business/live/2026/jul/14/oil-prices-rise-2-middle-east-strikes-chinas-exports-surge-ai-boom-live-updates",
-      "title": "Oil prices rise over 2% after Middle East strikes"
+      "url": "https://www.aljazeera.com/economy/2026/4/8/in-strait-of-hormuz-iran-and-china-take-aim-at-us-dollar-hegemony",
+      "title": "In Strait of Hormuz, Iran and China take aim at US dollar hegemony | Business and Economy News | Al Jazeera"
     },
     {
       "url": "https://www.bbc.com/news/world-middle-east-24316661",
       "title": "US-Iran relations: A brief history - BBC News"
     },
     {
-      "url": "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
-      "title": "Oil prices jump as US and Iran trade attacks over Strait of ..."
+      "url": "https://www.aljazeera.com/economy/2026/7/1/how-war-on-iran-changed-the-global-energy-sector-forever",
+      "title": "\u2018Never the same\u2019: How war on Iran changed the global energy sector | US-Israel war on Iran | Al Jazeera"
     },
     {
       "url": "https://www.britannica.com/topic/US-Iran-Relations-A-Timeline",
-      "title": "U.S.-Iran Relations: A Timeline | 1953 Coup, Hostage Crisis, Iran-Contra Affair, JCPOA, & 2025 and 2026 attacks | Britannica"
+      "title": "U.S.-Iran Relations: A Timeline | 1953 Coup, Hostage ..."
     },
     {
-      "url": "https://www.aljazeera.com/news/2009/6/25/timeline-iran-us-relations",
-      "title": "Timeline: Iran-US relations | News | Al Jazeera"
+      "url": "https://www.aljazeera.com/news/2025/6/23/history-of-us-iran-relations-from-the-1953-regime-change-to-trump-strikes",
+      "title": "History of US-Iran relations: From the 1953 regime change to Trump strikes | Donald Trump News | Al Jazeera"
     },
     {
       "url": "https://www.bbc.com/news/world-middle-east-48119109",
@@ -129,21 +129,21 @@
       "title": "US temporarily lifts Iran oil sanctions: What does it mean for India | World News - The Indian Express"
     },
     {
-      "url": "https://www.bbc.com/news/world-middle-east-45115743",
-      "title": "Iran sanctions: US can't stop our oil exports, says minister"
+      "url": "https://www.aljazeera.com/features/2023/8/24/can-brics-dethrone-the-us-dollar-itll-be-an-uphill-climb-experts-say",
+      "title": "Can BRICS dethrone the US dollar? It\u2019ll be an uphill climb, experts say | Business and Economy | Al Jazeera"
     },
     {
-      "url": "https://www.livemint.com/market/the-dominant-dollar-faces-a-backlash-in-the-oil-market-11703749186612.html",
-      "title": "The dominant dollar faces a backlash in the oil market | Stock Market News"
+      "url": "https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz",
+      "title": "Oil prices jump as US and Iran trade attacks over Strait of Hormuz - Al Jazeera"
     },
     {
-      "url": "https://www.bbc.com/news/articles/cd0p8me2m5do",
-      "title": "How could the US-Iran deal affect oil prices and the cost of ..."
+      "url": "https://www.theguardian.com/business/2026/may/24/oil-markets-danger-zone-us-iran-deal",
+      "title": "With oil markets nearing the danger zone, a US-Iran deal can\u2019t come soon enough | Heather Stewart | The Guardian"
     }
   ],
   "type": "deep_dive",
   "triage_reason": "Geopolitical tensions involve complex economic and historical factors.",
-  "category": "international",
+  "category": "Politics",
   "tags": [
     "international",
     "trending"

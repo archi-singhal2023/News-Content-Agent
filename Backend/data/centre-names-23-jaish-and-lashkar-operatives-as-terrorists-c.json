@@ -19,7 +19,7 @@
   "sections": [
     {
       "angle": "Geopolitics",
-      "paragraph": "The geopolitical relationship between India and Pakistan has been marked by conflict and tension since their partition in 1947, with the division of the Indian subcontinent into a predominantly Hindu India and a Muslim-majority Pakistan sparking one of the largest human migrations and riots in history. The first war between the two nations was fought over Kashmir in 1947-48, after armed tribesmen from Pakistan invaded the disputed territory, leading to the Maharaja of Kashmir seeking assistance from India. A UN-brokered ceasefire line was established in 1949, dividing Kashmir between India and Pakistan, but the region has remained a point of contention. The two countries have since engaged in multiple conflicts, including wars in 1965 and 1971, and more recent incidents such as the 2025 militant attack on Indian tourists in Kashmir, which led to heightened tensions, the cancellation of visas and diplomatic recalls, and military strikes by both countries. The conflict has resulted in significant loss of life and has had a profound impact on the region. The history of armed conflict between India and Pakistan is complex and multifaceted, with both sides having different perspectives on the issues at hand.",
+      "paragraph": "The geopolitical relationship between India and Pakistan has been marked by conflict and tension, particularly over the disputed region of Kashmir. The two countries were formed in 1947, with India being a predominantly Hindu nation and Pakistan being a Muslim-majority nation, leading to one of the largest human migrations in history and sparking riots and violence. The first war between India and Pakistan was fought in 1947-48 over Kashmir, resulting in the division of the region and the establishment of a ceasefire line. Subsequent wars were fought in 1965 and 1971, with the latter leading to the independence of Bangladesh from Pakistan. The Simla Agreement in 1972 aimed to govern relations between the two countries, but tensions have continued, with India accusing Pakistan of arming and sending fighters into Indian Kashmir, and both countries conducting nuclear tests in 1998. The region remains a flashpoint, with ongoing conflicts and ceasefire breaches.",
       "sources": [
         {
           "url": "https://www.aljazeera.com/news/2019/3/1/timeline-india-pakistan-relations",
@@ -28,6 +28,10 @@
         {
           "url": "https://apnews.com/article/india-pakistan-kashmir-pahlagam-loc-c657a7c7ad14440b03f5f75887922b0b",
           "title": "India and Pakistan faced a new crisis. Here\u2019s a look at their history of armed conflict | AP News"
+        },
+        {
+          "url": "https://www.aljazeera.com/news/2010/7/14/timeline-india-and-pakistan-relations",
+          "title": "Timeline: India and Pakistan relations | News"
         }
       ]
     },
@@ -51,33 +55,25 @@
     },
     {
       "angle": "National Security",
-      "paragraph": "The Indian government has unveiled its first national counter-terrorism policy, 'Prahaar', which is built on a zero-tolerance approach to extremist violence. The policy aims to prevent terrorism by denying access to funds, weapons, and safe havens for terrorists and their supporters. It is structured around seven key pillars, including prevention, response, and countering radicalization. The government has stated its commitment to eradicating terrorism, with Home Minister Amit Shah noting that terror incidents have decreased by 70% since 2014. The policy also emphasizes the need for coordinated efforts among security agencies and the importance of reintegrating affected communities. Additionally, the government plans to use technology and intelligence-led strategies to combat terrorism, and will work with state police forces and other security officials to implement the policy.",
+      "paragraph": "India's national security is being strengthened through a proposed national counter-terrorism policy and strategy, which aims to tackle the root causes of terrorism. The Home Minister has emphasized the need for a unified approach to fight terrorism, involving standard operating procedures, synergies among stakeholders, and coordination between agencies. A whole-of-the-government approach is being advocated, which would include local governance at the grassroots level, such as local rural and urban bodies, to make counter-terrorism a people's movement. This approach requires participation from a wide range of stakeholders beyond law enforcement and security agencies. The policy also aims to address structural violence, as defined by Johan Galtung, by diminishing its scope and ensuring that social institutions do not harm people by preventing them from meeting their basic needs or rights. The National Investigation Agency's anti-terror conference brought together various stakeholders, including 21 DGPs and officials, to discuss these facets of counter-terrorism.",
       "sources": [
         {
-          "url": "https://indianexpress.com/article/india/govt-unveils-countrys-first-counter-terrorism-policy-prahaar-10548369",
-          "title": "Govt unveils country's first counter-terrorism policy \u2014 Prahaar"
-        },
-        {
-          "url": "https://indianexpress.com/article/india/government-to-bring-national-counter-terrorism-policy-soon-amit-shah-9658464",
-          "title": "National counter-terrorism policy soon, terror incidents ..."
+          "url": "https://indianexpress.com/article/opinion/columns/tackle-terror-national-counter-terrorism-policy-root-causes-9660079",
+          "title": "How to tackle terror: National counter-terrorism policy must look at root causes"
         }
       ]
     },
     {
       "angle": "Regional Impact",
-      "paragraph": "The recent surge in militancy-related incidents in Jammu and Kashmir has significantly impacted the region's economy and tourism industry. In 2024, civilians accounted for 24% of deaths in such incidents, the highest proportion since 2005, with targeted killings of Kashmiri Pandits and other minorities on the rise. The situation has worsened in 2025, with 56% of militancy-related deaths being civilians. This has led to a decline in investments, with a 55% fall over the past four years, contradicting the Indian government's claims of containing armed groups. The newer districts in Jammu have also been affected by militancy, with sharp spikes in deaths in 2023 and 2024. The increased attacks on civilians, particularly non-resident Hindus and Kashmiri Pandits, have raised concerns about the sophistication of these attacks and the presence of armed groups' intelligence networks.",
+      "paragraph": "The regional impact of the situation in Kashmir is multifaceted. Since August 5, 2019, there has been a visible fall in terrorist recruitment, with a difference of nearly 60 fewer recruits compared to the previous year. This decrease is attributed to the generation of actionable intelligence and clean execution by security forces, as well as efforts to stop recruitment at the grassroots level. However, protests have erupted in Pakistan-occupied Jammu and Kashmir following the arrest of over 600 activists, highlighting severe shortages and humanitarian crises. The situation has also led to instances of terrorism, such as the abduction and killing of a carpenter, Tariq Mohand, by terrorists in South Kashmir. The response to these events has been varied, with some condemning the acts of terrorism and others being taken in by stories that romanticize the death of young boys.",
       "sources": [
         {
-          "url": "https://www.thehindu.com/data/jks-economy-and-tourism-in-peril-after-pahalgam-massacre/article69522025.ece",
-          "title": "J&K\u2019s economy and tourism in peril after Pahalgam massacre - The Hindu"
+          "url": "https://indianexpress.com/article/opinion/columns/jammu-kashmir-special-status-terrorist-recruits-article-370-6543102",
+          "title": "In post-August 5 Kashmir, officers at the ground have more freedom and space to implement their vision"
         },
         {
-          "url": "https://www.thehindu.com/data/in-2024-newer-districts-in-jammu-affected-by-militancy-more-civilians-targeted-data/article68464362.ece",
-          "title": "In 2024, newer districts in Jammu affected by militancy, more civilians targeted | Data - The Hindu"
-        },
-        {
-          "url": "https://www.aljazeera.com/opinions/2023/2/4/kashmir-is-bleeding-its-economy",
-          "title": "Kashmir is bleeding. So is its economy | Business and Economy | Al Jazeera"
+          "url": "https://economictimes.indiatimes.com/topic/terrorism-in-jammu-and-kashmir",
+          "title": "terrorism in jammu and kashmir: Latest News & Videos, Photos about terrorism in jammu and kashmir | The Economic Times - Page 1"
         }
       ]
     }
@@ -105,33 +101,29 @@
       "title": "India and Pakistan faced a new crisis. Here\u2019s a look at their history of armed conflict | AP News"
     },
     {
+      "url": "https://www.aljazeera.com/news/2010/7/14/timeline-india-and-pakistan-relations",
+      "title": "Timeline: India and Pakistan relations | News"
+    },
+    {
       "url": "https://en.wikipedia.org/wiki/Jaish-e-Mohammed",
       "title": "Jaish-e-Mohammed - Wikipedia"
     },
     {
-      "url": "https://indianexpress.com/article/india/govt-unveils-countrys-first-counter-terrorism-policy-prahaar-10548369",
-      "title": "Govt unveils country's first counter-terrorism policy \u2014 Prahaar"
+      "url": "https://indianexpress.com/article/opinion/columns/tackle-terror-national-counter-terrorism-policy-root-causes-9660079",
+      "title": "How to tackle terror: National counter-terrorism policy must look at root causes"
     },
     {
-      "url": "https://indianexpress.com/article/india/government-to-bring-national-counter-terrorism-policy-soon-amit-shah-9658464",
-      "title": "National counter-terrorism policy soon, terror incidents ..."
+      "url": "https://indianexpress.com/article/opinion/columns/jammu-kashmir-special-status-terrorist-recruits-article-370-6543102",
+      "title": "In post-August 5 Kashmir, officers at the ground have more freedom and space to implement their vision"
     },
     {
-      "url": "https://www.thehindu.com/data/jks-economy-and-tourism-in-peril-after-pahalgam-massacre/article69522025.ece",
-      "title": "J&K\u2019s economy and tourism in peril after Pahalgam massacre - The Hindu"
-    },
-    {
-      "url": "https://www.thehindu.com/data/in-2024-newer-districts-in-jammu-affected-by-militancy-more-civilians-targeted-data/article68464362.ece",
-      "title": "In 2024, newer districts in Jammu affected by militancy, more civilians targeted | Data - The Hindu"
-    },
-    {
-      "url": "https://www.aljazeera.com/opinions/2023/2/4/kashmir-is-bleeding-its-economy",
-      "title": "Kashmir is bleeding. So is its economy | Business and Economy | Al Jazeera"
+      "url": "https://economictimes.indiatimes.com/topic/terrorism-in-jammu-and-kashmir",
+      "title": "terrorism in jammu and kashmir: Latest News & Videos, Photos about terrorism in jammu and kashmir | The Economic Times - Page 1"
     }
   ],
   "type": "deep_dive",
   "triage_reason": "Links to a specific attack in J-K imply a broader geopolitical context",
-  "category": "politics",
+  "category": "Politics",
   "tags": [
     "india"
   ],

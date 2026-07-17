@@ -28,12 +28,13 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVE
     words = text.split()
     chunks = []
     start = 0
+    step = max(chunk_size - overlap, 1)
     while start < len(words):
         end = start + chunk_size
         chunk = " ".join(words[start:end])
         if chunk.strip():
             chunks.append(chunk)
-        start += chunk_size - overlap
+        start += step
     return chunks
 
 

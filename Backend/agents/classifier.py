@@ -88,12 +88,11 @@ def _closest_category(value: str) -> str:
 
 
 if __name__ == "__main__":
-    test_cases = [
-        ("US-Iran tensions over oil and dollar dominance", "Tensions escalated after a series of naval incidents in the Gulf."),
-        ("Neeru Dhanda wins India's first trap shooting gold", "India's first international trap shooting gold medal was won today."),
-        ("ISRO completes Gaganyaan uncrewed test flight", "The uncrewed test flight tested the crew escape system successfully."),
-        ("New research links consistent sleep timing to better health", "A large study found irregular sleep timing linked to worse health markers."),
-    ]
-    for topic, summary in test_cases:
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python classifier.py \"your topic here\" [\"optional summary\"]")
+    else:
+        topic = sys.argv[1]
+        summary = sys.argv[2] if len(sys.argv) > 2 else ""
         result = classify_topic(topic, summary)
-        print(f"{topic}\n  -> {result}\n")
+        print(f"{topic}\n  -> {result}")

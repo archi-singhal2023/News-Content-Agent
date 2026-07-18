@@ -8,14 +8,32 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+function toTitleCase(str) {
+  const minorWords = new Set(["a", "an", "the", "and", "or", "but", "for", "nor",
+    "of", "in", "on", "at", "to", "by", "with", "as"]);
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word, i) => {
+      if (i !== 0 && minorWords.has(word)) return word;
+      return word.charAt(0).toUpperCase() + word.slice(1);
+    })
+    .join(" ");
+}
+
 function createCard(item) {
   const card = document.createElement("a");
   card.className = "context-card";
   card.href = `/topic/${encodeURIComponent(item.id)}`;
+  if (item.image_url) {
+    card.style.backgroundImage = `url('${item.image_url}')`;
+    card.style.backgroundSize = "cover";
+    card.style.backgroundPosition = "center";
+  }
   card.innerHTML = `
     <div class="card-text">
       <span class="card-eyebrow">${escapeHtml((item.category || "").toUpperCase())}</span>
-      <h3 class="card-headline">${escapeHtml(item.headline)}</h3>
+      <h3 class="card-headline"><span>${escapeHtml(toTitleCase(item.headline))}</span></h3>
     </div>
   `;
   return card;

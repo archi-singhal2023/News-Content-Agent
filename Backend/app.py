@@ -35,6 +35,7 @@ def topic_summary(t):
         "category": t["category"],
         "tags": t.get("tags", []),
         "headline": t.get("headline", t["topic"].upper()),
+        "image_url": t.get("image_url"),
     }
 
 

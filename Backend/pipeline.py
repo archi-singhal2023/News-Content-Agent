@@ -18,6 +18,7 @@ from agents.analyst import generate_current_summary, analyze_angle
 from agents.editor import assemble_explainer
 from agents.editor import generate_headline
 from utils.llm_client import call_llm_json
+from utils.fetch_image import fetch_topic_image
 
 
 QUICK_READ_SYSTEM_PROMPT = """You are a news editor writing a short, factual summary
@@ -78,11 +79,13 @@ def generate_quick_read(topic: str) -> dict:
 
     unique_sources = list({s["url"]: s["title"] for s in all_sources}.items())
     headline = generate_headline(topic, result.get("summary", "")) if result.get("summary") else topic.upper()
+    image_url = fetch_topic_image(topic)
     
     return {
         "topic": topic,
         "type": "quick_read",
         "headline": headline,
+        "image_url": image_url,
         "summary": summary,
         "sources": [{"url": url, "title": title} for url, title in unique_sources[:5]],
         "note": None,

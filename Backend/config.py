@@ -8,6 +8,7 @@ load_dotenv(os.path.join(_ROOT_DIR, ".env"))
 # --- API Keys ---
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
 
 # --- Model selection ---
 MODEL_FAST = "llama-3.1-8b-instant"

@@ -17,6 +17,7 @@ from agents.researcher import research_topic
 from rag.embed_store import store_research
 from agents.analyst import generate_current_summary, analyze_angle
 from utils.llm_client import call_llm_json
+from utils.fetch_image import fetch_topic_image
 
 CONSISTENCY_CHECK_PROMPT = """You are a fact-checking editor. You will be given a
 current-situation summary and several angle analyses (History, Economics, etc.)
@@ -102,7 +103,8 @@ def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list) -
 
     consistency = check_consistency(summary_result["summary"], valid_angles)
     headline = generate_headline(topic, summary_result["summary"])
-
+    image_url = fetch_topic_image(topic)
+    
     # Collect every unique source used across the whole explainer, for a top-level "all sources" list
     all_sources = {}
     for s in summary_result["sources"]:
@@ -114,6 +116,7 @@ def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list) -
     final_explainer = {
         "topic": topic,
         "headline": headline,
+        "image_url": image_url,
         "summary": summary_result["summary"],
         "summary_sources": summary_result["sources"],
         "sections": [

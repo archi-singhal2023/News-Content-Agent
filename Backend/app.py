@@ -146,8 +146,7 @@ if not os.path.exists(os.path.join(DATA_DIR, "index.json")):
     print("No existing data found — starting initial generation in background...")
     run_initial_generation_in_background()
 
-if os.environ.get("WERKZEUG_RUN_MAIN") != "true" or not app.debug:
-    start_scheduler()
+start_scheduler()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

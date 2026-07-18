@@ -2,7 +2,8 @@
 Fetches a relevant stock photo URL for a topic using Unsplash's free API.
 Falls back to a category-based placeholder if no good match is found.
 """
-import requests
+import requests, os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import UNSPLASH_ACCESS_KEY
 
 UNSPLASH_SEARCH_URL = "https://api.unsplash.com/search/photos"

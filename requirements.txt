@@ -3,3 +3,4 @@ chromadb
 tavily
 bs4
 apscheduler==3.10.4
+gunicorn==22.0.0

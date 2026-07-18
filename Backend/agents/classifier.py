@@ -13,7 +13,7 @@ import json
 import re
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.llm_client import call_llm
+from utils.llm_client import call_llm_json
 
 ALLOWED_CATEGORIES = ["Politics", "Tech", "Finance", "Sports", "Science", "Daily Rituals"]
 ALLOWED_TAGS = {"india", "international", "trending"}
@@ -46,30 +46,13 @@ def classify_topic(topic: str, summary: str = "") -> dict:
     if summary:
         prompt += f"\n\nSummary: {summary}"
 
-    raw_response = call_llm(
+    result = call_llm_json(
         prompt=prompt,
         system=CLASSIFIER_SYSTEM_PROMPT,
         fast=True,
         temperature=0.1,
-        json_mode=True,
     )
-
-    result = _parse_response(raw_response)
-    return _validate(result, raw_response)
-
-
-def _parse_response(raw_response: str):
-    try:
-        return json.loads(raw_response)
-    except json.JSONDecodeError:
-        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
-        if match:
-            try:
-                return json.loads(match.group(0))
-            except json.JSONDecodeError:
-                pass
-        return None
-
+    return _validate(result, str(result))
 
 def _validate(result, raw_response: str) -> dict:
     if result is None:

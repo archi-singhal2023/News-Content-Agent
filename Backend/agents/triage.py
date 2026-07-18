@@ -1,9 +1,7 @@
 import os
 import sys
-import json
-import re
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.llm_client import call_llm
+from utils.llm_client import call_llm_json
 
 TRIAGE_SYSTEM_PROMPT = """You are a news editor deciding how much context a story needs.
 
@@ -27,32 +25,16 @@ def triage_topic(topic: str) -> dict:
     Classifies a news topic as deep_dive or quick_read.
     Returns a dict: {"category": "...", "reason": "..."}
     """
-    raw_response = call_llm(
+    result = call_llm_json(
         prompt=f"News topic: {topic}",
         system=TRIAGE_SYSTEM_PROMPT,
         fast=True,
         temperature=0.1,
-        json_mode=True,
     )
-
-    try:
-        result = json.loads(raw_response)
-        return result
-    except json.JSONDecodeError:
-        # Model may have added extra text around the JSON — try to extract just the {...} part
-        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
-        if match:
-            try:
-                return json.loads(match.group(0))
-            except json.JSONDecodeError:
-                pass
-        # Still failed — return the raw response so we can see what actually came back
-        return {
-            "category": "quick_read",
-            "reason": "Failed to parse, defaulting safe",
-            "raw_response": raw_response,
-        }
-
+    if "category" not in result:
+        result["category"] = "quick_read"
+        result["reason"] = "Failed to parse, defaulting safe"
+    return result
 
 if __name__ == "__main__":
     import sys

@@ -1,10 +1,9 @@
 import os
 import sys
 import json
-import re
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils.llm_client import call_llm
+from utils.llm_client import call_llm_json
 from utils.fetch_article import fetch_article_text
 from config import TAVILY_API_KEY, TRUSTED_DOMAINS
 from tavily import TavilyClient
@@ -33,26 +32,14 @@ def generate_subqueries(topic: str) -> list:
     """
     Given a topic, asks the LLM to break it into 3-4 angle-specific search queries.
     """
-    raw_response = call_llm(
+    result = call_llm_json(
         prompt=f"News topic: {topic}",
         system=SUBQUERY_SYSTEM_PROMPT,
-        fast=False,  # this needs real reasoning, use the smart model
+        fast=False,
         temperature=0.3,
-        json_mode=True,
     )
-
-    try:
-        result = json.loads(raw_response)
-        return result.get("queries", [])
-    except json.JSONDecodeError:
-        match = re.search(r"\{.*\}", raw_response, re.DOTALL)
-        if match:
-            try:
-                return json.loads(match.group(0)).get("queries", [])
-            except json.JSONDecodeError:
-                pass
-        # Fallback: just search the raw topic if query generation fails
-        return [{"angle": "general", "query": topic}]
+    queries = result.get("queries", [])
+    return queries if queries else [{"angle": "general", "query": topic}]
 
 
 
@@ -128,7 +115,6 @@ def research_topic(topic: str) -> dict:
 
 
 if __name__ == "__main__":
-    import sys
     if len(sys.argv) < 2:
         print("Usage: python researcher.py \"your topic here\"")
     else:

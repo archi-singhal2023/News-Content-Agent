@@ -9,9 +9,9 @@ venv/
 
 # Chroma vector DB storage
 chroma_db/
-backend/chroma_db/
+Backend/chroma_db/
 data/
-backend/data/
+Backend/data/
 
 # Cache folder for dev API response caching
 cache/

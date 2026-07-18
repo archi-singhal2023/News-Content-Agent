@@ -58,10 +58,13 @@ def fetch_article_text(url: str, topic_keywords: list = None, timeout: int = 10,
 
 
 if __name__ == "__main__":
-    test_url = "https://www.reuters.com/world/americas/brics-alternatives-dollar-no-longer-fantasy-economist-oneill-says-2026-07-06"
-    result = fetch_article_text(test_url)
-    print(f"Success: {result['success']}")
-    print(f"Error: {result['error']}")
-    print(f"Text length: {len(result['text'])} chars")
-    print("---")
-    print(result["text"][:1000])
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python fetch_article.py <url>")
+    else:
+        result = fetch_article_text(sys.argv[1])
+        print(f"Success: {result['success']}")
+        print(f"Error: {result['error']}")
+        print(f"Text length: {len(result['text'])} chars")
+        print("---")
+        print(result["text"][:1000])

@@ -9,14 +9,14 @@ import os, sys, json
 import threading
 from flask import Flask, render_template, jsonify, request
 
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "backend"))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend"))
 from pipeline import generate_full_explainer
 from apscheduler.schedulers.background import BackgroundScheduler
 import atexit
 
 app = Flask(__name__)
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "backend", "data")
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend", "data")
 
 def load_json(filename):
     path = os.path.join(DATA_DIR, filename)

@@ -5,14 +5,14 @@ Serves the templates/static frontend (built via Lovable) AND the real API
 endpoints, backed by actual pre-generated data from batch_generate.py and
 the live pipeline for search.
 """
-import os
-import sys
-import json
-
+import os, sys, json
+import threading
 from flask import Flask, render_template, jsonify, request
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from pipeline import generate_full_explainer
+from apscheduler.schedulers.background import BackgroundScheduler
+import atexit
 
 app = Flask(__name__)
 
@@ -116,6 +116,37 @@ def api_explain():
 def health_check():
     return jsonify({"status": "ok"})
 
+def refresh_news_data():
+    print("[Scheduler] Refreshing news data...")
+    try:
+        from batch_generate import run_batch
+        run_batch(per_category=3)
+        print("[Scheduler] Refresh complete.")
+    except Exception as e:
+        print(f"[Scheduler] Refresh failed: {e}")
+
+
+def start_scheduler():
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(refresh_news_data, "interval", hours=6)
+    scheduler.start()
+    atexit.register(lambda: scheduler.shutdown())
+    return scheduler
+
+
+def run_initial_generation_in_background():
+    """Runs the first-ever generation in a separate thread so Flask can
+    start serving requests immediately, instead of blocking startup."""
+    thread = threading.Thread(target=refresh_news_data, daemon=True)
+    thread.start()
+
+
+if not os.path.exists(os.path.join(DATA_DIR, "index.json")):
+    print("No existing data found — starting initial generation in background...")
+    run_initial_generation_in_background()
+
+if os.environ.get("WERKZEUG_RUN_MAIN") != "true" or not app.debug:
+    start_scheduler()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

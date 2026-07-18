@@ -2,3 +2,4 @@ flask
 chromadb
 tavily
 bs4
+apscheduler==3.10.4

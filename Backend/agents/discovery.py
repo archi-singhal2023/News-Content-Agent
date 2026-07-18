@@ -16,11 +16,11 @@ tavily_client = TavilyClient(api_key=TAVILY_API_KEY)
 # One broad discovery query per category — kept generic so Tavily surfaces
 # whatever is actually current, rather than us guessing specific topics.
 DISCOVERY_QUERIES = {
-    "Politics": "Politics news this week",
-    "Tech": "technology AI news this week",
-    "Finance": "business finance or stock markets news this week",
-    "Sports": "sports news this week",
-    "Science": "science space research news this week",
+    "Politics": "Both India and International Politics news this week",
+    "Tech": "Both India and International technology AI news this week",
+    "Finance": "Both India and International business finance or stock markets news this week",
+    "Sports": "Both India and International sports news this week",
+    "Science": "Both India and International science space research news this week",
 }
 
 EXTRACT_HEADLINES_PROMPT = """You are a news editor scanning search results to find

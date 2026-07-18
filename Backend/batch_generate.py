@@ -85,7 +85,7 @@ def run_batch(per_category: int = 3):
             "file": filename,
         })
 
-        time.sleep(1)  # easy on rate limits
+        time.sleep(2)  # easy on rate limits
 
     # Rebuild index.json from whatever's actually on disk right now, so stale
     # entries from previous runs get cleaned out too, not just appended to.

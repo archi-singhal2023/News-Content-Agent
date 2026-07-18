@@ -16,18 +16,18 @@ tavily_client = TavilyClient(api_key=TAVILY_API_KEY)
 # One broad discovery query per category — kept generic so Tavily surfaces
 # whatever is actually current, rather than us guessing specific topics.
 DISCOVERY_QUERIES = {
-    "Politics": "India politics news today",
-    "Tech": "technology AI news today",
-    "Finance": "business finance markets news today",
-    "Sports": "sports news today India",
-    "Science": "science space research news today",
+    "Politics": "Politics news this week",
+    "Tech": "technology AI news this week",
+    "Finance": "business finance or stock markets news this week",
+    "Sports": "sports news this week",
+    "Science": "science space research news this week",
 }
 
 EXTRACT_HEADLINES_PROMPT = """You are a news editor scanning search results to find
 distinct, real news STORIES (not opinion pieces, not "top 10" listicles, not
 evergreen explainer articles).
 
-Given a list of search result titles, extract up to 5 genuinely newsworthy,
+Given a list of search result titles, extract up to 10 genuinely newsworthy,
 CURRENT story topics. Rephrase each into a clear, specific topic string
 (like a headline), not the raw search result title if it's vague or clickbait.
 
@@ -49,16 +49,35 @@ def discover_topics_for_category(category: str, max_topics: int = 5) -> list:
         return []
 
     try:
-        response = tavily_client.search(query=query, search_depth="basic", max_results=10)
+        response = tavily_client.search(
+            query=query,
+            search_depth="basic",
+            max_results=10,
+            topic="news",   # biases toward actual recent news articles, not hub pages
+            days=3,         # only articles from the last 3 days
+        )
         raw_results = response.get("results", [])
     except Exception as e:
         print(f"Discovery search failed for '{category}': {e}")
         return []
-
     if not raw_results:
         return []
 
-    titles_text = "\n".join(f"- {r['title']}" for r in raw_results)
+    # Filter out obvious hub/category pages before even asking the LLM —
+    # titles like "X News | Latest Headlines" or "X - Wikipedia" are never
+    # single stories, so this saves a wasted extraction call when nothing
+    # good would come out of it anyway.
+    hub_page_markers = ["latest news", "latest headlines", "news and updates",
+                         "| news |", "updates, products", "wikipedia"]
+    filtered_results = [
+        r for r in raw_results
+        if not any(marker in r["title"].lower() for marker in hub_page_markers)
+    ]
+
+    if not filtered_results:
+        return []
+
+    titles_text = "\n".join(f"- {r['title']}" for r in filtered_results)
 
     result = call_llm_json(
         prompt=f"Category: {category}\n\nSearch result titles:\n{titles_text}",

@@ -117,26 +117,4 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
     }
 
 if __name__ == "__main__":
-    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-    topic = "US-Iran tensions over oil and dollar dominance"
-    research_result = research_topic(topic)
-    collection_name = store_research(topic, research_result)
-
-    print("\n--- Current Situation Summary ---\n")
-    summary_result = generate_current_summary(collection_name, topic)
-    print(summary_result["summary"])
-    print(f"\nSources: {[s['url'] for s in summary_result['sources']]}\n")
-
-    print("\n--- Analyzing each angle ---\n")
-    for angle_data in research_result["angles"]:
-        angle = angle_data["angle"]
-        query = angle_data["query"]
-        analysis = analyze_angle(collection_name, angle, query)
-        print(f"### {angle} ###")
-        if analysis["paragraph"]:
-            print(analysis["paragraph"])
-            print(f"\nSources: {[s['url'] for s in analysis['sources']]}")
-        else:
-            print(analysis["note"])
-        print("\n")
+    print("This module is used via editor.py's pipeline test — run: python editor.py \"topic\"")

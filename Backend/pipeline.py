@@ -128,15 +128,10 @@ def generate_full_explainer(topic: str) -> dict:
 
 
 if __name__ == "__main__":
-
-    test_topics = [
-        "US-Iran tensions over oil and dollar dominance",
-        "Fan cycles 12 days to meet favorite cricketer",
-    ]
-
-    for topic in test_topics:
-        print("\n" + "=" * 70)
-        print(f"TOPIC: {topic}")
-        print("=" * 70)
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python pipeline.py \"your topic here\"")
+    else:
+        topic = " ".join(sys.argv[1:])
         result = generate_full_explainer(topic)
-        print(json.dumps(result, indent=2)[:2000])  # truncated for readability
+        print(json.dumps(result, indent=2)[:2000])

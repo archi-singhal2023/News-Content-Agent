@@ -55,13 +55,10 @@ def triage_topic(topic: str) -> dict:
 
 
 if __name__ == "__main__":
-    test_topics = [
-        "US-Iran tensions over oil and dollar dominance",
-        "Fan cycles 12 days to meet favorite cricketer",
-        "RBI cuts repo rate by 25 basis points",
-        "Local robbery reported in Mumbai suburb",
-    ]
-
-    for topic in test_topics:
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python triage.py \"your topic here\"")
+    else:
+        topic = " ".join(sys.argv[1:])
         result = triage_topic(topic)
-        print(f"{topic}\n  -> {result}\n")
+        print(f"{topic}\n  -> {result}")

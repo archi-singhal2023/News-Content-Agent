@@ -128,5 +128,10 @@ def research_topic(topic: str) -> dict:
 
 
 if __name__ == "__main__":
-    test_result = research_topic("US-Iran tensions over oil and dollar dominance")
-    print(json.dumps(test_result, indent=2)[:3000])  # print first part to keep it readable
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python researcher.py \"your topic here\"")
+    else:
+        topic = " ".join(sys.argv[1:])
+        result = research_topic(topic)
+        print(json.dumps(result, indent=2)[:3000])

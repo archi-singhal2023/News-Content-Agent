@@ -5,12 +5,14 @@ using local, free sentence-transformer embeddings (no API cost).
 import os
 import sys
 import hashlib
+import chromadb
+from chromadb.utils import embedding_functions
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import CHUNK_SIZE, CHUNK_OVERLAP, EMBEDDING_MODEL, CHROMA_PERSIST_DIR
 
-import chromadb
-from chromadb.utils import embedding_functions
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from agents.researcher import research_topic
 
 # Local embedding function — runs on CPU, no API calls, no cost
 embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
@@ -108,17 +110,11 @@ def retrieve_for_angle(collection_name: str, angle: str, query: str, n_results: 
 
 
 if __name__ == "__main__":
-    import json
-    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    from agents.researcher import research_topic
-
-    topic = "US-Iran tensions over oil and dollar dominance"
-    research_result = research_topic(topic)
-
-    collection_name = store_research(topic, research_result)
-
-    print("\n--- Test retrieval for 'History' angle ---")
-    chunks = retrieve_for_angle(collection_name, "History", "US Iran history timeline")
-    for c in chunks:
-        print(f"\nFrom: {c['title']} ({c['url']})")
-        print(c["text"][:300], "...")
+    if len(sys.argv) < 2:
+        print("Usage: python embed_store.py \"your topic here\"")
+    else:
+        from agents.researcher import research_topic
+        topic = " ".join(sys.argv[1:])
+        research_result = research_topic(topic)
+        collection_name = store_research(topic, research_result)
+        print(f"\nStored under collection: {collection_name}")

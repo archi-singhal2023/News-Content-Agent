@@ -133,23 +133,21 @@ def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list) -
 
 
 if __name__ == "__main__":
-    topic = "US-Iran tensions over oil and dollar dominance"
+    import sys
+    if len(sys.argv) < 2:
+        print("Usage: python editor.py \"your topic here\"")
+    else:
+        from agents.researcher import research_topic
+        from rag.embed_store import store_research
+        from agents.analyst import generate_current_summary, analyze_angle
 
-    print("Researching...")
-    research_result = research_topic(topic)
-    collection_name = store_research(topic, research_result)
-
-    print("Generating summary...")
-    summary_result = generate_current_summary(collection_name, topic)
-
-    print("Analyzing angles...")
-    angle_analyses = []
-    for angle_data in research_result["angles"]:
-        analysis = analyze_angle(collection_name, angle_data["angle"], angle_data["query"])
-        angle_analyses.append(analysis)
-
-    print("Assembling final explainer...")
-    final = assemble_explainer(topic, summary_result, angle_analyses)
-
-    print("\n" + "=" * 60)
-    print(json.dumps(final, indent=2))
+        topic = " ".join(sys.argv[1:])
+        research_result = research_topic(topic)
+        collection_name = store_research(topic, research_result)
+        summary_result = generate_current_summary(collection_name, topic)
+        angle_analyses = [
+            analyze_angle(collection_name, a["angle"], a["query"])
+            for a in research_result["angles"]
+        ]
+        final = assemble_explainer(topic, summary_result, angle_analyses)
+        print(json.dumps(final, indent=2))

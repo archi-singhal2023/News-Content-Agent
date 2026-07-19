@@ -139,7 +139,7 @@ def refresh_news_data():
     print("[Scheduler] Refreshing news data...")
     try:
         from batch_generate import run_batch
-        run_batch(per_category=3)
+        run_batch(per_category=10)
         print("[Scheduler] Refresh complete.")
     except Exception as e:
         print(f"[Scheduler] Refresh failed: {e}")

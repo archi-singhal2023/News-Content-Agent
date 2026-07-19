@@ -36,4 +36,21 @@ document.addEventListener("DOMContentLoaded", async () => {
       alert("Something went wrong finding that story. Please try again.");
     }
   });
+
+  window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    // Page was restored from bfcache (e.g. browser Back button) —
+    // reset the search form to a clean, usable state.
+    const submitBtn = document.getElementById("search-submit");
+    const input = document.getElementById("search-input");
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Explain";
+    }
+    if (input) {
+      input.value = "";
+    }
+  }
+});
+  
 });

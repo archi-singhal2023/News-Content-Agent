@@ -9,8 +9,8 @@ import os, sys, json
 import threading
 from flask import Flask, render_template, jsonify, request
 
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend"))
-from pipeline import generate_full_explainer
+#sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend"))
+#from pipeline import generate_full_explainer
 from apscheduler.schedulers.background import BackgroundScheduler
 import atexit
 
@@ -97,8 +97,14 @@ def api_topic(topic_id):
         return jsonify({"error": "not found"}), 404
     return jsonify(explainer)
 
-
 @app.route("/api/explain", methods=["POST"])
+def api_explain():
+    return jsonify({
+        "error": "Live search is only available when running locally. "
+                 "This deployment serves pre-generated content only."
+    }), 503
+
+'''@app.route("/api/explain", methods=["POST"])
 def api_explain():
     data = request.get_json(force=True, silent=True) or {}
     query = data.get("topic", "").strip()
@@ -109,7 +115,7 @@ def api_explain():
         result = generate_full_explainer(query)
         return jsonify(result)
     except Exception as e:
-        return jsonify({"error": f"Failed to generate explainer: {str(e)}"}), 500
+        return jsonify({"error": f"Failed to generate explainer: {str(e)}"}), 500'''
 
 
 @app.route("/api/health")

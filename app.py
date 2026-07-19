@@ -113,6 +113,19 @@ def api_explain():
 
     try:
         result = generate_full_explainer(query)
+
+        # Live-searched topics need an id too, same slugify logic as batch_generate.py,
+        # so the frontend can redirect to /topic/<id> correctly
+        import re
+        slug = re.sub(r"[^a-z0-9]+", "-", query.lower()).strip("-")[:60]
+        result["id"] = slug
+
+        # Also save it to data/ so future visits to /topic/<id> or the homepage
+        # carousels can find it too, not just this one search session
+        filepath = os.path.join(DATA_DIR, f"{slug}.json")
+        with open(filepath, "w") as f:
+            json.dump(result, f, indent=2)
+
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": f"Failed to generate explainer: {str(e)}"}), 500

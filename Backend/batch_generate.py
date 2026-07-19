@@ -85,7 +85,7 @@ def run_batch(per_category: int = 3):
             "file": filename,
         })
 
-        time.sleep(2)  # easy on rate limits
+        time.sleep(5)  # easy on rate limits
 
     # Rebuild index.json from whatever's actually on disk right now, so stale
     # entries from previous runs get cleaned out too, not just appended to.
@@ -94,13 +94,19 @@ def run_batch(per_category: int = 3):
         if fname == "index.json" or not fname.endswith(".json"):
             continue
         full = load_saved_explainer(os.path.join(DATA_DIR, fname))
-        if full:
-            index_data.append({
-                "id": full["id"],
-                "topic": full["topic"],
-                "category": full["category"],
-                "tags": full["tags"],
-            })
+        if not full:
+            continue
+        # Skip malformed/incomplete files instead of crashing the whole index rebuild
+        required_keys = ("id", "topic", "category", "tags")
+        if not all(k in full for k in required_keys):
+            print(f"Skipping malformed data file (missing keys): {fname}")
+            continue
+        index_data.append({
+            "id": full["id"],
+            "topic": full["topic"],
+            "category": full["category"],
+            "tags": full["tags"],
+        })
 
     index_path = os.path.join(DATA_DIR, "index.json")
     with open(index_path, "w") as f:
@@ -119,4 +125,4 @@ def run_batch(per_category: int = 3):
 
 
 if __name__ == "__main__":
-    run_batch(per_category=3)
+    run_batch(per_category=6)

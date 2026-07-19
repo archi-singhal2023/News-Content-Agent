@@ -19,5 +19,5 @@ Backend/cache/
 
 # OS junk
 .DS_Store
-
+.vscode/
 .gitignore

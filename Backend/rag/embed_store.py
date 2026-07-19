@@ -15,9 +15,15 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from agents.researcher import research_topic
 
 # Local embedding function — runs on CPU, no API calls, no cost
-embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-    model_name=EMBEDDING_MODEL
-)
+_embedding_fn = None
+
+def get_embedding_fn():
+    global _embedding_fn
+    if _embedding_fn is None:
+        _embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
+            model_name=EMBEDDING_MODEL
+        )
+    return _embedding_fn
 
 chroma_client = chromadb.PersistentClient(path=CHROMA_PERSIST_DIR)
 
@@ -62,7 +68,7 @@ def store_research(topic: str, research_result: dict) -> str:
         pass
 
     collection = chroma_client.create_collection(
-        name=collection_name, embedding_function=embedding_fn
+        name=collection_name, embedding_function=_embedding_fn
     )
 
     documents, metadatas, ids = [], [], []
@@ -94,7 +100,7 @@ def retrieve_for_angle(collection_name: str, angle: str, query: str, n_results: 
     """
     Retrieves the most relevant chunks for a specific angle + query from the collection.
     """
-    collection = chroma_client.get_collection(collection_name, embedding_function=embedding_fn)
+    collection = chroma_client.get_collection(collection_name, embedding_function=_embedding_fn)
 
     results = collection.query(
         query_texts=[query],

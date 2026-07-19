@@ -92,7 +92,7 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
     (typically Business Impact or Geopolitics, since those track live events).
     """
     # Pull chunks broadly, not angle-restricted, to get the most current facts
-    collection = chroma_client.get_collection(collection_name, embedding_function=embedding_fn)
+    collection = chroma_client.get_collection(collection_name, embedding_function=_embedding_fn)
 
     results = collection.query(query_texts=[f"latest news {topic}"], n_results=5)
     chunks = [

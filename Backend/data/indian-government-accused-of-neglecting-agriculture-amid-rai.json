@@ -1,0 +1,132 @@
+{
+  "topic": "Indian government accused of neglecting agriculture amid rainfall deficit",
+  "headline": "GOVERNMENT ACCUSED OF NEGLECTING AGRICULTURE AS MONSOON RAINFALL PLUMMETS TO 5-YEAR LOW, KHA Rif CROP SOWING DECLINES BY 16%",
+  "image_url": "https://images.unsplash.com/photo-1602867741746-6df80f40b3f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8ZmFybWVyJTJDJTIwZHJvdWdodCUyQyUyMGNyb3BzfGVufDB8MXx8fDE3ODQ1NDUzNjV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "India is experiencing its lowest monsoon rainfall in 5 years, with August being the driest in over a century. The rainfall deficit is likely to affect agricultural production, with a 16% decline in kharif crop sowing. The Indian government is facing accusations of neglecting the agricultural sector. Farmers are struggling with the impacts of the weak monsoon.",
+  "summary_sources": [
+    {
+      "url": "https://www.aljazeera.com/news/2023/9/30/india-receives-lowest-rains-in-5-years-agricultural-production-to-be-hit",
+      "title": "India receives lowest rains in 5 years, agricultural production to be hit | Weather News | Al Jazeera"
+    },
+    {
+      "url": "https://frontline.thehindu.com/cover-story/agriculture-in-crisis/article7048078.ece",
+      "title": "Agriculture in crisis - Frontline - The Hindu"
+    },
+    {
+      "url": "https://www.livemint.com/opinion/online-views/weak-monsoon-devastating-india-rural-incomes-inflation-food-prices-consumption-demand-11784209173907.html",
+      "title": "A weak monsoon is not as devastating as it was in the past\u2014but India must not drop its guard | Mint"
+    },
+    {
+      "url": "https://www.aljazeera.com/opinions/2022/1/2/its-time-to-take-indias-farmers-protest-to-the-west",
+      "title": "India needs to protect its farmers against neocolonial ..."
+    }
+  ],
+  "sections": [
+    {
+      "angle": "History",
+      "paragraph": "India's agricultural sector has a complex history, with the country having made efforts to modernize and improve productivity. However, the path to modernization has been marked by contradictions, with the withdrawal of state support under neoliberalism leading to a crisis of livelihoods for those dependent on agriculture. The Indian government has faced opposition from farmers and laborers over the dismantling of the marketing framework, which has led to generalized distress. In recent years, the government repealed three contentious farm laws that aimed to remove subsidies and price regulation on crops, which were seen as a threat to the livelihoods of millions of farmers. The laws were criticized for being influenced by Western countries and corporate interests, and their repeal was seen as a step towards protecting Indian farmers. The history of Indian agriculture is also marked by fluctuations in production growth rates, with the annual growth rate in production of food staples varying over the years, from 2.5% per annum in the 1970s to 1.8% per annum in the late 1990s.",
+      "sources": [
+        {
+          "url": "https://www.aljazeera.com/opinions/2022/1/2/its-time-to-take-indias-farmers-protest-to-the-west",
+          "title": "India needs to protect its farmers against neocolonial ..."
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Agriculture_in_India",
+          "title": "Agriculture in India"
+        },
+        {
+          "url": "https://frontline.thehindu.com/cover-story/farmers-protests-agricultural-policy-modernsation-failures-standoff-escalates-new-farm-laws-2020/article33316673.ece",
+          "title": "On the endemic contradictions in India's path to modernisation ..."
+        }
+      ]
+    },
+    {
+      "angle": "Economics",
+      "paragraph": "India's economy is facing concerns due to a weak monsoon, with rainfall in June experiencing a 40% deficit, although it has improved in July. The cumulative figure remains in deficit, and poor rainfall has resulted in a 16% decline in kharif crop sowing compared to the previous year. The monsoon is vital for India's $3 trillion economy, contributing over 70% of the rain needed to water crops and replenish reservoirs and aquifers. The summer rainfall deficit is expected to affect agricultural production, potentially making staples such as sugar, pulses, rice, and vegetables more expensive. While diversification of agricultural income has provided some resilience, crop production still accounts for a substantial share of income, leaving rural incomes vulnerable to disruption. Food inflation has already jumped to 5.3% in June and is expected to climb to around 7% in the October-December quarter.",
+      "sources": [
+        {
+          "url": "https://www.livemint.com/opinion/online-views/weak-monsoon-devastating-india-rural-incomes-inflation-food-prices-consumption-demand-11784209173907.html",
+          "title": "A weak monsoon is not as devastating as it was in the past\u2014but India must not drop its guard | Mint"
+        },
+        {
+          "url": "https://www.aljazeera.com/news/2023/9/30/india-receives-lowest-rains-in-5-years-agricultural-production-to-be-hit",
+          "title": "India receives lowest rains in 5 years, agricultural production to be hit | Weather News | Al Jazeera"
+        }
+      ]
+    },
+    {
+      "angle": "Social Impact",
+      "paragraph": "The social impact of farming policies in India is a complex issue, with various stakeholders highlighting the need for clear definitions and support for farmers. Respecting farmers' rights has yielded benefits such as thriving land, avoidance of starvation, and curbed urban migration. However, the lack of a clear definition of a farmer by the government has practical implications, with most schemes meant for farmers' welfare only available to landowners. This ambiguity affects the design and beneficiaries of schemes like PM-KISAN, and has serious implications for communities working on the land. The issue is further complicated by the nuances of organic versus chemical farming, with some arguing that the success of organic farming depends on its implementation and support. Overall, the social impact of farming policies in India is far-reaching, influencing not only rural areas but also urban migration, water scarcity, and the welfare of farmers.",
+      "sources": [
+        {
+          "url": "https://frontline.thehindu.com/interviews/interview-vandana-shiva-environmental-activist-we-must-reclaim-land-as-a-commons-with-shared-use-rights-for-both-men-and-women/article67251141.ece",
+          "title": "INTERVIEW | Vandana Shiva: \u201cWe must reclaim land as a ..."
+        },
+        {
+          "url": "https://www.thehindu.com/sci-tech/agriculture/who-is-a-farmer-government-has-no-clear-definition/article61612154.ece",
+          "title": "Who is a farmer? Government has no clear definition"
+        }
+      ]
+    },
+    {
+      "angle": "Geopolitics",
+      "paragraph": "The geopolitics of agriculture is marked by significant diversity across different regions and countries, with Indian agriculture exhibiting distinct differences from that of foreign nations. Technological adoption and innovation are key areas where developed countries surpass India, with the use of precision farming techniques, automated machinery, and sophisticated irrigation systems. However, there is a growing emphasis on sustainable practices, such as organic farming, watershed management, and climate-resilient agriculture, driven by concerns over environmental degradation and climate change. Cultural and societal influences also play a profound role in shaping agricultural practices, with foreign countries often integrating farming with rural economies and cultural traditions. In contrast, Indian agriculture remains deeply intertwined with cultural and societal norms. The approaches to agricultural development vary, with some countries adopting a balanced approach that combines modern techniques with traditional knowledge.",
+      "sources": [
+        {
+          "url": "https://www.linkedin.com/pulse/exploring-contrasts-indian-agriculture-vs-foreign-ram-mukhekar-hgxzf",
+          "title": "Exploring the Contrasts: Indian Agriculture vs. Foreign ..."
+        }
+      ]
+    }
+  ],
+  "dropped_angles": [],
+  "consistency_check": {
+    "has_contradictions": false,
+    "notes": ""
+  },
+  "all_sources": [
+    {
+      "url": "https://www.aljazeera.com/news/2023/9/30/india-receives-lowest-rains-in-5-years-agricultural-production-to-be-hit",
+      "title": "India receives lowest rains in 5 years, agricultural production to be hit | Weather News | Al Jazeera"
+    },
+    {
+      "url": "https://frontline.thehindu.com/cover-story/agriculture-in-crisis/article7048078.ece",
+      "title": "Agriculture in crisis - Frontline - The Hindu"
+    },
+    {
+      "url": "https://www.livemint.com/opinion/online-views/weak-monsoon-devastating-india-rural-incomes-inflation-food-prices-consumption-demand-11784209173907.html",
+      "title": "A weak monsoon is not as devastating as it was in the past\u2014but India must not drop its guard | Mint"
+    },
+    {
+      "url": "https://www.aljazeera.com/opinions/2022/1/2/its-time-to-take-indias-farmers-protest-to-the-west",
+      "title": "India needs to protect its farmers against neocolonial ..."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Agriculture_in_India",
+      "title": "Agriculture in India"
+    },
+    {
+      "url": "https://frontline.thehindu.com/cover-story/farmers-protests-agricultural-policy-modernsation-failures-standoff-escalates-new-farm-laws-2020/article33316673.ece",
+      "title": "On the endemic contradictions in India's path to modernisation ..."
+    },
+    {
+      "url": "https://frontline.thehindu.com/interviews/interview-vandana-shiva-environmental-activist-we-must-reclaim-land-as-a-commons-with-shared-use-rights-for-both-men-and-women/article67251141.ece",
+      "title": "INTERVIEW | Vandana Shiva: \u201cWe must reclaim land as a ..."
+    },
+    {
+      "url": "https://www.thehindu.com/sci-tech/agriculture/who-is-a-farmer-government-has-no-clear-definition/article61612154.ece",
+      "title": "Who is a farmer? Government has no clear definition"
+    },
+    {
+      "url": "https://www.linkedin.com/pulse/exploring-contrasts-indian-agriculture-vs-foreign-ram-mukhekar-hgxzf",
+      "title": "Exploring the Contrasts: Indian Agriculture vs. Foreign ..."
+    }
+  ],
+  "type": "deep_dive",
+  "triage_reason": "Underlying causes and economic impact of the rainfall deficit on Indian agriculture",
+  "category": "Politics",
+  "tags": [
+    "india"
+  ],
+  "id": "indian-government-accused-of-neglecting-agriculture-amid-rai"
+}

@@ -35,7 +35,7 @@ def generate_subqueries(topic: str) -> list:
     result = call_llm_json(
         prompt=f"News topic: {topic}",
         system=SUBQUERY_SYSTEM_PROMPT,
-        fast=False,
+        fast=True,
         temperature=0.3,
     )
     queries = result.get("queries", [])

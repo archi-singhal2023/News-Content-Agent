@@ -30,8 +30,7 @@ def _write_cache(key, response):
     with open(path, "w") as f:
         json.dump({"response": response}, f)
 
-
-@retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=2, max=20))
+@retry(stop=stop_after_attempt(6), wait=wait_exponential(multiplier=1, min=5, max=50))
 def _call_groq(model, system, prompt, temperature, json_mode=False):
     kwargs = {
         "model": model,

@@ -18,6 +18,15 @@
     ]
   },
   {
+    "id": "india-and-finland-discuss-technology-and-manufacturing-partn",
+    "topic": "India and Finland Discuss Technology and Manufacturing Partnership",
+    "category": "Politics",
+    "tags": [
+      "india",
+      "international"
+    ]
+  },
+  {
     "id": "india-s-rapid-development-of-a-i-data-centers-may-harm-coast",
     "topic": "India's rapid development of A.I. data centers may harm coastal city",
     "category": "Tech",
@@ -30,6 +39,23 @@
     "id": "india-s-rapid-development-of-a-i-data-centers-raises-environ",
     "topic": "India's rapid development of A.I. data centers raises environmental concerns",
     "category": "Finance",
+    "tags": [
+      "india",
+      "trending"
+    ]
+  },
+  {
+    "id": "india-s-smartphone-market-faces-challenges-due-to-ai-driven-",
+    "topic": "India's Smartphone Market Faces Challenges Due to AI-Driven Memory Crunch",
+    "category": "Tech",
+    "tags": [
+      "india"
+    ]
+  },
+  {
+    "id": "indian-activist-forcibly-removed-by-police-while-on-hunger-s",
+    "topic": "Indian Activist Forcibly Removed by Police While on Hunger Strike",
+    "category": "Politics",
     "tags": [
       "india",
       "trending"
@@ -53,12 +79,55 @@
     ]
   },
   {
+    "id": "indian-self-help-groups-to-produce-200-000-national-flags-fo",
+    "topic": "Indian Self-Help Groups to Produce 200,000 National Flags for Independence Day",
+    "category": "Daily Rituals",
+    "tags": [
+      "india",
+      "trending"
+    ]
+  },
+  {
+    "id": "rajnath-singh-reiterates-india-s-zero-tolerance-policy-again",
+    "topic": "Rajnath Singh Reiterates India's Zero Tolerance Policy Against Terrorism",
+    "category": "Politics",
+    "tags": [
+      "india"
+    ]
+  },
+  {
+    "id": "taiwan-president-urges-party-to-oppose-china-s-red-terror-ta",
+    "topic": "Taiwan President Urges Party to Oppose China's 'Red Terror' Tactics",
+    "category": "Politics",
+    "tags": [
+      "international",
+      "trending"
+    ]
+  },
+  {
     "id": "trump-criticizes-dhs-decision-to-pause-immigration-traffic-s",
     "topic": "Trump Criticizes DHS Decision to Pause Immigration Traffic Stops",
     "category": "Politics",
     "tags": [
       "international",
       "trending"
+    ]
+  },
+  {
+    "id": "us-senator-fetterman-threatens-to-leave-democratic-party-ove",
+    "topic": "US Senator Fetterman Threatens to Leave Democratic Party Over Israel Policy",
+    "category": "Politics",
+    "tags": [
+      "international",
+      "trending"
+    ]
+  },
+  {
+    "id": "ysrcp-accuses-government-of-neglecting-agriculture-amid-rain",
+    "topic": "YSRCP Accuses Government of Neglecting Agriculture Amid Rainfall Deficit",
+    "category": "Politics",
+    "tags": [
+      "india"
     ]
   }
 ]

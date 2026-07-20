@@ -76,7 +76,7 @@ def check_consistency(summary: str, angle_analyses: list) -> dict:
     result = call_llm_json(
         prompt=sections_text,
         system=CONSISTENCY_CHECK_PROMPT,
-        fast=False,
+        fast=True,
         temperature=0.1,
     )
     return {
@@ -140,10 +140,6 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python editor.py \"your topic here\"")
     else:
-        from agents.researcher import research_topic
-        from rag.embed_store import store_research
-        from agents.analyst import generate_current_summary, analyze_angle
-
         topic = " ".join(sys.argv[1:])
         research_result = research_topic(topic)
         collection_name = store_research(topic, research_result)

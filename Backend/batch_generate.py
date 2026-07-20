@@ -125,4 +125,4 @@ def run_batch(per_category: int = 3):
 
 
 if __name__ == "__main__":
-    run_batch(per_category=6)
+    run_batch(per_category=3)

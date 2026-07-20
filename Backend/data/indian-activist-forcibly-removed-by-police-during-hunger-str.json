@@ -1,0 +1,37 @@
+{
+  "topic": "Indian activist forcibly removed by police during hunger strike",
+  "type": "quick_read",
+  "headline": "SONAM WANGCHUK FORCIBLY REMOVED BY POLICE DURING 18-DAY HUNGER STRIKE AT JANTAR MANTAR OVER NEET DEMANDS",
+  "image_url": "https://images.unsplash.com/photo-1550000472-ed8dbdc1a1b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8cHJvdGVzdCUyQyUyMHBvbGljZSUyQyUyMGFjdGl2aXN0fGVufDB8MXx8fDE3ODQ1NDU0Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "Indian climate activist Sonam Wangchuk was forcibly removed by police during his hunger strike at Jantar Mantar, which had entered its 18th day. Wangchuk had been demanding the resignation of Union Education Minister Dharmendra Pradhan over alleged irregularities in the NEET exam. Despite growing concerns over his health, Wangchuk had continued his strike, with many voicing their support for him. The hunger strike was part of his protest for various causes, including autonomy for the people of Ladakh. Wangchuk's health had been deteriorating during the strike.",
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Anna_Hazare",
+      "title": "Anna Hazare - Wikipedia"
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/cvg32g1764jo",
+      "title": "The activist who went on a hunger strike to save his cold ..."
+    },
+    {
+      "url": "https://www.thehindu.com/news/national/sonam-wangchuk-warns-of-hunger-strike-from-june-28-at-jantar-mantar/article71147277.ece",
+      "title": "Sonam Wangchuk warns of hunger strike from June 28 at Jantar Mantar - The Hindu"
+    },
+    {
+      "url": "https://www.livemint.com/news/sonam-wangchuk-hunger-strike-naseeruddin-shah-arundhati-roy-among-signatories-urging-centre-to-open-dialogue-11784088520414.html",
+      "title": "Sonam Wangchuk hunger strike: Abhay Deol, Swara Bhaskar, Shreya, others rally behind activist as calls grow to end fast | Today News"
+    },
+    {
+      "url": "https://www.bbc.com/news/world-asia-india-55798003",
+      "title": "India farmers' rally: What's next for the protesters?"
+    }
+  ],
+  "note": null,
+  "triage_reason": "The story is a factual event with no underlying cause to explain.",
+  "category": "Politics",
+  "tags": [
+    "india",
+    "trending"
+  ],
+  "id": "indian-activist-forcibly-removed-by-police-during-hunger-str"
+}

@@ -5,34 +5,33 @@ using local, free sentence-transformer embeddings (no API cost).
 import os
 import sys
 import hashlib
-import chromadb
-from chromadb.utils import embedding_functions
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import CHUNK_SIZE, CHUNK_OVERLAP, EMBEDDING_MODEL, CHROMA_PERSIST_DIR
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from agents.researcher import research_topic
-
-# Local embedding function — runs on CPU, no API calls, no cost
 _embedding_fn = None
+_chroma_client = None
+
 
 def get_embedding_fn():
     global _embedding_fn
     if _embedding_fn is None:
+        from chromadb.utils import embedding_functions  # deferred import
         _embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
             model_name=EMBEDDING_MODEL
         )
     return _embedding_fn
 
-chroma_client = chromadb.PersistentClient(path=CHROMA_PERSIST_DIR)
+
+def get_chroma_client():
+    global _chroma_client
+    if _chroma_client is None:
+        import chromadb  # deferred import
+        _chroma_client = chromadb.PersistentClient(path=CHROMA_PERSIST_DIR)
+    return _chroma_client
 
 
 def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list:
-    """
-    Splits text into overlapping word-based chunks.
-    Overlap helps preserve context across chunk boundaries.
-    """
     words = text.split()
     chunks = []
     start = 0
@@ -47,14 +46,14 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVE
 
 
 def _make_collection_name(topic: str) -> str:
-    """Chroma collection names must be simple strings — hash the topic for a safe unique name."""
     safe_hash = hashlib.md5(topic.encode()).hexdigest()[:12]
     return f"topic_{safe_hash}"
 
 
 def store_research(topic: str, research_result: dict) -> str:
+    chroma_client = get_chroma_client()
+    embedding_fn = get_embedding_fn()
     collection_name = _make_collection_name(topic)
-    embedding_fn = get_embedding_fn()  # <-- actually initializes it
 
     try:
         chroma_client.delete_collection(collection_name)
@@ -91,6 +90,7 @@ def store_research(topic: str, research_result: dict) -> str:
 
 
 def retrieve_for_angle(collection_name: str, angle: str, query: str, n_results: int = 4) -> list:
+    chroma_client = get_chroma_client()
     embedding_fn = get_embedding_fn()
     collection = chroma_client.get_collection(collection_name, embedding_function=embedding_fn)
 

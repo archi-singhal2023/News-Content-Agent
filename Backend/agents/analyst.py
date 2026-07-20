@@ -11,7 +11,7 @@ import json as json_lib
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utils.llm_client import call_llm_json
-from rag.embed_store import chroma_client, get_embedding_fn
+from rag.embed_store import get_chroma_client, get_embedding_fn
 from agents.researcher import research_topic
 from rag.embed_store import store_research
 from rag.embed_store import retrieve_for_angle
@@ -92,7 +92,7 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
     (typically Business Impact or Geopolitics, since those track live events).
     """
     # Pull chunks broadly, not angle-restricted, to get the most current facts
-    collection = chroma_client.get_collection(collection_name, embedding_function=get_embedding_fn)
+    collection = get_chroma_client.get_collection(collection_name, embedding_function=get_embedding_fn)
 
     results = collection.query(query_texts=[f"latest news {topic}"], n_results=5)
     chunks = [

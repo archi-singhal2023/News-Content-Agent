@@ -20,6 +20,16 @@ from agents.discovery import discover_all_topics
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 os.makedirs(DATA_DIR, exist_ok=True)
 
+def clear_old_data():
+    """Remove all existing topic JSON files before a fresh batch run,
+    so the site only ever shows the current run's discovered news,
+    not an ever-accumulating pile of old stories."""
+    removed = 0
+    for fname in os.listdir(DATA_DIR):
+        if fname.endswith(".json"):
+            os.remove(os.path.join(DATA_DIR, fname))
+            removed += 1
+    print(f"Cleared {removed} old data files before fresh run.")
 
 def slugify(topic: str) -> str:
     """Convert a topic string into a safe filename."""
@@ -33,6 +43,7 @@ def load_saved_explainer(filepath):
 
 
 def run_batch(per_category: int = 3):
+    clear_old_data()
     print("Discovering current topics...\n")
     discovered = discover_all_topics(per_category=per_category)
 

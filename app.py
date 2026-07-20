@@ -1,22 +1,20 @@
 """
 Context — Flask app.
-
-Serves the templates/static frontend (built via Lovable) AND the real API
-endpoints, backed by actual pre-generated data from batch_generate.py and
-the live pipeline for search.
+Serves the templates/static frontend AND the real API endpoints, backed by
+pre-generated data from local batch_generate.py runs, plus live search via
+the real pipeline (user-triggered only — no autonomous background discovery
+in production, to avoid burning shared Tavily/Groq quota).
 """
 import os, sys, json
-import threading
 from flask import Flask, render_template, jsonify, request
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend"))
 from pipeline import generate_full_explainer
-from apscheduler.schedulers.background import BackgroundScheduler
-import atexit
 
 app = Flask(__name__)
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend", "data")
+
 
 def load_json(filename):
     path = os.path.join(DATA_DIR, filename)
@@ -27,7 +25,6 @@ def load_json(filename):
 
 
 def topic_summary(t):
-    """Shape used for list views (carousels) — smaller than the full explainer."""
     return {
         "id": t["id"],
         "topic": t["topic"],
@@ -38,9 +35,6 @@ def topic_summary(t):
     }
 
 
-# ---------------------------------------------------------------------------
-# Page routes (render templates)
-# ---------------------------------------------------------------------------
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -62,9 +56,6 @@ def detail_page(topic_id):
     return render_template("detail.html", topic_id=topic_id)
 
 
-# ---------------------------------------------------------------------------
-# API routes — backed by real pre-generated data + live pipeline
-# ---------------------------------------------------------------------------
 @app.route("/api/topics")
 def api_topics():
     tag = request.args.get("tag")
@@ -80,8 +71,6 @@ def api_topics():
     if category:
         items = [t for t in items if t.get("category", "").lower() == category.lower()]
 
-    # index.json already has id/topic/category/tags — just need headline too,
-    # so pull that from each topic's full JSON file
     results = []
     for t in items:
         full = load_json(f"{t['id']}.json")
@@ -97,12 +86,6 @@ def api_topic(topic_id):
         return jsonify({"error": "not found"}), 404
     return jsonify(explainer)
 
-'''@app.route("/api/explain", methods=["POST"])
-def api_explain():
-    return jsonify({
-        "error": "Live search is only available when running locally. "
-                 "This deployment serves pre-generated content only."
-    }), 503'''
 
 @app.route("/api/explain", methods=["POST"])
 def api_explain():
@@ -114,14 +97,10 @@ def api_explain():
     try:
         result = generate_full_explainer(query)
 
-        # Live-searched topics need an id too, same slugify logic as batch_generate.py,
-        # so the frontend can redirect to /topic/<id> correctly
         import re
         slug = re.sub(r"[^a-z0-9]+", "-", query.lower()).strip("-")[:60]
         result["id"] = slug
 
-        # Also save it to data/ so future visits to /topic/<id> or the homepage
-        # carousels can find it too, not just this one search session
         filepath = os.path.join(DATA_DIR, f"{slug}.json")
         with open(filepath, "w") as f:
             json.dump(result, f, indent=2)
@@ -135,36 +114,6 @@ def api_explain():
 def health_check():
     return jsonify({"status": "ok"})
 
-def refresh_news_data():
-    print("[Scheduler] Refreshing news data...")
-    try:
-        from batch_generate import run_batch
-        run_batch(per_category=6)
-        print("[Scheduler] Refresh complete.")
-    except Exception as e:
-        print(f"[Scheduler] Refresh failed: {e}")
-
-
-def start_scheduler():
-    scheduler = BackgroundScheduler()
-    scheduler.add_job(refresh_news_data, "interval", hours=6)
-    scheduler.start()
-    atexit.register(lambda: scheduler.shutdown())
-    return scheduler
-
-
-def run_initial_generation_in_background():
-    """Runs the first-ever generation in a separate thread so Flask can
-    start serving requests immediately, instead of blocking startup."""
-    thread = threading.Thread(target=refresh_news_data, daemon=True)
-    thread.start()
-
-
-if not os.path.exists(os.path.join(DATA_DIR, "index.json")):
-    print("No existing data found — starting initial generation in background...")
-    run_initial_generation_in_background()
-
-start_scheduler()
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

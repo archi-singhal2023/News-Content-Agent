@@ -53,22 +53,16 @@ def _make_collection_name(topic: str) -> str:
 
 
 def store_research(topic: str, research_result: dict) -> str:
-    """
-    Chunks and embeds all sources from a research_topic() result into a
-    fresh Chroma collection scoped to this topic.
-
-    Returns the collection name so it can be queried later.
-    """
     collection_name = _make_collection_name(topic)
+    embedding_fn = get_embedding_fn()  # <-- actually initializes it
 
-    # Fresh collection each time — delete if it already exists from a prior run
     try:
         chroma_client.delete_collection(collection_name)
     except Exception:
         pass
 
     collection = chroma_client.create_collection(
-        name=collection_name, embedding_function=_embedding_fn
+        name=collection_name, embedding_function=embedding_fn
     )
 
     documents, metadatas, ids = [], [], []
@@ -97,10 +91,8 @@ def store_research(topic: str, research_result: dict) -> str:
 
 
 def retrieve_for_angle(collection_name: str, angle: str, query: str, n_results: int = 4) -> list:
-    """
-    Retrieves the most relevant chunks for a specific angle + query from the collection.
-    """
-    collection = chroma_client.get_collection(collection_name, embedding_function=_embedding_fn)
+    embedding_fn = get_embedding_fn()
+    collection = chroma_client.get_collection(collection_name, embedding_function=embedding_fn)
 
     results = collection.query(
         query_texts=[query],

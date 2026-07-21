@@ -1,37 +1,42 @@
 """
-Handles chunking article text and storing/retrieving it via Chroma
+Handles chunking article text and storing/retrieving it via FAISS,
 using local, free sentence-transformer embeddings (no API cost).
+
+Replaces chromadb — same public interface (store_research, retrieve_for_angle),
+but with a much lighter dependency footprint (no telemetry/grpc/auth machinery),
+which matters on memory-constrained deployments.
+
+Storage is in-memory only (no persistence across restarts) — appropriate for
+this use case, since each store_research() call is scoped to one topic and
+queried within the same request/process lifetime, not looked up days later.
 """
 import os
 import sys
 import hashlib
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from config import CHUNK_SIZE, CHUNK_OVERLAP, EMBEDDING_MODEL, CHROMA_PERSIST_DIR
+from config import CHUNK_SIZE, CHUNK_OVERLAP, EMBEDDING_MODEL
 
-_embedding_fn = None
-_chroma_client = None
+# In-memory store: collection_name -> {"index": faiss.Index, "documents": [...], "metadatas": [...]}
+_collections = {}
 
-
-def get_embedding_fn():
-    global _embedding_fn
-    if _embedding_fn is None:
-        from chromadb.utils import embedding_functions  # deferred import
-        _embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name=EMBEDDING_MODEL
-        )
-    return _embedding_fn
+_embedding_model = None
 
 
-def get_chroma_client():
-    global _chroma_client
-    if _chroma_client is None:
-        import chromadb  # deferred import
-        _chroma_client = chromadb.PersistentClient(path=CHROMA_PERSIST_DIR)
-    return _chroma_client
+def get_embedding_model():
+    """Lazy-load the sentence-transformer model — only imported/loaded on first real use."""
+    global _embedding_model
+    if _embedding_model is None:
+        from sentence_transformers import SentenceTransformer  # deferred import
+        _embedding_model = SentenceTransformer(EMBEDDING_MODEL)
+    return _embedding_model
 
 
 def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list:
+    """
+    Splits text into overlapping word-based chunks.
+    Overlap helps preserve context across chunk boundaries.
+    """
     words = text.split()
     chunks = []
     start = 0
@@ -46,26 +51,25 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVE
 
 
 def _make_collection_name(topic: str) -> str:
+    """Unique name per topic, same as before — kept for compatibility."""
     safe_hash = hashlib.md5(topic.encode()).hexdigest()[:12]
     return f"topic_{safe_hash}"
 
 
 def store_research(topic: str, research_result: dict) -> str:
-    chroma_client = get_chroma_client()
-    embedding_fn = get_embedding_fn()
+    """
+    Chunks and embeds all sources from a research_topic() result into an
+    in-memory FAISS index scoped to this topic.
+
+    Returns the collection name so it can be queried later via retrieve_for_angle().
+    """
+    import faiss  # deferred import
+    import numpy as np
+
     collection_name = _make_collection_name(topic)
+    model = get_embedding_model()
 
-    try:
-        chroma_client.delete_collection(collection_name)
-    except Exception:
-        pass
-
-    collection = chroma_client.create_collection(
-        name=collection_name, embedding_function=embedding_fn
-    )
-
-    documents, metadatas, ids = [], [], []
-    chunk_counter = 0
+    documents, metadatas = [], []
 
     for angle_data in research_result["angles"]:
         angle = angle_data["angle"]
@@ -78,11 +82,24 @@ def store_research(topic: str, research_result: dict) -> str:
                     "url": source["url"],
                     "title": source["title"],
                 })
-                ids.append(f"chunk_{chunk_counter}")
-                chunk_counter += 1
 
-    if documents:
-        collection.add(documents=documents, metadatas=metadatas, ids=ids)
+    if not documents:
+        _collections[collection_name] = {"index": None, "documents": [], "metadatas": []}
+        print(f"Stored 0 chunks in collection '{collection_name}' (no sources)")
+        return collection_name
+
+    embeddings = model.encode(documents, convert_to_numpy=True, normalize_embeddings=True)
+    embeddings = embeddings.astype("float32")
+
+    dim = embeddings.shape[1]
+    index = faiss.IndexFlatIP(dim)  # inner product on normalized vectors = cosine similarity
+    index.add(embeddings)
+
+    _collections[collection_name] = {
+        "index": index,
+        "documents": documents,
+        "metadatas": metadatas,
+    }
 
     print(f"Stored {len(documents)} chunks across {len(research_result['angles'])} angles "
           f"in collection '{collection_name}'")
@@ -90,19 +107,42 @@ def store_research(topic: str, research_result: dict) -> str:
 
 
 def retrieve_for_angle(collection_name: str, angle: str, query: str, n_results: int = 4) -> list:
-    chroma_client = get_chroma_client()
-    embedding_fn = get_embedding_fn()
-    collection = chroma_client.get_collection(collection_name, embedding_function=embedding_fn)
+    """
+    Retrieves the most relevant chunks for a specific angle + query from the collection.
+    """
+    import numpy as np
 
-    results = collection.query(
-        query_texts=[query],
-        n_results=n_results,
-        where={"angle": angle},
-    )
+    collection = _collections.get(collection_name)
+    if not collection or collection["index"] is None:
+        return []
+
+    model = get_embedding_model()
+    query_embedding = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
+    query_embedding = query_embedding.astype("float32")
+
+    # Filter to only this angle's chunks first (FAISS itself has no metadata
+    # filtering, so we search within the angle-filtered subset directly)
+    angle_indices = [i for i, m in enumerate(collection["metadatas"]) if m["angle"] == angle]
+    if not angle_indices:
+        return []
+
+    angle_embeddings = np.array([collection["index"].reconstruct(i) for i in angle_indices])
+
+    # Brute-force cosine similarity (dot product, since vectors are normalized)
+    # against just this angle's subset — small scale, so this is instant.
+    scores = angle_embeddings @ query_embedding[0]
+    top_k = min(n_results, len(angle_indices))
+    top_local_indices = np.argsort(scores)[::-1][:top_k]
 
     retrieved = []
-    for doc, meta in zip(results["documents"][0], results["metadatas"][0]):
-        retrieved.append({"text": doc, "url": meta["url"], "title": meta["title"]})
+    for local_idx in top_local_indices:
+        global_idx = angle_indices[local_idx]
+        meta = collection["metadatas"][global_idx]
+        retrieved.append({
+            "text": collection["documents"][global_idx],
+            "url": meta["url"],
+            "title": meta["title"],
+        })
 
     return retrieved
 

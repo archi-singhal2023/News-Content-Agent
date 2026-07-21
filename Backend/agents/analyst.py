@@ -3,15 +3,14 @@ Analyst agent — takes retrieved chunks for one angle and synthesizes them
 into a clear, accurate paragraph, with source attribution.
 Does NOT invent facts not present in the retrieved text.
 """
-import os
-import sys
-import json, re
+import os, sys
 import json as json_lib
+import numpy as np
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utils.llm_client import call_llm_json
-from rag.embed_store import get_chroma_client, get_embedding_fn
+from rag.embed_store import _collections, get_embedding_model
 from agents.researcher import research_topic
 from rag.embed_store import store_research
 from rag.embed_store import retrieve_for_angle
@@ -88,16 +87,25 @@ Respond with ONLY a JSON object in this format:
 def generate_current_summary(collection_name: str, topic: str) -> dict:
     """
     Generates the short 'what's happening right now' summary, pulling from
-    whichever angle has the most current/recent source material
-    (typically Business Impact or Geopolitics, since those track live events).
+    across ALL angles (not angle-restricted) to get the most current facts.
     """
-    # Pull chunks broadly, not angle-restricted, to get the most current facts
-    collection = get_chroma_client.get_collection(collection_name, embedding_function=get_embedding_fn)
+    collection = _collections.get(collection_name)
+    if not collection or collection["index"] is None:
+        return {"summary": "", "sources": []}
 
-    results = collection.query(query_texts=[f"latest news {topic}"], n_results=5)
+    model = get_embedding_model()
+    query_embedding = model.encode([f"latest news {topic}"], convert_to_numpy=True,
+                                     normalize_embeddings=True).astype("float32")
+
+    all_embeddings = np.array([collection["index"].reconstruct(i) for i in range(len(collection["documents"]))])
+    scores = all_embeddings @ query_embedding[0]
+    top_k = min(5, len(collection["documents"]))
+    top_indices = np.argsort(scores)[::-1][:top_k]
+
     chunks = [
-        {"text": doc, "url": meta["url"], "title": meta["title"]}
-        for doc, meta in zip(results["documents"][0], results["metadatas"][0])
+        {"text": collection["documents"][i], "url": collection["metadatas"][i]["url"],
+         "title": collection["metadatas"][i]["title"]}
+        for i in top_indices
     ]
 
     excerpts_text = "\n\n---\n\n".join(f"Source: {c['title']}\n{c['text'][:600]}" for c in chunks)

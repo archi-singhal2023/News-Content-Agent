@@ -31,7 +31,6 @@ TRUSTED_DOMAINS = [
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-CHROMA_PERSIST_DIR = "./chroma_db"
 
 # --- Caching ---
 CACHE_DIR = "./cache"

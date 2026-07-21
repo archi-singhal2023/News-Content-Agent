@@ -1,0 +1,37 @@
+{
+  "topic": "England Wins Series-Deciding 3rd ODI Against India",
+  "type": "quick_read",
+  "headline": "ENGLAND SEALS 2-1 SERIES VICTORY OVER INDIA WITH THRILLING 27-RUN WIN IN SERIES-DECIDING 3RD ODI AT LORD'S",
+  "image_url": "https://images.unsplash.com/photo-1665413811870-5b29a250f64a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8Y3JpY2tldCUyQyUyMHN0YWRpdW0lMkMlMjBjZWxlYnJhdGlvbnxlbnwwfDF8fHwxNzg0NjI3MjY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "England won the third and final ODI against India by 27 runs, securing a 2-1 series victory. England set a record ODI total at Lord's with 387-3, thanks to Ben Duckett's 141 and contributions from Jacob Bethell and Joe Root. India scored 360-7 in response, with Rohit Sharma scoring 138, but fell short of the target. The win marked England's 18th victory over India at Lord's across all formats. England's Sam Curran took 4-75 to help his team seal the series.",
+  "sources": [
+    {
+      "url": "https://www.bbc.com/sport/cricket/articles/cglj4n91744o",
+      "title": "England vs India: Ben Duckett century and record Lord's ODI total help seal series win for hosts - BBC Sport"
+    },
+    {
+      "url": "https://sportstar.thehindu.com/cricket/england-vs-india-head-to-head-record-in-odis-lords-cricket-ground-eng-v-ind-stats-runs-wickets/article71238307.ece",
+      "title": "ENG vs IND, 3rd ODI: Head-to-head record between England and India at Lord\u2019s - Sportstar"
+    },
+    {
+      "url": "https://indianexpress.com/section/sports/cricket/live-score/england-vs-india-3rd-odi-live-score-full-scorecard-highlights-india-in-england-3-odi-series-2026-enin07192026264919",
+      "title": "HIGHLIGHTS ENG vs IND India in England, 3 ODI Series, ..."
+    },
+    {
+      "url": "https://indianexpress.com/article/sports/cricket/india-lords-odi-poor-record-losing-streak-england-3rd-odi-10792221",
+      "title": "India\u2019s ODI record at Lord\u2019s: 4 Losses, a Tie and two wins since 1983 WC Final"
+    },
+    {
+      "url": "https://www.bbc.com/sport/cricket/67009730",
+      "title": "Cricket World Cup 2023: England thumped by New Zealand in tournament opener - BBC Sport"
+    }
+  ],
+  "note": null,
+  "triage_reason": "It's a self-contained sports result with no broader impact to explain.",
+  "category": "Sports",
+  "tags": [
+    "india",
+    "trending"
+  ],
+  "id": "england-wins-series-deciding-3rd-odi-against-india"
+}

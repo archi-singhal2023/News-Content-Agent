@@ -1,0 +1,124 @@
+{
+  "topic": "Takeda's dengue vaccine Qdenga approved in India",
+  "headline": "INDIA APPROVES TAKEDA'S DENGUE VACCINE QDenga FOR PEOPLE AGED 4-60 WITHOUT PRE-VACCINATION SCREENING",
+  "image_url": "https://images.unsplash.com/photo-1691935443689-6f1133a29ce5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8dmFjY2luZSUyQyUyMG1lZGljaW5lJTJDJTIwaGVhbHRoY2FyZXxlbnwwfDF8fHwxNzg0NjI3NTQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "India has approved Takeda's dengue vaccine Qdenga for people aged 4-60, which can be administered without pre-vaccination screening. The vaccine is designed to protect against all four dengue virus strains and comes as a two-dose regimen. The vaccine is administered subcutaneously with doses given three months apart.",
+  "summary_sources": [
+    {
+      "url": "https://www.livemint.com/news/india/india-approves-first-dengue-vaccine-qdenga-11784544484728.html",
+      "title": "India approves first dengue vaccine amid rising disease burden | Today News"
+    },
+    {
+      "url": "https://indianexpress.com/article/health-wellness/dcgi-qdenga-takeda-india-first-dengue-vaccine-doses-10795019",
+      "title": "India\u2019s first dengue vaccine approved: DCGI clears Takeda\u2019s Qdenga for those aged 4 to 60 | Health and Wellness News - The Indian Express"
+    }
+  ],
+  "sections": [
+    {
+      "angle": "history",
+      "paragraph": "The history of dengue fever is complex, with the disease being endemic in over 100 countries as of March 2023. According to various sources, dengue viral infections frequently are not apparent, especially in children younger than 15 years, and can range from asymptomatic to severe. The disease has been reported in every continent except Antarctica, with the Americas, Southeast Asia, and the Western Pacific regions being the most seriously affected. Estimates suggest that 3.9 billion people are at risk of dengue infection, with 390 million infections occurring every year, resulting in 500,000 severe cases and 25,000 deaths. The severity of the disease can vary, with recovery usually complete by 7-10 days in cases of classic dengue fever, while severe dengue can occur around the third to seventh day of illness during a second dengue infection. Research has been ongoing to develop effective control measures, including vaccines, with several studies and trials conducted in recent years to assess their efficacy.",
+      "sources": [
+        {
+          "url": "https://emedicine.medscape.com/article/215840-overview",
+          "title": "Dengue: Practice Essentials, Background, Pathophysiology"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Dengue_fever",
+          "title": "Dengue fever - Wikipedia"
+        }
+      ]
+    },
+    {
+      "angle": "business impact",
+      "paragraph": "Takeda Pharmaceutical Company has undergone significant business transactions in recent years, including the acquisition of Shire for over $50 billion in 2019. The company has also divested several assets, such as its Xiidra dry-eye drug business to Novartis for $5.3 billion and its over-the-counter and prescription medicines businesses in Russia and other countries to Stada Arzneimittel for $660 million. Additionally, Takeda has sold portfolios of medicines in the Middle East and Africa to Acino International for over $200 million and in certain European countries to Orifarm for approximately $670 million. These transactions have contributed to the company's revenue, which reached $19.299 billion in the 2018 fiscal year. Takeda's business focus areas include oncology, rare diseases, neuroscience, gastroenterology, plasma-derived therapies, and vaccines. The company has a substantial global presence, with over 49,578 employees worldwide.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Takeda_Pharmaceutical_Company",
+          "title": "Takeda Pharmaceutical Company - Wikipedia"
+        },
+        {
+          "url": "https://www.takeda.com/science/products",
+          "title": "Our Products | Takeda Pharmaceuticals"
+        }
+      ]
+    },
+    {
+      "angle": "geopolitics",
+      "paragraph": "India has approved its first dengue vaccine, QDENGA, developed by Japanese drugmaker Takeda Pharmaceutical Co.'s Indian arm, for individuals aged 4-60. The vaccine, which can be administered without pre-vaccination screening, is designed to protect against all four dengue virus strains and has shown an overall vaccine efficacy of 80.2% against virologically confirmed dengue. The approval marks a significant step in dengue prevention in India, where reported cases have risen 11-fold in the past two decades. The vaccine has demonstrated sustained safety and efficacy for up to seven years across all four dengue virus serotypes. QDENGA will be manufactured in partnership with Hyderabad-based Biological E, with the goal of producing up to 50 million doses annually, which is expected to make the vaccine competitively priced for the Indian market. The approval is supported by data from a Phase III clinical trial conducted in Indian participants, which evaluated the safety and immunogenicity of the vaccine in the 4\u201360 age group.",
+      "sources": [
+        {
+          "url": "https://www.livemint.com/news/india/india-approves-first-dengue-vaccine-qdenga-11784544484728.html",
+          "title": "India approves first dengue vaccine amid rising disease burden | Today News"
+        },
+        {
+          "url": "https://indianexpress.com/article/health-wellness/dcgi-qdenga-takeda-india-first-dengue-vaccine-doses-10795019",
+          "title": "India\u2019s first dengue vaccine approved: DCGI clears Takeda\u2019s Qdenga for those aged 4 to 60 | Health and Wellness News - The Indian Express"
+        },
+        {
+          "url": "https://economictimes.indiatimes.com/industry/healthcare/biotech/healthcare/japanese-drugmaker-takedas-qdenga-becomes-first-dengue-vaccine-approved-in-india/articleshow/132526370.cms",
+          "title": "Japanese drugmaker Takeda's Qdenga becomes first dengue vaccine approved in India - The Economic Times"
+        }
+      ]
+    },
+    {
+      "angle": "health impact",
+      "paragraph": "The recently approved dengue vaccine, Qdenga, has demonstrated an overall vaccine efficacy of 80.2% against virologically confirmed dengue and 90.4% efficacy against dengue-related hospitalisation at 18 months. The vaccine has also shown sustained safety and efficacy for up to seven years across all four dengue virus serotypes. In contrast, another dengue vaccine, DengiAll, is currently in its first-ever phase-three clinical trial in India, which will evaluate its efficacy. Dengue is a significant health concern, with India being among the top 30 countries with the highest incidence of the disease, and approximately 75-80% of infections in the country being asymptomatic. Children are at a higher risk of hospitalisation and mortality due to dengue, while adults can experience severe conditions like dengue haemorrhagic fever and dengue shock syndrome. The dengue virus has four serotypes with low cross-protection against each other.",
+      "sources": [
+        {
+          "url": "https://indianexpress.com/article/health-wellness/dcgi-qdenga-takeda-india-first-dengue-vaccine-doses-10795019",
+          "title": "India\u2019s first dengue vaccine approved: DCGI clears Takeda\u2019s Qdenga for those aged 4 to 60 | Health and Wellness News - The Indian Express"
+        },
+        {
+          "url": "https://www.thehindu.com/sci-tech/health/first-ever-phase-three-clinical-trial-for-dengue-vaccine-initiated-in-india/article68524194.ece",
+          "title": "First-ever phase-three clinical trial for dengue vaccine ..."
+        }
+      ]
+    }
+  ],
+  "dropped_angles": [],
+  "consistency_check": {
+    "has_contradictions": false,
+    "notes": ""
+  },
+  "all_sources": [
+    {
+      "url": "https://www.livemint.com/news/india/india-approves-first-dengue-vaccine-qdenga-11784544484728.html",
+      "title": "India approves first dengue vaccine amid rising disease burden | Today News"
+    },
+    {
+      "url": "https://indianexpress.com/article/health-wellness/dcgi-qdenga-takeda-india-first-dengue-vaccine-doses-10795019",
+      "title": "India\u2019s first dengue vaccine approved: DCGI clears Takeda\u2019s Qdenga for those aged 4 to 60 | Health and Wellness News - The Indian Express"
+    },
+    {
+      "url": "https://emedicine.medscape.com/article/215840-overview",
+      "title": "Dengue: Practice Essentials, Background, Pathophysiology"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Dengue_fever",
+      "title": "Dengue fever - Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Takeda_Pharmaceutical_Company",
+      "title": "Takeda Pharmaceutical Company - Wikipedia"
+    },
+    {
+      "url": "https://www.takeda.com/science/products",
+      "title": "Our Products | Takeda Pharmaceuticals"
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/industry/healthcare/biotech/healthcare/japanese-drugmaker-takedas-qdenga-becomes-first-dengue-vaccine-approved-in-india/articleshow/132526370.cms",
+      "title": "Japanese drugmaker Takeda's Qdenga becomes first dengue vaccine approved in India - The Economic Times"
+    },
+    {
+      "url": "https://www.thehindu.com/sci-tech/health/first-ever-phase-three-clinical-trial-for-dengue-vaccine-initiated-in-india/article68524194.ece",
+      "title": "First-ever phase-three clinical trial for dengue vaccine ..."
+    }
+  ],
+  "type": "deep_dive",
+  "triage_reason": "Approval of a vaccine has significant implications for public health and disease prevention in India.",
+  "category": "Tech",
+  "tags": [
+    "india"
+  ],
+  "id": "takeda-s-dengue-vaccine-qdenga-approved-in-india"
+}

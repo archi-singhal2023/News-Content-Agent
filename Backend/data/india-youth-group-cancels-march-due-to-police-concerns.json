@@ -1,0 +1,34 @@
+{
+  "topic": "India Youth Group Cancels March Due to Police Concerns",
+  "type": "quick_read",
+  "summary": null,
+  "sources": [
+    {
+      "url": "https://www.bbc.com/news/uk-northern-ireland-foyle-west-47797989",
+      "title": "Police event cancelled over Saoradh protest threat"
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/cwy2gd508n9o",
+      "title": "NEET 2026: Protests in India after medical entrance test scrapped over leak claims"
+    },
+    {
+      "url": "https://www.bbc.com/news/articles/cly0ey5y10qo",
+      "title": "Why India's cockroach protesters are still on the streets in ..."
+    },
+    {
+      "url": "https://frontline.thehindu.com/social-issues/article24552440.ece",
+      "title": "Blind and brutal - Frontline - The Hindu"
+    },
+    {
+      "url": "https://www.aljazeera.com/opinions/2025/6/11/east-africas-rulers-saw-what-gen-z-can-do-now-theyre-striking-first",
+      "title": "East Africa's rulers saw what Gen Z can do \u2013 now they're ..."
+    }
+  ],
+  "note": "Could not find verified sources specifically confirming this story's details.",
+  "triage_reason": "The story is a factual event with no underlying causes or broader impact to explain.",
+  "category": "Politics",
+  "tags": [
+    "india"
+  ],
+  "id": "india-youth-group-cancels-march-due-to-police-concerns"
+}

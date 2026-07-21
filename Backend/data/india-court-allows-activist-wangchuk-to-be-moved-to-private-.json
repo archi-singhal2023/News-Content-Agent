@@ -1,0 +1,36 @@
+{
+  "topic": "India court allows activist Wangchuk to be moved to private hospital",
+  "type": "quick_read",
+  "headline": "INDIAN COURT GRANTS PERMISSION FOR ACTIVIST WANGCHUK TO BE TRANSFERRED TO PRIVATE HOSPITAL",
+  "image_url": "https://images.unsplash.com/photo-1550831107-1553da8c8464?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8aG9zcGl0YWwlMkMlMjBkb2N0b3IlMkMlMjBwYXRpZW50fGVufDB8MXx8fDE3ODQ2Mjc1NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "An Indian court has granted permission for activist Wangchuk to be transferred to a private hospital. No further details about the activist's condition or the reason for the transfer are provided. The news comes amidst discussions of India-Bhutan relations and developments in the Indian healthcare system, including a new grading system for private hospitals.",
+  "sources": [
+    {
+      "url": "https://www.thehindu.com/news/national/india-bhutan-ties-have-stood-test-of-time-rahul/article25860696.ece",
+      "title": "India-Bhutan ties have stood test of time: Rahul"
+    },
+    {
+      "url": "https://www.thehindu.com/news/national/india-bhutan-enjoy-exemplary-ties-of-friendship-cooperation-ministry-of-external-affairs/article69250720.ece",
+      "title": "India, Bhutan enjoy exemplary ties of friendship, cooperation"
+    },
+    {
+      "url": "https://www.thehindu.com/opinion/op-ed/sovereignty-and-sensitivity/article24731900.ece",
+      "title": "Sovereignty and sensitivity: on India-Bhutan relations"
+    },
+    {
+      "url": "https://www.livemint.com/Politics/19GmD4CzmvfGXKrIfJVtrJ/IndiaBhutan-relations-age-better-with-time.html",
+      "title": "India-Bhutan relations age better with time"
+    },
+    {
+      "url": "https://www.livemint.com/economy/india-private-hospitals-grading-system-healthcare-quality-council-of-india-nabh-naresh-trehan-patients-11739167015757.html",
+      "title": "Which private hospital is best for you? New grading system ..."
+    }
+  ],
+  "note": null,
+  "triage_reason": "The story is a factual event with no underlying cause or broader impact to explain.",
+  "category": "Politics",
+  "tags": [
+    "india"
+  ],
+  "id": "india-court-allows-activist-wangchuk-to-be-moved-to-private-"
+}

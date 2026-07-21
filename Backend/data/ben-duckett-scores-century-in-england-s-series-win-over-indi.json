@@ -1,0 +1,37 @@
+{
+  "topic": "Ben Duckett Scores Century in England's Series Win Over India",
+  "type": "quick_read",
+  "headline": "BEN DUCKETT SMASHES RECORD-BREAKING 149 TO LEAD ENGLAND TO THRILLING 1-0 SERIES LEAD OVER INDIA",
+  "image_url": "https://images.unsplash.com/photo-1512719994953-eabf50895df7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8Y3JpY2tldCUyQyUyMHNwb3J0cyUyQyUyMHN0YWRpdW18ZW58MHwxfHx8MTc4NDYyNzI5N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "Ben Duckett scored a record-breaking 149 to lead England to a five-wicket win over India in the first Test at Headingley, helping his team chase down a target of 371. This victory gives England a 1-0 lead in the five-match series. Duckett's innings is considered one of the finest by an England batter. England won the match despite India's strong performances, including centuries from several of their players.",
+  "sources": [
+    {
+      "url": "https://www.bbc.com/sport/cricket/video",
+      "title": "Cricket Video - England match highlights - BBC Sport"
+    },
+    {
+      "url": "https://www.bbc.com/sport/cricket/articles/cm2z19qpjdeo",
+      "title": "Duckett leads England to classic defeat of India"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/England",
+      "title": "England - Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/England_national_football_team",
+      "title": "England national football team"
+    },
+    {
+      "url": "https://www.britannica.com/place/England",
+      "title": "England | History, Map, Flag, Population, Cities, & Facts"
+    }
+  ],
+  "note": null,
+  "triage_reason": "A sports result with no broader impact or underlying cause to explain.",
+  "category": "Sports",
+  "tags": [
+    "india",
+    "trending"
+  ],
+  "id": "ben-duckett-scores-century-in-england-s-series-win-over-indi"
+}

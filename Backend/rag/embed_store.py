@@ -1,35 +1,29 @@
 """
-Handles chunking article text and storing/retrieving it via FAISS,
-using local, free sentence-transformer embeddings (no API cost).
+Handles chunking article text and storing/retrieving relevant chunks using
+TF-IDF + cosine similarity (scikit-learn), NOT neural embeddings.
 
-Replaces chromadb — same public interface (store_research, retrieve_for_angle),
-but with a much lighter dependency footprint (no telemetry/grpc/auth machinery),
-which matters on memory-constrained deployments.
+Why: sentence-transformers requires torch, which is a huge dependency (300+MB,
+slow multi-second import, pulls in sympy/transformers/etc.) — this was the
+actual root cause of repeated OOM/timeout crashes in production, not chromadb
+or FAISS themselves. TF-IDF is pure numpy/scipy under scikit-learn, with a
+tiny import footprint, and is fully sufficient for this use case: each
+collection is scoped to ONE topic's ~20-60 chunks, and we're just matching an
+angle name/query against those chunks — term-overlap similarity is a completely
+reasonable and fast way to do that at this scale, not a case that needs deep
+semantic embeddings.
 
-Storage is in-memory only (no persistence across restarts) — appropriate for
-this use case, since each store_research() call is scoped to one topic and
-queried within the same request/process lifetime, not looked up days later.
+Same public interface as before (store_research, retrieve_for_angle), so
+pipeline.py, analyst.py, etc. need no changes beyond their imports.
 """
 import os
 import sys
 import hashlib
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from config import CHUNK_SIZE, CHUNK_OVERLAP, EMBEDDING_MODEL
+from config import CHUNK_SIZE, CHUNK_OVERLAP
 
-# In-memory store: collection_name -> {"index": faiss.Index, "documents": [...], "metadatas": [...]}
+# In-memory store: collection_name -> {"vectorizer", "matrix", "documents", "metadatas"}
 _collections = {}
-
-_embedding_model = None
-
-
-def get_embedding_model():
-    """Lazy-load the sentence-transformer model — only imported/loaded on first real use."""
-    global _embedding_model
-    if _embedding_model is None:
-        from sentence_transformers import SentenceTransformer  # deferred import
-        _embedding_model = SentenceTransformer(EMBEDDING_MODEL)
-    return _embedding_model
 
 
 def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list:
@@ -51,23 +45,21 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE, overlap: int = CHUNK_OVE
 
 
 def _make_collection_name(topic: str) -> str:
-    """Unique name per topic, same as before — kept for compatibility."""
+    """Unique name per topic, kept for compatibility with the rest of the codebase."""
     safe_hash = hashlib.md5(topic.encode()).hexdigest()[:12]
     return f"topic_{safe_hash}"
 
 
 def store_research(topic: str, research_result: dict) -> str:
     """
-    Chunks and embeds all sources from a research_topic() result into an
-    in-memory FAISS index scoped to this topic.
+    Chunks all sources from a research_topic() result and builds a TF-IDF
+    matrix over them, scoped to this topic.
 
     Returns the collection name so it can be queried later via retrieve_for_angle().
     """
-    import faiss  # deferred import
-    import numpy as np
+    from sklearn.feature_extraction.text import TfidfVectorizer  # deferred import, lightweight
 
     collection_name = _make_collection_name(topic)
-    model = get_embedding_model()
 
     documents, metadatas = [], []
 
@@ -84,19 +76,17 @@ def store_research(topic: str, research_result: dict) -> str:
                 })
 
     if not documents:
-        _collections[collection_name] = {"index": None, "documents": [], "metadatas": []}
+        _collections[collection_name] = {"vectorizer": None, "matrix": None,
+                                          "documents": [], "metadatas": []}
         print(f"Stored 0 chunks in collection '{collection_name}' (no sources)")
         return collection_name
 
-    embeddings = model.encode(documents, convert_to_numpy=True, normalize_embeddings=True)
-    embeddings = embeddings.astype("float32")
-
-    dim = embeddings.shape[1]
-    index = faiss.IndexFlatIP(dim)  # inner product on normalized vectors = cosine similarity
-    index.add(embeddings)
+    vectorizer = TfidfVectorizer(stop_words="english", max_features=5000)
+    matrix = vectorizer.fit_transform(documents)
 
     _collections[collection_name] = {
-        "index": index,
+        "vectorizer": vectorizer,
+        "matrix": matrix,
         "documents": documents,
         "metadatas": metadatas,
     }
@@ -108,31 +98,25 @@ def store_research(topic: str, research_result: dict) -> str:
 
 def retrieve_for_angle(collection_name: str, angle: str, query: str, n_results: int = 4) -> list:
     """
-    Retrieves the most relevant chunks for a specific angle + query from the collection.
+    Retrieves the most relevant chunks for a specific angle + query from the collection,
+    using TF-IDF cosine similarity restricted to that angle's chunks.
     """
-    import numpy as np
+    from sklearn.metrics.pairwise import cosine_similarity  # deferred import
 
     collection = _collections.get(collection_name)
-    if not collection or collection["index"] is None:
+    if not collection or collection["vectorizer"] is None:
         return []
 
-    model = get_embedding_model()
-    query_embedding = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
-    query_embedding = query_embedding.astype("float32")
-
-    # Filter to only this angle's chunks first (FAISS itself has no metadata
-    # filtering, so we search within the angle-filtered subset directly)
     angle_indices = [i for i, m in enumerate(collection["metadatas"]) if m["angle"] == angle]
     if not angle_indices:
         return []
 
-    angle_embeddings = np.array([collection["index"].reconstruct(i) for i in angle_indices])
+    query_vec = collection["vectorizer"].transform([query])
+    angle_matrix = collection["matrix"][angle_indices]
 
-    # Brute-force cosine similarity (dot product, since vectors are normalized)
-    # against just this angle's subset — small scale, so this is instant.
-    scores = angle_embeddings @ query_embedding[0]
+    scores = cosine_similarity(query_vec, angle_matrix)[0]
     top_k = min(n_results, len(angle_indices))
-    top_local_indices = np.argsort(scores)[::-1][:top_k]
+    top_local_indices = scores.argsort()[::-1][:top_k]
 
     retrieved = []
     for local_idx in top_local_indices:
@@ -140,6 +124,34 @@ def retrieve_for_angle(collection_name: str, angle: str, query: str, n_results: 
         meta = collection["metadatas"][global_idx]
         retrieved.append({
             "text": collection["documents"][global_idx],
+            "url": meta["url"],
+            "title": meta["title"],
+        })
+
+    return retrieved
+
+
+def retrieve_across_all(collection_name: str, query: str, n_results: int = 5) -> list:
+    """
+    Retrieves the most relevant chunks across ALL angles (not restricted to one) —
+    used by generate_current_summary() for the broad 'what's happening now' pull.
+    """
+    from sklearn.metrics.pairwise import cosine_similarity  # deferred import
+
+    collection = _collections.get(collection_name)
+    if not collection or collection["vectorizer"] is None:
+        return []
+
+    query_vec = collection["vectorizer"].transform([query])
+    scores = cosine_similarity(query_vec, collection["matrix"])[0]
+    top_k = min(n_results, len(collection["documents"]))
+    top_indices = scores.argsort()[::-1][:top_k]
+
+    retrieved = []
+    for i in top_indices:
+        meta = collection["metadatas"][i]
+        retrieved.append({
+            "text": collection["documents"][i],
             "url": meta["url"],
             "title": meta["title"],
         })

@@ -10,7 +10,7 @@ import numpy as np
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utils.llm_client import call_llm_json
-from rag.embed_store import _collections, get_embedding_model
+from rag.embed_store import retrieve_across_all
 from agents.researcher import research_topic
 from rag.embed_store import store_research
 from rag.embed_store import retrieve_for_angle
@@ -84,29 +84,17 @@ Respond with ONLY a JSON object in this format:
 """
 
 
+from rag.embed_store import retrieve_across_all
+
 def generate_current_summary(collection_name: str, topic: str) -> dict:
     """
     Generates the short 'what's happening right now' summary, pulling from
-    across ALL angles (not angle-restricted) to get the most current facts.
+    across ALL angles to get the most current facts.
     """
-    collection = _collections.get(collection_name)
-    if not collection or collection["index"] is None:
+    chunks = retrieve_across_all(collection_name, f"latest news {topic}", n_results=5)
+
+    if not chunks:
         return {"summary": "", "sources": []}
-
-    model = get_embedding_model()
-    query_embedding = model.encode([f"latest news {topic}"], convert_to_numpy=True,
-                                     normalize_embeddings=True).astype("float32")
-
-    all_embeddings = np.array([collection["index"].reconstruct(i) for i in range(len(collection["documents"]))])
-    scores = all_embeddings @ query_embedding[0]
-    top_k = min(5, len(collection["documents"]))
-    top_indices = np.argsort(scores)[::-1][:top_k]
-
-    chunks = [
-        {"text": collection["documents"][i], "url": collection["metadatas"][i]["url"],
-         "title": collection["metadatas"][i]["title"]}
-        for i in top_indices
-    ]
 
     excerpts_text = "\n\n---\n\n".join(f"Source: {c['title']}\n{c['text'][:600]}" for c in chunks)
 

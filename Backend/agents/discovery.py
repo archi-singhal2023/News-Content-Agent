@@ -56,7 +56,7 @@ def discover_topics_for_category(category: str, max_topics: int = 5) -> list:
             search_depth="basic",
             max_results=10,
             topic="news",   # biases toward actual recent news articles, not hub pages
-            days=3,         # only articles from the last 3 days
+            days=2,         # only articles from the last 3 days
         )
         raw_results = response.get("results", [])
     except Exception as e:

@@ -1,34 +1,37 @@
 {
-  "topic": "India Youth Group Cancels March Due to Police Concerns",
+  "topic": "India youth group cancels march due to police concerns",
   "type": "quick_read",
-  "summary": null,
+  "headline": "COCKROACH JANTA PARTY CALLS OFF MARCH TO PARLIAMENT AFTER POLICE EXPRESS CONCERNS OVER VIOLENCE FEARS",
+  "image_url": "https://images.unsplash.com/photo-1602572389332-95f29651e6ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8cHJvdGVzdCUyQyUyMHlvdXRoJTJDJTIwcG9saWNlfGVufDB8MXx8fDE3ODQ2NTE3ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "A youth group in India, the Cockroach Janta Party, canceled a planned march to Parliament due to concerns from police. The group had been protesting against the Union Education Minister over alleged exam irregularities. Thousands of people had taken part in a previous march, which saw clashes between demonstrators and police. The incident has raised questions about the right to protest in India and the limits of this right.",
   "sources": [
     {
-      "url": "https://www.bbc.com/news/uk-northern-ireland-foyle-west-47797989",
-      "title": "Police event cancelled over Saoradh protest threat"
+      "url": "https://www.livemint.com/politics/news/cjp-farmers-protest-right-to-protest-in-india-what-the-constitution-laws-and-supreme-court-say-dlehi-police-sonam-11784609328724.html",
+      "title": "Right to protest in India: What the Constitution, laws and ... - Mint"
     },
     {
-      "url": "https://www.bbc.com/news/articles/cwy2gd508n9o",
-      "title": "NEET 2026: Protests in India after medical entrance test scrapped over leak claims"
+      "url": "https://www.aljazeera.com/news/2019/12/18/india-citizenship-law-protests-all-the-latest-updates",
+      "title": "India citizenship law protests: All the latest updates | News | Al Jazeera"
     },
     {
-      "url": "https://www.bbc.com/news/articles/cly0ey5y10qo",
-      "title": "Why India's cockroach protesters are still on the streets in ..."
+      "url": "https://indianexpress.com/article/explained/explained-law/cjp-protest-legal-in-india-constitution-10795059",
+      "title": "Is staging a protest legal in India: What rights, restrictions ..."
     },
     {
-      "url": "https://frontline.thehindu.com/social-issues/article24552440.ece",
-      "title": "Blind and brutal - Frontline - The Hindu"
+      "url": "https://www.bbc.com/news/articles/cj9ydj7y0vvo",
+      "title": "Australian move to fast-track new gun and protest laws ..."
     },
     {
-      "url": "https://www.aljazeera.com/opinions/2025/6/11/east-africas-rulers-saw-what-gen-z-can-do-now-theyre-striking-first",
-      "title": "East Africa's rulers saw what Gen Z can do \u2013 now they're ..."
+      "url": "https://www.bbc.com/news/world-asia-26064485",
+      "title": "India's awakening youth threaten political status quo - BBC News"
     }
   ],
-  "note": "Could not find verified sources specifically confirming this story's details.",
+  "note": null,
   "triage_reason": "The story is a factual event with no underlying causes or broader impact to explain.",
   "category": "Politics",
   "tags": [
-    "india"
+    "india",
+    "trending"
   ],
   "id": "india-youth-group-cancels-march-due-to-police-concerns"
 }

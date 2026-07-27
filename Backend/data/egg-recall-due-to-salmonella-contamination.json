@@ -1,0 +1,37 @@
+{
+  "topic": "Egg recall due to Salmonella contamination",
+  "type": "quick_read",
+  "headline": "EGG INDUSTRY ROCKED BY SALMONELLA OUTBREAK: DOZENS FALL ILL, RECALLS ISSUED ACROSS UK AND US",
+  "image_url": "https://images.unsplash.com/photo-1639194335563-d56b83f0060c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8ZWdncyUyQyUyMGZvb2QlMjBzYWZldHklMkMlMjBjb250YW1pbmF0aW9ufGVufDB8MXx8fDE3ODUxNTcyNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "Dozens of people have fallen ill due to salmonella contamination in eggs, with at least 45 cases reported in the UK and 79 cases in the US. The contaminated eggs have been linked to specific farms and producers, including the August Egg Company in California. As a result, recalls have been issued, and consumers have been advised to discard or return affected eggs. The outbreaks have raised concerns about food safety and the risk of salmonella contamination in the egg industry.",
+  "sources": [
+    {
+      "url": "https://www.theguardian.com/environment/2019/sep/20/dozens-of-people-poisoned-this-year-by-salmonella-infected-british-eggs",
+      "title": "Dozens of people poisoned this year by salmonella ..."
+    },
+    {
+      "url": "https://www.theguardian.com/us-news/2025/jun/07/salmonella-eggs-californina",
+      "title": "Dozens ill from salmonella outbreak linked to eggs from ..."
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Salmonella-in-eggs_controversy",
+      "title": "Salmonella-in-eggs controversy - Wikipedia"
+    },
+    {
+      "url": "https://apnews.com/article/poultry-salmonella-food-poisoning-usda-081dafd3c8a75c3ef2203d260584a893",
+      "title": "USDA withdraws a plan to limit salmonella levels in raw poultry | AP News"
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/news/bird-flu",
+      "title": "Bird Flu: Read Bird Flu latest news and updates, Bird Flu cases in India | The Economic Times"
+    }
+  ],
+  "note": null,
+  "triage_reason": "A factual event with a clear cause (Salmonella contamination) and no broader impact to explain.",
+  "category": "Science",
+  "tags": [
+    "international",
+    "trending"
+  ],
+  "id": "egg-recall-due-to-salmonella-contamination"
+}

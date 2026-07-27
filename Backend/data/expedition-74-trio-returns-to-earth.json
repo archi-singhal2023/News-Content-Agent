@@ -1,0 +1,36 @@
+{
+  "topic": "Expedition 74 Trio Returns to Earth",
+  "type": "quick_read",
+  "headline": "SPACEX'S ENDEAVOUR SPLASHES DOWN IN PACIFIC OCEAN, RETURNING EXPEDITION 74 ASTRONAUTS TO EARTH",
+  "image_url": "https://images.unsplash.com/photo-1655114722721-5c75114be5ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8c3BhY2UlMkMlMjBhc3Ryb25hdXRzJTJDJTIwbGFuZGluZ3xlbnwwfDF8fHwxNzg1MTU2OTg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "The Expedition 74 trio, consisting of astronauts, has returned to Earth. They splashed down in the Pacific Ocean after completing their mission on the International Space Station. The SpaceX Dragon spacecraft, known as the 'Endeavour', carried the astronauts, including American astronauts Mike Fincke, back to Earth. The spacecraft landed off the coast of San Diego, California. The astronauts were part of Expedition 74/75, which included a long-duration mission on the ISS.",
+  "sources": [
+    {
+      "url": "https://indianexpress.com/article/india/anil-menon-nasa-astronaut-indian-iss-spaceflight-launch-soyuz-ms-10782762",
+      "title": "Indian-origin NASA astronaut Anil Menon set for first ISS mission | India News - The Indian Express"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Michael_Fincke",
+      "title": "Michael Fincke - Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Sophie_Adenot",
+      "title": "Sophie Adenot - Wikipedia"
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/1/15/astronauts-depart-international-space-station-after-medical-emergency",
+      "title": "Astronauts splash down on Earth after first-ever ISS ..."
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2025/11/28/russian-space-agency-says-cosmodrome-damaged-after-joint-launch-with-us",
+      "title": "Russian space agency says cosmodrome damaged after joint launch with US | Space News | Al Jazeera"
+    }
+  ],
+  "note": null,
+  "triage_reason": "A routine space mission with no significant underlying causes or broader impact.",
+  "category": "Science",
+  "tags": [
+    "international"
+  ],
+  "id": "expedition-74-trio-returns-to-earth"
+}

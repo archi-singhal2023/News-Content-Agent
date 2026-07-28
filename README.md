@@ -10,7 +10,7 @@ Built as a multi-agent AI pipeline: no LangChain/LangGraph, no vector database �
 
 ## What it does
 
-1. **Discovers** current news topics automatically across categories (Politics, Tech, Finance, Sports, Science) — no hardcoded topic list.
+1. **Discovers** current news topics automatically across categories through agents(Politics, Tech, Finance, Sports, Science).
 2. **Triages** each topic: does this story need deep context (a war, a policy change) or is it self-contained (a sports result, a routine announcement)?
 3. **Researches** the topic by generating angle-specific search queries (History, Economics, Geopolitics, etc. — chosen dynamically per topic, not fixed), searching trusted news domains, fetching full article text, and filtering out irrelevant or low-quality sources.
 4. **Analyzes** each angle, synthesizing multiple sources into a clear paragraph — grounded only in what the sources actually say, never fabricated.
@@ -25,30 +25,15 @@ Built as a multi-agent AI pipeline: no LangChain/LangGraph, no vector database �
 User query
 │
 ▼
-┌─────────────┐
-│ Triage │ deep_dive vs quick_read?
-└──────┬──────┘
-│
+Triage │ deep_dive vs quick_read?
 ▼
-┌─────────────┐ ┌──────────────┐
-│ Researcher │────▶│ Tavily search │ (angle-specific queries,
-└──────┬──────┘ └──────────────┘ trusted-domain whitelist,
-│ relevance-verified article fetch)
+Researcher │────▶│ Tavily search │ (angle-specific queries, trusted-domain whitelist, relevance-verified article fetch)
 ▼
-┌─────────────┐
-│ Analyst │ synthesizes each angle's sources into a paragraph
-└──────┬──────┘
-│
+Analyst │ synthesizes each angle's sources into a paragraph
 ▼
-┌─────────────┐
-│ Editor │ consistency check, headline, image, final assembly
-└──────┬──────┘
-│
+Editor │ consistency check, headline, image, final assembly
 ▼
-┌─────────────┐
-│ Classifier │ category + tags, based on actual content
-└──────┬──────┘
-│
+Classifier │ category + tags, based on actual content
 ▼
 Structured JSON → served to frontend
 

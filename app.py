@@ -5,16 +5,14 @@ pre-generated data from local batch_generate.py runs, plus live search via
 the real pipeline (user-triggered only — no autonomous background discovery
 in production, to avoid burning shared Tavily/Groq quota).
 """
-import os, sys, json
+import os, sys, json, re
 from flask import Flask, render_template, jsonify, request
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend"))
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend", "data")
 from pipeline import generate_full_explainer
 
 app = Flask(__name__)
-
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Backend", "data")
-
 
 def load_json(filename):
     path = os.path.join(DATA_DIR, filename)
@@ -22,7 +20,6 @@ def load_json(filename):
         return None
     with open(path, "r") as f:
         return json.load(f)
-
 
 def topic_summary(t):
     return {
@@ -34,27 +31,22 @@ def topic_summary(t):
         "image_url": t.get("image_url"),
     }
 
-
 @app.route("/")
 def home():
     return render_template("index.html")
 
-
 @app.route("/about")
 def about():
     return render_template("about.html")
-
 
 @app.route("/category/<name>")
 def category_page(name):
     category = name.replace("-", " ").title()
     return render_template("category.html", category=category)
 
-
 @app.route("/topic/<topic_id>")
 def detail_page(topic_id):
     return render_template("detail.html", topic_id=topic_id)
-
 
 @app.route("/api/topics")
 def api_topics():
@@ -78,14 +70,12 @@ def api_topics():
             results.append(topic_summary(full))
     return jsonify(results)
 
-
 @app.route("/api/topics/<topic_id>")
 def api_topic(topic_id):
     explainer = load_json(f"{topic_id}.json")
     if explainer is None:
         return jsonify({"error": "not found"}), 404
     return jsonify(explainer)
-
 
 @app.route("/api/explain", methods=["POST"])
 def api_explain():
@@ -95,9 +85,8 @@ def api_explain():
         return jsonify({"error": "topic is required"}), 400
 
     try:
-        result = generate_full_explainer(query)
+        result = generate_full_explainer(query, live=True)
 
-        import re
         slug = re.sub(r"[^a-z0-9]+", "-", query.lower()).strip("-")[:60]
         result["id"] = slug
 
@@ -109,11 +98,9 @@ def api_explain():
     except Exception as e:
         return jsonify({"error": f"Failed to generate explainer: {str(e)}"}), 500
 
-
 @app.route("/api/health")
 def health_check():
     return jsonify({"status": "ok"})
-
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

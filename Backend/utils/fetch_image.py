@@ -5,6 +5,7 @@ Falls back to a category-based placeholder if no good match is found.
 import requests, os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import UNSPLASH_ACCESS_KEY
+from utils.llm_client import call_llm_json
 
 UNSPLASH_SEARCH_URL = "https://api.unsplash.com/search/photos"
 
@@ -19,9 +20,6 @@ CATEGORY_FALLBACKS = {
     "Daily Rituals": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
 }
 
-
-from utils.llm_client import call_llm_json
-
 IMAGE_QUERY_SYSTEM_PROMPT = """Given a news topic, output 2-3 simple, concrete,
 visual search keywords suitable for a stock photo search (like Unsplash).
 
@@ -33,7 +31,6 @@ satellite" -> "rocket launch, space, night sky".
 Respond with ONLY a JSON object: {"keywords": "2-3 words, comma separated"}
 """
 
-
 def get_image_search_keywords(topic: str) -> str:
     result = call_llm_json(
         prompt=f"Topic: {topic}",
@@ -44,8 +41,8 @@ def get_image_search_keywords(topic: str) -> str:
     return result.get("keywords", topic)
 
 
-def fetch_topic_image(query: str, category: str = "Tech") -> str:
-    if not UNSPLASH_ACCESS_KEY:
+def fetch_topic_image(query: str, category: str = "Tech", use_search: bool = True) -> str:
+    if not use_search or not UNSPLASH_ACCESS_KEY:
         return CATEGORY_FALLBACKS.get(category, CATEGORY_FALLBACKS["Tech"])
 
     search_terms = get_image_search_keywords(query)
@@ -55,7 +52,7 @@ def fetch_topic_image(query: str, category: str = "Tech") -> str:
             UNSPLASH_SEARCH_URL,
             params={"query": search_terms, "per_page": 1, "orientation": "portrait"},
             headers={"Authorization": f"Client-ID {UNSPLASH_ACCESS_KEY}"},
-            timeout=8,
+            timeout=(3, 5),  # (connect timeout, read timeout) — stricter than before
         )
         response.raise_for_status()
         results = response.json().get("results", [])

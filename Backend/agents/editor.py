@@ -14,7 +14,6 @@ import json
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from agents.researcher import research_topic
-from rag.embed_store import store_research
 from agents.analyst import generate_current_summary, analyze_angle
 from utils.llm_client import call_llm_json
 from utils.fetch_image import fetch_topic_image
@@ -85,7 +84,7 @@ def check_consistency(summary: str, angle_analyses: list) -> dict:
     }
 
 
-def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list) -> dict:
+def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list, live: bool = False) -> dict:
     """
     Assembles the final structured explainer object.
 
@@ -103,7 +102,7 @@ def assemble_explainer(topic: str, summary_result: dict, angle_analyses: list) -
 
     consistency = check_consistency(summary_result["summary"], valid_angles)
     headline = generate_headline(topic, summary_result["summary"])
-    image_url = fetch_topic_image(topic)
+    image_url = fetch_topic_image(topic, use_search=not live)
     
     # Collect every unique source used across the whole explainer, for a top-level "all sources" list
     all_sources = {}
@@ -142,11 +141,7 @@ if __name__ == "__main__":
     else:
         topic = " ".join(sys.argv[1:])
         research_result = research_topic(topic)
-        collection_name = store_research(topic, research_result)
-        summary_result = generate_current_summary(collection_name, topic)
-        angle_analyses = [
-            analyze_angle(collection_name, a["angle"], a["query"])
-            for a in research_result["angles"]
-        ]
+        summary_result = generate_current_summary(research_result, topic)
+        angle_analyses = [analyze_angle(a) for a in research_result["angles"]]
         final = assemble_explainer(topic, summary_result, angle_analyses)
         print(json.dumps(final, indent=2))

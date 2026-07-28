@@ -13,13 +13,11 @@ import sys, json
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from agents.triage import triage_topic
 from agents.researcher import research_topic
-from rag.embed_store import store_research
 from agents.analyst import generate_current_summary, analyze_angle
 from agents.editor import assemble_explainer
 from agents.editor import generate_headline
 from utils.llm_client import call_llm_json
 from utils.fetch_image import fetch_topic_image
-
 
 QUICK_READ_SYSTEM_PROMPT = """You are a news editor writing a short, factual summary
 for a simple, self-contained news story (not one that needs deep context).
@@ -32,7 +30,7 @@ Respond with ONLY a JSON object in this format:
 """
 
 
-def generate_quick_read(topic: str) -> dict:
+def generate_quick_read(topic: str, live: bool = False) -> dict:
     """
     For quick_read stories: light research, then a short factual summary with sources.
     """
@@ -79,7 +77,7 @@ def generate_quick_read(topic: str) -> dict:
 
     unique_sources = list({s["url"]: s["title"] for s in all_sources}.items())
     headline = generate_headline(topic, result.get("summary", "")) if result.get("summary") else topic.upper()
-    image_url = fetch_topic_image(topic)
+    image_url = fetch_topic_image(topic, use_search=not live)
     
     return {
         "topic": topic,
@@ -91,41 +89,30 @@ def generate_quick_read(topic: str) -> dict:
         "note": None,
     }
 
-
-def generate_deep_dive(topic: str) -> dict:
+def generate_deep_dive(topic: str, live: bool = False) -> dict:
     """
-    Full pipeline: Researcher -> RAG storage -> Analyst (summary + all angles) -> Editor.
+    Full pipeline: Researcher -> Analyst (summary + all angles) -> Editor.
+    No vector store — Researcher already organizes sources per angle.
     """
     research_result = research_topic(topic)
-    collection_name = store_research(topic, research_result)
-
-    summary_result = generate_current_summary(collection_name, topic)
-
-    angle_analyses = []
-    for angle_data in research_result["angles"]:
-        analysis = analyze_angle(collection_name, angle_data["angle"], angle_data["query"])
-        angle_analyses.append(analysis)
-
-    final = assemble_explainer(topic, summary_result, angle_analyses)
+    summary_result = generate_current_summary(research_result, topic)
+    angle_analyses = [analyze_angle(a) for a in research_result["angles"]]
+    final = assemble_explainer(topic, summary_result, angle_analyses, live=live)
     final["type"] = "deep_dive"
     return final
 
-
-def generate_full_explainer(topic: str) -> dict:
+def generate_full_explainer(topic: str, live: bool = False) -> dict:
     """
     THE single entry point. Classifies the topic, then routes to the
     appropriate pipeline. Always returns a consistent, frontend-ready dict.
     """
     triage_result = triage_topic(topic)
     category = triage_result.get("category", "quick_read")
-
     print(f"[Triage] '{topic}' -> {category} ({triage_result.get('reason', '')})")
-
     if category == "deep_dive":
-        result = generate_deep_dive(topic)
+        result = generate_deep_dive(topic, live=live)
     else:
-        result = generate_quick_read(topic)
-
+        result = generate_quick_read(topic, live=live)
     result["triage_reason"] = triage_result.get("reason", "")
     return result
 

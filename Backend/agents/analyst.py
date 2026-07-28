@@ -1,19 +1,18 @@
 """
-Analyst agent — takes retrieved chunks for one angle and synthesizes them
-into a clear, accurate paragraph, with source attribution.
-Does NOT invent facts not present in the retrieved text.
+Analyst agent — takes the sources already grouped by angle (from Researcher)
+and synthesizes them into a clear, accurate paragraph, with source attribution.
+
+No vector store, no embeddings, no similarity search — the Researcher already
+organizes sources per angle (2-4 sources each), so there's nothing to "retrieve"
+that isn't already directly available. This keeps the whole pipeline free of
+heavy ML dependencies (removed chromadb/FAISS/sentence-transformers/scikit-learn
+entirely), which is what was causing repeated OOM crashes in production.
 """
-import os, sys
-import json as json_lib
-import numpy as np
+import os
+import sys
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from utils.llm_client import call_llm_json
-from rag.embed_store import retrieve_across_all
-from agents.researcher import research_topic
-from rag.embed_store import store_research
-from rag.embed_store import retrieve_for_angle
 
 ANALYST_SYSTEM_PROMPT = """You are a careful news analyst. You will be given several
 source excerpts about ONE specific angle of a news topic (e.g. History, Economics,
@@ -35,14 +34,15 @@ Respond with ONLY a JSON object in this format:
 """
 
 
-def analyze_angle(collection_name: str, angle: str, query: str) -> dict:
+def analyze_angle(angle_data: dict) -> dict:
     """
-    Retrieves relevant chunks for an angle and synthesizes them into one paragraph.
-    Returns the paragraph plus the source URLs actually used, for attribution.
+    Synthesizes the sources already gathered for this angle into one paragraph.
+    angle_data comes directly from research_topic()'s output — {"angle", "query", "sources"}.
     """
-    chunks = retrieve_for_angle(collection_name, angle, query, n_results=4)
+    sources = angle_data.get("sources", [])
+    angle = angle_data["angle"]
 
-    if not chunks:
+    if not sources:
         return {
             "angle": angle,
             "paragraph": None,
@@ -51,7 +51,7 @@ def analyze_angle(collection_name: str, angle: str, query: str) -> dict:
         }
 
     excerpts_text = "\n\n---\n\n".join(
-        f"Source: {c['title']}\n{c['text'][:800]}" for c in chunks
+        f"Source: {s['title']}\n{s['content'][:800]}" for s in sources
     )
 
     result = call_llm_json(
@@ -62,8 +62,7 @@ def analyze_angle(collection_name: str, angle: str, query: str) -> dict:
     )
     paragraph = result.get("paragraph", "")
 
-    # Deduplicate source URLs used for this angle
-    unique_sources = list({c["url"]: c["title"] for c in chunks}.items())
+    unique_sources = list({s["url"]: s["title"] for s in sources}.items())
 
     return {
         "angle": angle,
@@ -71,6 +70,7 @@ def analyze_angle(collection_name: str, angle: str, query: str) -> dict:
         "sources": [{"url": url, "title": title} for url, title in unique_sources],
         "note": None,
     }
+
 
 SUMMARY_SYSTEM_PROMPT = """You are a news editor writing a short, neutral summary of
 CURRENT events for a news app. You will be given source excerpts.
@@ -84,19 +84,22 @@ Respond with ONLY a JSON object in this format:
 """
 
 
-from rag.embed_store import retrieve_across_all
-
-def generate_current_summary(collection_name: str, topic: str) -> dict:
+def generate_current_summary(research_result: dict, topic: str) -> dict:
     """
-    Generates the short 'what's happening right now' summary, pulling from
-    across ALL angles to get the most current facts.
+    Generates the short 'what's happening right now' summary, pulling the
+    top 1-2 sources from EACH angle (already gathered by the Researcher) to
+    get a spread of the most current facts across all angles.
     """
-    chunks = retrieve_across_all(collection_name, f"latest news {topic}", n_results=5)
+    pooled_sources = []
+    for angle_data in research_result["angles"]:
+        pooled_sources.extend(angle_data.get("sources", [])[:2])
 
-    if not chunks:
+    if not pooled_sources:
         return {"summary": "", "sources": []}
 
-    excerpts_text = "\n\n---\n\n".join(f"Source: {c['title']}\n{c['text'][:600]}" for c in chunks)
+    excerpts_text = "\n\n---\n\n".join(
+        f"Source: {s['title']}\n{s['content'][:600]}" for s in pooled_sources[:6]
+    )
 
     result = call_llm_json(
         prompt=f"Topic: {topic}\n\nSource excerpts:\n\n{excerpts_text}",
@@ -106,11 +109,12 @@ def generate_current_summary(collection_name: str, topic: str) -> dict:
     )
     summary = result.get("summary", "")
 
-    unique_sources = list({c["url"]: c["title"] for c in chunks}.items())
+    unique_sources = list({s["url"]: s["title"] for s in pooled_sources}.items())
     return {
         "summary": summary,
         "sources": [{"url": url, "title": title} for url, title in unique_sources],
     }
+
 
 if __name__ == "__main__":
     print("This module is used via editor.py's pipeline test — run: python editor.py \"topic\"")

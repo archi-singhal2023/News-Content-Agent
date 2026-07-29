@@ -4,7 +4,7 @@
 
 Most news apps optimize for speed: a headline, a scroll, gone. **Context** does the opposite — it takes a news topic and unpacks it from every angle that actually matters (history, economics, geopolitics, and more), with every claim traced back to a real, verified source.
 
-Built as a multi-agent AI pipeline: no LangChain/LangGraph, no vector database — a hand-rolled orchestration of specialized agents that research, verify, synthesize, and fact-check news topics end to end.
+Built as a multi-agent AI pipeline: no LangChain/LangGraph, no vector database; a hand-rolled orchestration of specialized agents that research, verify, synthesize, and fact-check news topics end to end.
 
 ---
 

@@ -4,7 +4,7 @@
 
 Most news apps optimize for speed: a headline, a scroll, gone. **Context** does the opposite — it takes a news topic and unpacks it from every angle that actually matters (history, economics, geopolitics, and more), with every claim traced back to a real, verified source.
 
-Built as a multi-agent AI pipeline: no LangChain/LangGraph, no vector database — a hand-rolled orchestration of specialized agents that research, verify, synthesize, and fact-check news topics end to end.
+Built as a multi-agent AI pipeline: no LangChain/LangGraph, no vector database; a hand-rolled orchestration of specialized agents that research, verify, synthesize, and fact-check news topics end to end.
 
 ---
 
@@ -22,7 +22,7 @@ Built as a multi-agent AI pipeline: no LangChain/LangGraph, no vector database �
 
 ## Architecture
 
-User query ▶ Triage │ deep_dive vs quick_read? ▶ Researcher │────▶│ Tavily search │ (angle-specific queries, trusted-domain whitelist, relevance-verified article fetch) ▶ Analyst │ synthesizes each angle's sources into a paragraph ▶ Editor │ consistency check, headline, image, final assembly > Classifier │ category + tags, based on actual content ▶ Structured JSON → served to frontend
+User query ▶ Triage │ deep_dive vs quick_read? ▶ Researcher ─> Tavily search │ (angle-specific queries, trusted-domain whitelist, relevance-verified article fetch) ▶ Analyst │ synthesizes each angle's sources into a paragraph ▶ Editor │ consistency check, headline, image, final assembly > Classifier │ category + tags, based on actual content ▶ Structured JSON → served to frontend
 
 A separate **Discovery** agent runs ahead of all this, scanning Tavily's news search per category to find real, current, dated stories (filtering out hub pages, listicles, and evergreen content) — this is what feeds the pipeline topics to process, rather than a human curating a list.
 

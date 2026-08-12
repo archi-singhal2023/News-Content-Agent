@@ -1,0 +1,37 @@
+{
+  "topic": "India Dispatches Life-Saving Medicines to Bolivia",
+  "type": "quick_read",
+  "headline": "INDIA SENDS 8 TONNES OF LIFE-SAVING MEDICINES TO BOLIVIA TO STRENGTHEN ITS HEALTHCARE SYSTEM",
+  "image_url": "https://images.unsplash.com/photo-1591562747474-ab6e2dab1070?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8bWVkaWNpbmVzJTJDJTIwYWlkJTJDJTIwaHVtYW5pdGFyaWFufGVufDB8MXx8fDE3ODY1NTQ0ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "India has dispatched eight metric tonnes of essential and life-saving medicines to Bolivia to strengthen its healthcare system. This aid is part of India's efforts to support Bolivia during a challenging time. The medicines are intended to provide critical care to patients in need. The shipment is a significant gesture of support from India to Bolivia.",
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Foreign_relations_of_Bolivia",
+      "title": "Foreign relations of Bolivia - Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bolivia%E2%80%93China_relations",
+      "title": "Bolivia\u2013China relations - Wikipedia"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Bolivia%E2%80%93Chile_relations",
+      "title": "Bolivia\u2013Chile relations - Wikipedia"
+    },
+    {
+      "url": "https://government.economictimes.indiatimes.com/amp/news/healthcare/india-dispatches-8-mt-of-life-saving-medicines-to-bolivia-to-support-public-healthcare/133149315",
+      "title": "India Sends 8 MT of Life-Saving Medicines to Bolivia to Strengthen Healthcare, ETGovernment"
+    },
+    {
+      "url": "https://www.aljazeera.com/features/2021/3/10/frontline-healthcare-workers-around-the-world-covid",
+      "title": "\u2018Worse than war\u2019: Health workers on a year of the pandemic | Coronavirus pandemic News | Al Jazeera"
+    }
+  ],
+  "note": null,
+  "triage_reason": "A self-contained event with no underlying causes to explain",
+  "category": "Tech",
+  "tags": [
+    "india",
+    "trending"
+  ],
+  "id": "india-dispatches-life-saving-medicines-to-bolivia"
+}

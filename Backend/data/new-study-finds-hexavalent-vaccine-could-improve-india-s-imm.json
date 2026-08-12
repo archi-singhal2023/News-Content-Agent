@@ -1,0 +1,141 @@
+{
+  "topic": "New Study Finds Hexavalent Vaccine Could Improve India's Immunization Program",
+  "headline": "INDIA'S IMMUNIZATION PROGRAM GETS A BOOST WITH NEW HEXAVALENT VACCINE TO PROTECT AGAINST MULTIPLE DEADLY DISEASES",
+  "image_url": "https://images.unsplash.com/photo-1691935443689-6f1133a29ce5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8dmFjY2luZSUyQyUyMGltbXVuaXphdGlvbiUyQyUyMGhlYWx0aGNhcmV8ZW58MHwxfHx8MTc4NjU1NDUxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "India is set to roll out a nationwide human papillomavirus vaccination program for girls aged 14, and a hexavalent vaccine could potentially improve the country's immunization program, protecting against multiple diseases including diphtheria, tetanus, and hepatitis B.",
+  "summary_sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Hexavalent_vaccine",
+      "title": "Hexavalent vaccine - Wikipedia"
+    },
+    {
+      "url": "https://www.britannica.com/explore/vaccines-immunization-history-timeline",
+      "title": "Vaccines and Immunizations: History, Timeline, and Invention | Britannica"
+    },
+    {
+      "url": "https://www.livemint.com/news/india-nationwide-hpv-vaccine-program-cervical-cancer-elimination-girls-14-years-11771938587732.html",
+      "title": "India to launch nationwide HPV vaccination drive to eradicate cervical cancer | Today News"
+    },
+    {
+      "url": "https://www.livemint.com/news/india-nationwide-hpv-vaccine-program-cervical-cancer-elimination-girls-14-years/amp-11771938587732.html",
+      "title": "India to launch nationwide HPV vaccination drive to eradicate cervical cancer | Today News"
+    },
+    {
+      "url": "https://www.thehindu.com/business/panacea-sanofi-settle-vaccine-patent-violation-suit/article68652725.ece",
+      "title": "Panacea, Sanofi settle vaccine patent violation suit - The Hindu"
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/topic/mrna-vaccine-side-effects",
+      "title": "mrna vaccine side effects: Latest News & Videos, Photos about mrna vaccine side effects | The Economic Times - Page 1"
+    }
+  ],
+  "sections": [
+    {
+      "angle": "history",
+      "paragraph": "The history of vaccine development is marked by significant milestones, with vaccines becoming one of the most effective tools in medicine. Over the years, vaccines have been developed to protect against multiple diseases, including diphtheria, tetanus, pertussis, poliomyelitis, haemophilus B, and hepatitis B, with the hexavalent vaccine being a notable example. This vaccine, also known as the 6-in-1 vaccine, has been used in over 90 countries worldwide. Meanwhile, early attempts to develop vaccines against other diseases, such as typhus, date back to the 1930s, with Hans Zinsser and Rudolf Weigl working on epidemic typhus vaccines. Global vaccination efforts have had a profound impact on public health, with infant mortality declining by 40 percent between the 1970s and 2020s, and an estimated 154 million deaths prevented during that time. The development of vaccines has continued to evolve, with new vaccines being developed to combat diseases such as COVID-19.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Hexavalent_vaccine",
+          "title": "Hexavalent vaccine - Wikipedia"
+        },
+        {
+          "url": "https://www.britannica.com/explore/vaccines-immunization-history-timeline",
+          "title": "Vaccines and Immunizations: History, Timeline, and Invention | Britannica"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Typhus_vaccine",
+          "title": "Typhus vaccine - Wikipedia"
+        }
+      ]
+    },
+    {
+      "angle": "healthcare",
+      "paragraph": "India is set to launch a nationwide human papillomavirus (HPV) vaccination program aimed at eliminating cervical cancer, which is the second most common cancer among women in India. The program targets girls aged 14 years across all socio-economic groups and aligns with the World Health Organization's Global Strategy to Eliminate Cervical Cancer. According to reports, nearly 80,000 new cases of cervical cancer and over 42,000 deaths are reported annually in India, with some sources citing higher numbers, such as 120,000 new cases and 80,000 deaths. The vaccination campaign has been included in India's Universal Immunization Programme, with Prime Minister Narendra Modi launching the nationwide HPV vaccination campaign to vaccinate 12 million girls annually. Scientific evidence establishes that almost all cases of cervical cancer are caused by certain HPV strains. India accounts for a significant portion of global cervical cancer deaths, with some reports indicating it accounts for a quarter of these deaths worldwide.",
+      "sources": [
+        {
+          "url": "https://www.livemint.com/news/india-nationwide-hpv-vaccine-program-cervical-cancer-elimination-girls-14-years-11771938587732.html",
+          "title": "India to launch nationwide HPV vaccination drive to eradicate cervical cancer | Today News"
+        },
+        {
+          "url": "https://www.livemint.com/news/india-nationwide-hpv-vaccine-program-cervical-cancer-elimination-girls-14-years/amp-11771938587732.html",
+          "title": "India to launch nationwide HPV vaccination drive to eradicate cervical cancer | Today News"
+        },
+        {
+          "url": "https://www.thehindu.com/sci-tech/science/the-case-to-rethink-indias-influenza-vaccination-strategy/article70115669.ece",
+          "title": "The case to rethink India\u2019s influenza vaccination strategy - The Hindu"
+        },
+        {
+          "url": "https://www.livemint.com/news/india-hpv-vaccination-cervical-cancer-gardasil-india-gavi-womens-health-merck-who/amp-11772767438802.html",
+          "title": "Mint Explainer | Why India\u2019s nationwide HPV vaccination drive is a shot in the arm to eliminate cervical cancer | Today News"
+        }
+      ]
+    },
+    {
+      "angle": "science",
+      "paragraph": "The science behind vaccine development has led to a settlement between Panacea Biotec and Sanofi Healthcare India, where Sanofi agreed not to commercially produce its fully liquid hexavalent vaccine Shan6 in India. This decision came after Panacea petitioned the Delhi High Court in 2021 to restrain Sanofi from marketing the vaccine, citing patent concerns. Meanwhile, separate research highlights the importance of prescribed burns in mitigating wildfire threats, as seen in the protection of Giant Forest's giant sequoia groves. In another development, the Centre has restructured the Ganga's floodplain into well-defined zones to reduce pollution and enhance groundwater recharge. However, the connection between these environmental efforts and vaccine development remains unclear. The settlement between Panacea and Sanofi suggests a focus on vaccine patent protection, while the environmental initiatives aim to address separate scientific concerns.",
+      "sources": [
+        {
+          "url": "https://www.thehindu.com/business/panacea-sanofi-settle-vaccine-patent-violation-suit/article68652725.ece",
+          "title": "Panacea, Sanofi settle vaccine patent violation suit - The Hindu"
+        },
+        {
+          "url": "https://economictimes.indiatimes.com/topic/mrna-vaccine-side-effects",
+          "title": "mrna vaccine side effects: Latest News & Videos, Photos about mrna vaccine side effects | The Economic Times - Page 1"
+        }
+      ]
+    }
+  ],
+  "dropped_angles": [
+    "economics"
+  ],
+  "consistency_check": {
+    "has_contradictions": false,
+    "notes": ""
+  },
+  "all_sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/Hexavalent_vaccine",
+      "title": "Hexavalent vaccine - Wikipedia"
+    },
+    {
+      "url": "https://www.britannica.com/explore/vaccines-immunization-history-timeline",
+      "title": "Vaccines and Immunizations: History, Timeline, and Invention | Britannica"
+    },
+    {
+      "url": "https://www.livemint.com/news/india-nationwide-hpv-vaccine-program-cervical-cancer-elimination-girls-14-years-11771938587732.html",
+      "title": "India to launch nationwide HPV vaccination drive to eradicate cervical cancer | Today News"
+    },
+    {
+      "url": "https://www.livemint.com/news/india-nationwide-hpv-vaccine-program-cervical-cancer-elimination-girls-14-years/amp-11771938587732.html",
+      "title": "India to launch nationwide HPV vaccination drive to eradicate cervical cancer | Today News"
+    },
+    {
+      "url": "https://www.thehindu.com/business/panacea-sanofi-settle-vaccine-patent-violation-suit/article68652725.ece",
+      "title": "Panacea, Sanofi settle vaccine patent violation suit - The Hindu"
+    },
+    {
+      "url": "https://economictimes.indiatimes.com/topic/mrna-vaccine-side-effects",
+      "title": "mrna vaccine side effects: Latest News & Videos, Photos about mrna vaccine side effects | The Economic Times - Page 1"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Typhus_vaccine",
+      "title": "Typhus vaccine - Wikipedia"
+    },
+    {
+      "url": "https://www.thehindu.com/sci-tech/science/the-case-to-rethink-indias-influenza-vaccination-strategy/article70115669.ece",
+      "title": "The case to rethink India\u2019s influenza vaccination strategy - The Hindu"
+    },
+    {
+      "url": "https://www.livemint.com/news/india-hpv-vaccination-cervical-cancer-gardasil-india-gavi-womens-health-merck-who/amp-11772767438802.html",
+      "title": "Mint Explainer | Why India\u2019s nationwide HPV vaccination drive is a shot in the arm to eliminate cervical cancer | Today News"
+    }
+  ],
+  "type": "deep_dive",
+  "triage_reason": "The topic involves a potential policy change and its implications on a country's healthcare system.",
+  "category": "Science",
+  "tags": [
+    "india",
+    "trending"
+  ],
+  "id": "new-study-finds-hexavalent-vaccine-could-improve-india-s-imm"
+}

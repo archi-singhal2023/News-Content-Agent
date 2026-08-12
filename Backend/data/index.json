@@ -1,171 +1,66 @@
 [
   {
-    "id": "athletics-vs-minnesota-twins-game-highlights",
-    "topic": "Athletics vs Minnesota Twins game highlights",
-    "category": "Sports",
-    "tags": [
-      "international"
-    ]
-  },
-  {
-    "id": "egg-recall-due-to-salmonella-contamination",
-    "topic": "Egg recall due to Salmonella contamination",
-    "category": "Science",
-    "tags": [
-      "international",
-      "trending"
-    ]
-  },
-  {
-    "id": "expedition-74-trio-returns-to-earth",
-    "topic": "Expedition 74 Trio Returns to Earth",
-    "category": "Science",
-    "tags": [
-      "international"
-    ]
-  },
-  {
-    "id": "india-education-minister-resigns-amid-youth-protest-demands",
-    "topic": "India Education Minister resigns amid youth protest demands",
-    "category": "Politics",
-    "tags": [
-      "india",
-      "trending"
-    ]
-  },
-  {
-    "id": "india-finance-minister-says-budget-has-buffers-to-absorb-inf",
-    "topic": "India finance minister says budget has buffers to absorb inflation risks",
+    "id": "accel-closes-550m-india-fund-amid-ai-investment-wave",
+    "topic": "Accel Closes $550M India Fund Amid AI Investment Wave",
     "category": "Finance",
     "tags": [
       "india"
     ]
   },
   {
-    "id": "india-government-faces-criticism-over-handling-of-neet-unres",
-    "topic": "India government faces criticism over handling of NEET unrest",
+    "id": "air-india-captain-under-investigation-for-marijuana-use-afte",
+    "topic": "Air India captain under investigation for marijuana use after flight incident",
+    "category": "Politics",
+    "tags": [
+      "india"
+    ]
+  },
+  {
+    "id": "amnesty-criticizes-india-israel-defense-ties-over-gaza-weapo",
+    "topic": "Amnesty Criticizes India-Israel Defense Ties Over Gaza Weapons Shipments",
     "category": "Politics",
     "tags": [
       "india",
+      "international"
+    ]
+  },
+  {
+    "id": "china-restricts-trading-speed-for-quant-funds",
+    "topic": "China restricts trading speed for quant funds",
+    "category": "Finance",
+    "tags": [
+      "international",
       "trending"
     ]
   },
   {
-    "id": "india-pm-modi-announces-overhaul-of-exam-system-after-protes",
-    "topic": "India PM Modi announces overhaul of exam system after protests",
-    "category": "Politics",
-    "tags": [
-      "india",
-      "trending"
-    ]
-  },
-  {
-    "id": "india-pm-modi-announces-panel-to-overhaul-exam-system-after-",
-    "topic": "India PM Modi announces panel to overhaul exam system after protests",
-    "category": "Politics",
-    "tags": [
-      "india",
-      "trending"
-    ]
-  },
-  {
-    "id": "india-sees-boom-in-leveraged-stock-bets-amid-decreased-optio",
-    "topic": "India Sees Boom in Leveraged Stock Bets Amid Decreased Options Trading",
+    "id": "emcure-pharmaceuticals-posts-strong-q1-2026-growth",
+    "topic": "Emcure Pharmaceuticals posts strong Q1 2026 growth",
     "category": "Finance",
     "tags": [
       "india"
     ]
   },
   {
-    "id": "india-sweeps-t20-series-against-zimbabwe",
-    "topic": "India sweeps T20 series against Zimbabwe",
+    "id": "gareth-edwards-exits-jurassic-world-rebirth-sequel",
+    "topic": "Gareth Edwards exits Jurassic World Rebirth sequel",
     "category": "Sports",
-    "tags": [
-      "india",
-      "trending"
-    ]
-  },
-  {
-    "id": "indian-celebrities-face-backlash-for-silence-on-cockroach-pr",
-    "topic": "Indian Celebrities Face Backlash for Silence on Cockroach Protests",
-    "category": "Politics",
-    "tags": [
-      "india",
-      "trending"
-    ]
-  },
-  {
-    "id": "indian-rupee-bonds-set-for-relief-as-iran-us-war-truce-eases",
-    "topic": "Indian rupee, bonds set for relief as Iran-US war truce eases oil fears",
-    "category": "Finance",
-    "tags": [
-      "india",
-      "international"
-    ]
-  },
-  {
-    "id": "indian-shares-decline-as-crude-oil-prices-rise",
-    "topic": "Indian Shares Decline as Crude Oil Prices Rise",
-    "category": "Finance",
-    "tags": [
-      "india",
-      "trending"
-    ]
-  },
-  {
-    "id": "iowa-cyclospora-outbreak-potentially-linked-to-national-case",
-    "topic": "Iowa Cyclospora outbreak potentially linked to national cases",
-    "category": "Tech",
-    "tags": [
-      "international"
-    ]
-  },
-  {
-    "id": "ishan-kishan-leads-india-to-90-run-win-over-zimbabwe-in-t20-",
-    "topic": "Ishan Kishan leads India to 90-run win over Zimbabwe in T20 series",
-    "category": "Sports",
-    "tags": [
-      "india",
-      "trending"
-    ]
-  },
-  {
-    "id": "juno-spacecraft-discovers-io-s-subsurface-is-hotter-than-exp",
-    "topic": "Juno Spacecraft Discovers Io's Subsurface is Hotter Than Expected",
-    "category": "Science",
-    "tags": [
-      "international"
-    ]
-  },
-  {
-    "id": "millions-of-eggs-recalled-due-to-salmonella-fears",
-    "topic": "Millions of Eggs Recalled Due to Salmonella Fears",
-    "category": "Daily Rituals",
     "tags": [
       "international",
       "trending"
     ]
   },
   {
-    "id": "nasa-astronaut-chris-williams-completes-successful-space-mis",
-    "topic": "NASA Astronaut Chris Williams Completes Successful Space Mission",
-    "category": "Science",
+    "id": "ilt20-season-to-feature-international-stars-klaasen-miller-a",
+    "topic": "ILT20 season to feature international stars Klaasen, Miller, and Finn Allen",
+    "category": "Sports",
     "tags": [
       "international"
     ]
   },
   {
-    "id": "nickelodeon-child-actor-speaks-out-on-reality-of-residual-ch",
-    "topic": "Nickelodeon Child Actor Speaks Out on Reality of Residual Checks",
-    "category": "Tech",
-    "tags": [
-      "international",
-      "trending"
-    ]
-  },
-  {
-    "id": "us-congress-attempts-to-increase-transparency-in-healthcare-",
-    "topic": "US Congress attempts to increase transparency in healthcare bills",
+    "id": "india-and-china-seek-to-resolve-strait-of-hormuz-crisis",
+    "topic": "India and China Seek to Resolve Strait of Hormuz Crisis",
     "category": "Politics",
     "tags": [
       "international",
@@ -173,9 +68,107 @@
     ]
   },
   {
-    "id": "us-stock-market-rally-loses-momentum-due-to-chip-sector-conc",
-    "topic": "US Stock Market Rally Loses Momentum Due to Chip Sector Concerns",
+    "id": "india-and-pakistan-conflict-escalation",
+    "topic": "India and Pakistan Conflict Escalation",
+    "category": "Politics",
+    "tags": [
+      "india",
+      "international",
+      "trending"
+    ]
+  },
+  {
+    "id": "india-and-us-deepen-space-cooperation-with-moon-base-program",
+    "topic": "India and US Deepen Space Cooperation with Moon Base Programme",
+    "category": "Science",
+    "tags": [
+      "india",
+      "international"
+    ]
+  },
+  {
+    "id": "india-deepens-relationship-with-israel-amid-middle-east-conf",
+    "topic": "India Deepens Relationship with Israel Amid Middle East Conflict",
+    "category": "Politics",
+    "tags": [
+      "india",
+      "international"
+    ]
+  },
+  {
+    "id": "india-dispatches-life-saving-medicines-to-bolivia",
+    "topic": "India Dispatches Life-Saving Medicines to Bolivia",
+    "category": "Tech",
+    "tags": [
+      "india",
+      "trending"
+    ]
+  },
+  {
+    "id": "india-faces-challenges-in-rare-earth-element-production",
+    "topic": "India Faces Challenges in Rare-Earth Element Production",
+    "category": "Science",
+    "tags": [
+      "india",
+      "international"
+    ]
+  },
+  {
+    "id": "india-plans-insurance-reforms-to-reduce-healthcare-costs",
+    "topic": "India Plans Insurance Reforms to Reduce Healthcare Costs",
     "category": "Finance",
+    "tags": [
+      "india"
+    ]
+  },
+  {
+    "id": "indian-billionaire-adani-cleared-of-criminal-charges-by-us-j",
+    "topic": "Indian billionaire Adani cleared of criminal charges by US judge",
+    "category": "Finance",
+    "tags": [
+      "india",
+      "international"
+    ]
+  },
+  {
+    "id": "nasa-invites-india-to-join-first-moon-base-mission",
+    "topic": "NASA Invites India to Join First Moon Base Mission",
+    "category": "Science",
+    "tags": [
+      "india",
+      "international"
+    ]
+  },
+  {
+    "id": "new-study-finds-hexavalent-vaccine-could-improve-india-s-imm",
+    "topic": "New Study Finds Hexavalent Vaccine Could Improve India's Immunization Program",
+    "category": "Science",
+    "tags": [
+      "india",
+      "trending"
+    ]
+  },
+  {
+    "id": "spider-man-brand-new-day-becomes-biggest-hollywood-film-in-i",
+    "topic": "Spider-Man: Brand New Day becomes biggest Hollywood film in India",
+    "category": "Finance",
+    "tags": [
+      "india",
+      "trending"
+    ]
+  },
+  {
+    "id": "wipro-exits-nifty-index",
+    "topic": "Wipro exits Nifty index",
+    "category": "Finance",
+    "tags": [
+      "india"
+    ]
+  },
+  {
+    "id": "zendaya-becomes-2026-s-highest-grossing-actor-with-spider-ma",
+    "topic": "Zendaya becomes 2026's highest-grossing actor with Spider-Man: Brand New Day and The Odyssey",
+    "category": "Tech",
     "tags": [
       "international",
       "trending"

@@ -1,0 +1,36 @@
+{
+  "topic": "Air India captain under investigation for marijuana use after flight incident",
+  "type": "quick_read",
+  "headline": "AIR INDIA CAPTAIN UNDER INVESTIGATION FOR MARIJUANA USE AFTER FLIGHT INCIDENT LEAVES 24 INJURED",
+  "image_url": "https://images.unsplash.com/photo-1583150647472-d239652a12f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMDAxNTc5fDB8MXxzZWFyY2h8MXx8YWlycGxhbmUlMkMlMjBwaWxvdCUyQyUyMGFpcnBvcnR8ZW58MHwxfHx8MTc4NjU1NDE4Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+  "summary": "The captain of an Air India flight from Phuket to Delhi is under investigation after a confirmatory drug test revealed the presence of marijuana. The test was conducted after a preliminary screening gave a 'non-negative' result. The incident occurred on August 4 when the flight experienced a sudden loss of altitude, resulting in 24 people being injured. The Ministry of Civil Aviation had ordered the testing after the incident.",
+  "sources": [
+    {
+      "url": "https://indianexpress.com/article/business/air-india-plane-mishap-injures-17-ceo-top-officials-in-huddle-at-aviation-ministry-phuket-delhi-campbell-wilson-10828441",
+      "title": "Marijuana found in sample of Air India pilot whose flight fell 300 feet, injured 24 | Business News - The Indian Express"
+    },
+    {
+      "url": "https://indianexpress.com/article/business/aviation/air-india-plane-mishap-injures-17-ceo-top-officials-in-huddle-at-aviation-ministry-phuket-delhi-campbell-wilson-10828441",
+      "title": "Marijuana found in sample of Air India pilot whose flight fell 300 feet, injured 24 | Business News - The Indian Express"
+    },
+    {
+      "url": "https://m.economictimes.indiatimes.com/industry/transportation/airlines-/-aviation/air-india-pilot-on-phuket-delhi-flight-tests-positive-for-marijuana-report/articleshow/133160322.cms",
+      "title": "Air India pilot on Phuket-Delhi flight tests 'positive' for ..."
+    },
+    {
+      "url": "https://www.thehindu.com/news/national/air-india-crash-ministry-of-civil-aviation-clarified-pilot-not-being-blamed-centre-tells-sc/article70274692.ece",
+      "title": "Air India crash investigation aimed at finding cause, not apportioning blame, says Supreme Court - The Hindu"
+    },
+    {
+      "url": "https://www.livemint.com/news/air-india-plane-crash-report-pilots-union-questions-direction-of-investigation-presuming-the-guilt-11752307353901.html",
+      "title": "Air India Plane Crash Report: Pilots' union questions direction of investigation \u2013 \u2018presuming the guilt\u2019 | Today News"
+    }
+  ],
+  "note": null,
+  "triage_reason": "The incident is a self-contained factual event with no clear underlying cause or broader impact.",
+  "category": "Politics",
+  "tags": [
+    "india"
+  ],
+  "id": "air-india-captain-under-investigation-for-marijuana-use-afte"
+}
